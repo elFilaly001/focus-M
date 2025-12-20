@@ -2,12 +2,14 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { NewsletterPopup } from "@/components/newsletter-popup"
-import HeroPlatform  from "@/components/hero-platform"
+import HeroPlatform  from "@/components/Edu/hero-platform"
 import { Button } from "@/components/ui/button"
 import { Database, Cpu, Zap, ArrowRight, Terminal, Lock, Globe2 } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ProductsSection } from "@/components/products-section"
+import { AboutIntroSection } from "@/components/About-us"
+import { SolutionsEducation } from "@/components/Edu/Solutions"
 
 export default function Home() {
   return (
@@ -16,10 +18,10 @@ export default function Home() {
       <NewsletterPopup />
 
       <HeroPlatform />
-      <ProductsSection />
 
-      {/* PRODUCT SECTION: extracted to `ProductsSection` component */}
-      <ProductsSection />
+      <AboutIntroSection />
+
+      <SolutionsEducation />
 
       <section className="py-32 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">

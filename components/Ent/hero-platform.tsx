@@ -1,0 +1,88 @@
+"use client"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { motion } from "framer-motion"
+
+export default function HeroPlatformEnterprise() {
+    return (
+        <div className="relative bg-background min-h-screen overflow-hidden">
+            {/* Video Background */}
+            <div className="absolute inset-0 z-0">
+                <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="w-full h-full object-cover"
+                >
+                    <source src="https://media.istockphoto.com/id/1036766612/video/african-american-business-man-holding-a-presentation-in-the-glass-conference-room.mp4?s=mp4-640x640-is&k=20&c=7S7-7Ef0aNIM_DCXqgP7fcGxzpWCVAs7zcad0PbN4sU=" type="video/mp4" />
+                </video>
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+            </div>
+
+            <section className="relative overflow-hidden min-h-[100vh] z-10">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="container mx-auto px-4 py-20 md:py-32 relative">
+                    <div className="max-w-6xl mx-auto">
+
+                        <motion.h1 
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="font-display text-5xl md:text-7xl font-bold mb-8 leading-[0.95] tracking-tight text-white"
+                        >
+                            Écrans tactiles
+                            <br />
+                            <span className="text-[#dc2626]">à la demande</span>
+                        </motion.h1>
+                        
+                        <motion.p 
+                            initial={{ opacity: 0, y: 20 }} 
+                            animate={{ opacity: 1, y: 0 }} 
+                            transition={{ delay: 0.2 }}
+                            className="text-xl text-white/90 mb-8 max-w-2xl"
+                        >
+                            Transformez vos salles de réunion avec des écrans interactifs professionnels. 
+                            Augmentez la productivité de 40% et impressionnez vos clients.
+                        </motion.p>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }} 
+                            animate={{ opacity: 1, y: 0 }} 
+                            transition={{ delay: 0.3 }} 
+                            className="flex flex-col sm:flex-row gap-4 mb-20"
+                        >
+                            <Button asChild size="lg" className="bg-[#dc2626] hover:bg-[#b91c1c] text-white text-lg px-8 h-14">
+                                <Link href="/demo">Demander une démo</Link>
+                            </Button>
+                            <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
+                                <Link href="/products">Voir les produits</Link>
+                            </Button>
+                        </motion.div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            {[
+                                { val: "40%", label: "Productivité" },
+                                { val: "7 jours", label: "Délai typique" },
+                                { val: "Toutes", label: "Tailles" },
+                                { val: "50+", label: "Pays" }
+                            ].map((stat, i) => (
+                                <motion.div 
+                                    key={i} 
+                                    initial={{ opacity: 0, y: 20 }} 
+                                    animate={{ opacity: 1, y: 0 }} 
+                                    transition={{ delay: 0.4 + i * 0.1 }} 
+                                    className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-lg"
+                                >
+                                    <div className="text-3xl font-bold text-[#dc2626] mb-1">{stat.val}</div>
+                                    <div className="text-sm text-white/80">{stat.label}</div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}

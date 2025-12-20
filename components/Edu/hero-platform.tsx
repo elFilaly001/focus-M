@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Palette, Eraser, Trash2 } from "lucide-react"
+import { Palette, Trash2 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
@@ -18,6 +18,7 @@ export default function HeroPlatform() {
     const strokesRef = useRef<Array<{ points: Array<{ x: number; y: number }>; color: string; width: number }>>([])
     const colorRef = useRef(color)
     const lineWidthRef = useRef(lineWidth)
+    const [isDarkTheme, setIsDarkTheme] = useState(false)
 
     useEffect(() => {
         drawingEnabledRef.current = drawingEnabled
@@ -25,6 +26,33 @@ export default function HeroPlatform() {
 
     useEffect(() => { colorRef.current = color }, [color])
     useEffect(() => { lineWidthRef.current = lineWidth }, [lineWidth])
+
+    // Initialize default pen color according to theme: light -> black, dark -> white
+    useEffect(() => {
+        const prefersDark = typeof window !== 'undefined' && (
+            document.documentElement.classList.contains('dark') ||
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        )
+        setColor(prefersDark ? '#FFFFFF' : '#000000')
+    }, [])
+
+    // Track theme so we can swap the black swatch to white in dark mode
+    useEffect(() => {
+        if (typeof window === 'undefined') return
+        const check = () => {
+            const hasDark = document.documentElement.classList.contains('dark') ||
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            setIsDarkTheme(Boolean(hasDark))
+        }
+        check()
+        const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
+        if (mq && mq.addEventListener) mq.addEventListener('change', check)
+        else if (mq && mq.addListener) mq.addListener(check)
+        return () => {
+            if (mq && mq.removeEventListener) mq.removeEventListener('change', check)
+            else if (mq && mq.removeListener) mq.removeListener(check)
+        }
+    }, [])
 
     useEffect(() => {
         const canvas = canvasRef.current
@@ -163,25 +191,29 @@ export default function HeroPlatform() {
                         <div>
                             <p className="text-sm font-semibold mb-3 text-gray-700">Couleur</p>
                             <div className="grid grid-cols-4 gap-2">
-                                {colors.map((c) => (
-                                    <button
-                                        key={c}
-                                        onClick={(e) => {
-                                            e.stopPropagation()
-                                            setColor(c)
-                                        }}
-                                        className={`h-10 w-10 rounded-lg transition-all hover:scale-110 ${
-                                            color === c ? 'ring-2 ring-[#dc2626] ring-offset-2 scale-110' : ''
-                                        }`}
-                                        style={{ backgroundColor: c }}
-                                    />
-                                ))}
+                                {colors.map((c) => {
+                                    const isMappedBlack = c === '#000000' && isDarkTheme
+                                    const displayColor = isMappedBlack ? '#FFFFFF' : c
+                                    return (
+                                        <button
+                                            key={c}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                setColor(displayColor)
+                                            }}
+                                            className={`h-10 w-10 rounded-lg transition-all hover:scale-110 ${
+                                                color === displayColor ? 'ring-2 ring-[var(--color-primary)] ring-offset-2 scale-110' : ''
+                                            } ${isMappedBlack ? 'border border-slate-200 dark:border-slate-700' : ''}`}
+                                            style={{ backgroundColor: displayColor }}
+                                        />
+                                    )
+                                })}
                             </div>
                         </div>
 
                         <div>
-                            <p className="text-sm font-semibold mb-3 text-gray-700">Taille</p>
-                            <input
+                                <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-slate-300">Taille</p>
+                                <input
                                 type="range"
                                 min="1"
                                 max="20"
@@ -195,32 +227,20 @@ export default function HeroPlatform() {
                             </div>
                         </div>
 
-                        <div className="flex gap-2 pt-2 border-t border-gray-200">
-                            <Button
-                                onClick={(e) => {
-                                    e.stopPropagation()
-                                    setColor('#FFFFFF')
-                                }}
-                                variant="outline"
-                                size="sm"
-                                className="flex-1"
-                            >
-                                <Eraser className="h-4 w-4 mr-2" />
-                                Gomme
-                            </Button>
-                            <Button
-                                onClick={(e) => {
-                                    e.stopPropagation()
-                                    clearCanvas()
-                                }}
-                                variant="outline"
-                                size="sm"
-                                className="flex-1"
-                            >
-                                <Trash2 className="h-4 w-4 mr-2" />
-                                Effacer
-                            </Button>
-                        </div>
+                                <div className="flex gap-2 pt-2 border-t border-gray-200 dark:border-slate-700">
+                                    <Button
+                                        onClick={(e) => {
+                                            e.stopPropagation()
+                                            clearCanvas()
+                                        }}
+                                        variant="outline"
+                                        size="sm"
+                                        className="flex-1"
+                                    >
+                                        <Trash2 className="h-4 w-4 mr-2" />
+                                        Effacer
+                                    </Button>
+                                </div>
                     </div>
                 </div>
             )}
