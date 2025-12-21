@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SectorProvider } from "@/components/sector-context";
 import { SectorToggle } from "@/components/sector-toggle";
+import { NewsletterPopup } from "@/components/newsletter-popup";
+import { Header } from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +30,8 @@ export default function RootLayout({
         >
           <SectorProvider>
             <SectorToggle />
+            <Header />
+            <NewsletterPopup />
             {children}
           </SectorProvider>
         </ThemeProvider>

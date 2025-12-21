@@ -14,8 +14,7 @@ import { SolutionsEducation } from "@/components/Edu/Solutions"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <NewsletterPopup />
+      
 
       <HeroPlatform />
 
@@ -23,20 +22,20 @@ export default function Home() {
 
       <SolutionsEducation />
 
-      <section className="py-32 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-32 bg-[var(--color-background)]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-sm font-semibold text-[#dc2626] uppercase tracking-wide mb-4">Quick Start</p>
-                <h2 className="font-display text-5xl font-bold mb-6">Get up and running in minutes</h2>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-4">Quick Start</p>
+                <h2 className="font-display text-5xl font-bold mb-6 text-[var(--color-foreground)]">Get up and running in minutes</h2>
+                <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
                   Install the SDK, initialize your workspace, and start building. Full TypeScript support with
                   auto-completion.
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="h-8 w-8 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <div className="h-8 w-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                       1
                     </div>
                     <div>
@@ -45,7 +44,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="h-8 w-8 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <div className="h-8 w-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                       2
                     </div>
                     <div>
@@ -54,7 +53,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="h-8 w-8 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <div className="h-8 w-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                       3
                     </div>
                     <div>
@@ -65,62 +64,62 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="bg-[#1e1e1e] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
-                  <div className="flex items-center space-x-2 px-4 py-3 border-b border-gray-800">
-                    <div className="h-3 w-3 rounded-full bg-[#ff5f56]" />
-                    <div className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
-                    <div className="h-3 w-3 rounded-full bg-[#27c93f]" />
-                    <span className="text-xs text-gray-400 ml-2">main.ts</span>
+                <div className="relative">
+                <div className="bg-[var(--color-card)] rounded-2xl overflow-hidden border border-border shadow-2xl">
+                  <div className="flex items-center space-x-2 px-4 py-3 border-b border-border">
+                    <div className="h-3 w-3 rounded-full bg-[var(--color-primary)]" />
+                    <div className="h-3 w-3 rounded-full bg-[var(--color-primary)]/60" />
+                    <div className="h-3 w-3 rounded-full bg-[var(--color-primary)]/40" />
+                    <span className="text-xs text-[var(--color-muted-foreground)] ml-2">main.ts</span>
                   </div>
                   <div className="p-6 font-mono text-sm overflow-x-auto">
-                    <div className="text-gray-500">{"// Install the SDK"}</div>
-                    <div className="text-gray-300">npm install @focustech/sdk</div>
+                    <div className="text-[var(--color-muted-foreground)]">{"// Install the SDK"}</div>
+                    <div className="text-[var(--color-foreground)]">npm install @focustech/sdk</div>
                     <div className="h-4" />
-                    <div className="text-gray-500">{"// Initialize workspace"}</div>
+                    <div className="text-[var(--color-muted-foreground)]">{"// Initialize workspace"}</div>
                     <div>
-                      <span className="text-purple-400">import</span>{" "}
-                      <span className="text-gray-300">{"{ FocusTech }"}</span>{" "}
-                      <span className="text-purple-400">from</span>{" "}
-                      <span className="text-green-400">'@focustech/sdk'</span>
-                    </div>
-                    <div className="h-4" />
-                    <div>
-                      <span className="text-purple-400">const</span> <span className="text-blue-400">client</span>{" "}
-                      <span className="text-gray-300">= </span>
-                      <span className="text-purple-400">new</span> <span className="text-yellow-400">FocusTech</span>
-                      <span className="text-gray-300">{"({"}</span>
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-blue-300">apiKey</span>
-                      <span className="text-gray-300">: </span>
-                      <span className="text-green-400">process.env.FOCUSTECH_API_KEY</span>
-                    </div>
-                    <div>
-                      <span className="text-gray-300">{"})"}</span>
+                      <span className="text-[var(--color-primary)]">import</span>{" "}
+                      <span className="text-[var(--color-foreground)]">{"{ FocusTech }"}</span>{" "}
+                      <span className="text-[var(--color-primary)]">from</span>{" "}
+                      <span className="text-[var(--color-primary)]">'@focustech/sdk'</span>
                     </div>
                     <div className="h-4" />
-                    <div className="text-gray-500">{"// Create a collaborative workspace"}</div>
                     <div>
-                      <span className="text-purple-400">const</span> <span className="text-blue-400">workspace</span>{" "}
-                      <span className="text-gray-300">= </span>
-                      <span className="text-purple-400">await</span> <span className="text-gray-300">client.</span>
-                      <span className="text-yellow-400">createWorkspace</span>
-                      <span className="text-gray-300">{"({"}</span>
+                      <span className="text-[var(--color-primary)]">const</span> <span className="text-[var(--color-primary)]">client</span>{" "}
+                      <span className="text-[var(--color-foreground)]">= </span>
+                      <span className="text-[var(--color-primary)]">new</span> <span className="text-[var(--color-primary)]">FocusTech</span>
+                      <span className="text-[var(--color-foreground)]">{"({"}</span>
                     </div>
                     <div className="pl-4">
-                      <span className="text-blue-300">name</span>
-                      <span className="text-gray-300">: </span>
-                      <span className="text-green-400">'My Workspace'</span>
-                      <span className="text-gray-300">,</span>
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-blue-300">realtime</span>
-                      <span className="text-gray-300">: </span>
-                      <span className="text-orange-400">true</span>
+                      <span className="text-[var(--color-primary)]">apiKey</span>
+                      <span className="text-[var(--color-foreground)]">: </span>
+                      <span className="text-[var(--color-primary)]">process.env.FOCUSTECH_API_KEY</span>
                     </div>
                     <div>
-                      <span className="text-gray-300">{"})"}</span>
+                      <span className="text-[var(--color-foreground)]">{"})"}</span>
+                    </div>
+                    <div className="h-4" />
+                    <div className="text-[var(--color-muted-foreground)]">{"// Create a collaborative workspace"}</div>
+                    <div>
+                      <span className="text-[var(--color-primary)]">const</span> <span className="text-[var(--color-primary)]">workspace</span>{" "}
+                      <span className="text-[var(--color-foreground)]">= </span>
+                      <span className="text-[var(--color-primary)]">await</span> <span className="text-[var(--color-foreground)]">client.</span>
+                      <span className="text-[var(--color-primary)]">createWorkspace</span>
+                      <span className="text-[var(--color-foreground)]">{"({"}</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-[var(--color-primary)]">name</span>
+                      <span className="text-[var(--color-foreground)]">: </span>
+                      <span className="text-[var(--color-primary)]">'My Workspace'</span>
+                      <span className="text-[var(--color-foreground)]">,</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-[var(--color-primary)]">realtime</span>
+                      <span className="text-[var(--color-foreground)]">: </span>
+                      <span className="text-[var(--color-primary)]">true</span>
+                    </div>
+                    <div>
+                      <span className="text-[var(--color-foreground)]">{"})"}</span>
                     </div>
                   </div>
                 </div>
@@ -186,7 +185,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="py-32 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#991b1b] text-white relative overflow-hidden">
+      <section className="py-32 bg-[var(--color-primary)] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:24px_24px]" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -202,7 +201,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-10 h-14 border-2 border-white text-white hover:bg-white hover:text-[#dc2626] bg-transparent font-semibold"
+                className="text-lg px-10 h-14 border-2 border-white text-white hover:bg-white hover:text-[var(--color-primary)] bg-transparent font-semibold"
               >
                 <Link href="/contact">Contact sales</Link>
               </Button>

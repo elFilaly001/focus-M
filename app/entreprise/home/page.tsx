@@ -14,8 +14,6 @@ import { SolutionsEnterprise } from "@/components/Ent/Solutions"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <NewsletterPopup />
 
       <HeroPlatform />
 
@@ -23,7 +21,7 @@ export default function Home() {
 
       <SolutionsEnterprise/>
 
-      <section className="py-32 bg-gradient-to-b from-gray-50 to-white">
+      {/* <section className="py-32 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -128,7 +126,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="py-32 bg-white">
         <div className="container mx-auto px-4">

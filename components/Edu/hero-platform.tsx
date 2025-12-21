@@ -4,6 +4,7 @@ import { Palette, Trash2 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
 
 const colors = ['#000000', '#dc2626', '#2563eb', '#16a34a', '#ca8a04', '#9333ea', '#ea580c', '#06b6d4']
 
@@ -18,7 +19,10 @@ export default function HeroPlatform() {
     const strokesRef = useRef<Array<{ points: Array<{ x: number; y: number }>; color: string; width: number }>>([])
     const colorRef = useRef(color)
     const lineWidthRef = useRef(lineWidth)
-    const [isDarkTheme, setIsDarkTheme] = useState(false)
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => setMounted(true), [])
 
     useEffect(() => {
         drawingEnabledRef.current = drawingEnabled
@@ -27,32 +31,32 @@ export default function HeroPlatform() {
     useEffect(() => { colorRef.current = color }, [color])
     useEffect(() => { lineWidthRef.current = lineWidth }, [lineWidth])
 
-    // Initialize default pen color according to theme: light -> black, dark -> white
+    // Initialize default pen color according to theme
     useEffect(() => {
-        const prefersDark = typeof window !== 'undefined' && (
-            document.documentElement.classList.contains('dark') ||
-            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        )
-        setColor(prefersDark ? '#FFFFFF' : '#000000')
-    }, [])
+        if (!mounted) return
+        const isDark = resolvedTheme === 'dark'
+        setColor(isDark ? '#FFFFFF' : '#000000')
+    }, [mounted, resolvedTheme])
 
-    // Track theme so we can swap the black swatch to white in dark mode
+    // Convert existing strokes when theme changes
     useEffect(() => {
-        if (typeof window === 'undefined') return
-        const check = () => {
-            const hasDark = document.documentElement.classList.contains('dark') ||
-                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-            setIsDarkTheme(Boolean(hasDark))
-        }
-        check()
-        const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
-        if (mq && mq.addEventListener) mq.addEventListener('change', check)
-        else if (mq && mq.addListener) mq.addListener(check)
-        return () => {
-            if (mq && mq.removeEventListener) mq.removeEventListener('change', check)
-            else if (mq && mq.removeListener) mq.removeListener(check)
-        }
-    }, [])
+        if (!mounted) return
+        
+        const isDark = resolvedTheme === 'dark'
+        
+        // Convert all existing strokes
+        strokesRef.current = strokesRef.current.map(stroke => {
+            // If stroke is white and we're switching to light mode, make it black
+            if (stroke.color === '#FFFFFF' && !isDark) {
+                return { ...stroke, color: '#000000' }
+            }
+            // If stroke is black and we're switching to dark mode, make it white
+            if (stroke.color === '#000000' && isDark) {
+                return { ...stroke, color: '#FFFFFF' }
+            }
+            return stroke
+        })
+    }, [mounted, resolvedTheme])
 
     useEffect(() => {
         const canvas = canvasRef.current
@@ -168,6 +172,8 @@ export default function HeroPlatform() {
         strokesRef.current = []
     }
 
+    const isDark = mounted && resolvedTheme === 'dark'
+
     return (
         <div ref={containerRef} className="relative select-none touch-none bg-background min-h-screen overflow-auto">
             <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-20" />
@@ -181,19 +187,21 @@ export default function HeroPlatform() {
                 size="lg"
                 className="absolute top-6 right-6 z-50 bg-[#dc2626] hover:bg-[#b91c1c] rounded-full h-14 w-14 p-0 shadow-lg" 
             >
-                <Palette className="h-6 w-6 dark:text-white" />
+                <Palette className="h-6 w-6 text-white" />
             </Button>
 
             {/* Palette Panel */}
             {showPalette && (
-                <div className="absolute top-24 right-6 bg-white rounded-2xl shadow-2xl p-6 border border-gray-200 z-50 animate-in fade-in slide-in-from-bottom-4 duration-200">
+                <div className="absolute top-24 right-6 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 border border-gray-200 dark:border-gray-700 z-50 animate-in fade-in slide-in-from-bottom-4 duration-200">
                     <div className="space-y-4 min-w-[200px]">
                         <div>
-                            <p className="text-sm font-semibold mb-3 text-gray-700">Couleur</p>
+                            <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Couleur</p>
                             <div className="grid grid-cols-4 gap-2">
                                 {colors.map((c) => {
-                                    const isMappedBlack = c === '#000000' && isDarkTheme
-                                    const displayColor = isMappedBlack ? '#FFFFFF' : c
+                                    // In dark mode, show white instead of black
+                                    const displayColor = (c === '#000000' && isDark) ? '#FFFFFF' : c
+                                    const isSelected = color === displayColor
+                                    
                                     return (
                                         <button
                                             key={c}
@@ -202,8 +210,8 @@ export default function HeroPlatform() {
                                                 setColor(displayColor)
                                             }}
                                             className={`h-10 w-10 rounded-lg transition-all hover:scale-110 ${
-                                                color === displayColor ? 'ring-2 ring-[var(--color-primary)] ring-offset-2 scale-110' : ''
-                                            } ${isMappedBlack ? 'border border-slate-200 dark:border-slate-700' : ''}`}
+                                                isSelected ? 'ring-2 ring-[#dc2626] ring-offset-2 scale-110' : ''
+                                            } ${displayColor === '#FFFFFF' ? 'border border-gray-300 dark:border-gray-600' : ''}`}
                                             style={{ backgroundColor: displayColor }}
                                         />
                                     )
@@ -212,8 +220,8 @@ export default function HeroPlatform() {
                         </div>
 
                         <div>
-                                <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-slate-300">Taille</p>
-                                <input
+                            <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Taille</p>
+                            <input
                                 type="range"
                                 min="1"
                                 max="20"
@@ -221,33 +229,33 @@ export default function HeroPlatform() {
                                 onChange={(e) => setLineWidth(Number(e.target.value))}
                                 className="w-full accent-[#dc2626]"
                             />
-                            <div className="flex justify-between text-xs text-gray-500 mt-1">
+                            <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                                 <span>Fin</span>
                                 <span>Épais</span>
                             </div>
                         </div>
 
-                                <div className="flex gap-2 pt-2 border-t border-gray-200 dark:border-slate-700">
-                                    <Button
-                                        onClick={(e) => {
-                                            e.stopPropagation()
-                                            clearCanvas()
-                                        }}
-                                        variant="outline"
-                                        size="sm"
-                                        className="flex-1"
-                                    >
-                                        <Trash2 className="h-4 w-4 mr-2" />
-                                        Effacer
-                                    </Button>
-                                </div>
+                        <div className="flex gap-2 pt-2 border-t border-gray-200 dark:border-gray-700">
+                            <Button
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                    clearCanvas()
+                                }}
+                                variant="outline"
+                                size="sm"
+                                className="flex-1"
+                            >
+                                <Trash2 className="h-4 w-4 mr-2" />
+                                Effacer
+                            </Button>
+                        </div>
                     </div>
                 </div>
             )}
 
-            <section className="relative overflow-hidden min-h-[100vh] ">
+            <section className="relative overflow-hidden min-h-[100vh]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="container mx-auto px-4 py-20 md:py-32 relative">
+                <div className="container px-4 py-20 md:py-32 relative">
                     <div className="max-w-6xl mx-auto">
                         <motion.h1 
                             initial={{ opacity: 0, x: -50 }}
@@ -280,7 +288,7 @@ export default function HeroPlatform() {
                                 <Link href="/demo">Réserver une démo en classe</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2">
-                                <Link href="/products">Voir les solutions éducatives</Link>
+                                <Link href="/education/solutions">Voir les solutions éducatives</Link>
                             </Button>
                         </motion.div>
 

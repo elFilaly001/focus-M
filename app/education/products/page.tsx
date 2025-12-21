@@ -12,7 +12,6 @@ export const metadata = {
 export default function ProductsPage() {
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="py-32 bg-gradient-to-b from-white to-gray-50/50">
         <div className="container mx-auto px-4">

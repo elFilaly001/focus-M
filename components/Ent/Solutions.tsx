@@ -48,7 +48,7 @@ const benefits = [
 
 export function SolutionsEnterprise() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <section className="py-20 bg-[var(--color-background)]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           
@@ -60,13 +60,13 @@ export function SolutionsEnterprise() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <p className="text-sm font-semibold text-[#dc2626] uppercase tracking-wide mb-4">
+            <p className="text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-4">
               Solutions Entreprise
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
               Des solutions pour chaque espace professionnel
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto">
               De la salle de réunion au hall d'accueil, nos écrans tactiles transforment 
               votre environnement de travail en espace collaboratif moderne
             </p>
@@ -81,29 +81,29 @@ export function SolutionsEnterprise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                className="group bg-[var(--color-card)] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border"
               >
                 {/* Image Placeholder */}
-                <div className="relative aspect-video bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 overflow-hidden">
+                <div className="relative aspect-video bg-[var(--color-card-light)] overflow-hidden">
                   {/* Placeholder content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--color-muted-foreground)]">
                     <ImageIcon className="h-12 w-12 mb-2 opacity-50" />
                     <span className="text-xs font-mono opacity-50">{solution.imagePlaceholder}</span>
                   </div>
                   {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="h-12 w-12 rounded-xl bg-[#fef2f2] dark:bg-[#dc2626]/20 flex items-center justify-center">
-                      <solution.icon className="h-6 w-6 text-[#dc2626]" />
+                    <div className="h-12 w-12 rounded-xl bg-[var(--color-card-light)] dark:bg-[var(--color-card)] flex items-center justify-center">
+                      <solution.icon className="h-6 w-6 text-[var(--color-primary)]" />
                     </div>
-                    <h3 className="font-semibold text-xl text-foreground">{solution.title}</h3>
+                    <h3 className="font-semibold text-xl text-[var(--color-foreground)]">{solution.title}</h3>
                   </div>
                   
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-[var(--color-muted-foreground)] mb-4 leading-relaxed">
                     {solution.description}
                   </p>
 
@@ -112,7 +112,7 @@ export function SolutionsEnterprise() {
                     {solution.features.map((feature) => (
                       <span 
                         key={feature}
-                        className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full"
+                        className="text-xs bg-[var(--color-card-light)] dark:bg-[var(--color-card)] text-[var(--color-primary)] px-3 py-1 rounded-full"
                       >
                         {feature}
                       </span>
@@ -129,17 +129,17 @@ export function SolutionsEnterprise() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-200 dark:border-gray-700"
+            className="bg-[var(--color-card)] rounded-2xl p-8 shadow-sm border border-border"
           >
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit) => (
                 <div key={benefit.title} className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-[#dc2626] flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 rounded-xl bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-1 text-foreground">{benefit.title}</h4>
-                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    <h4 className="font-semibold text-lg mb-1 text-[var(--color-foreground)]">{benefit.title}</h4>
+                    <p className="text-sm text-[var(--color-muted-foreground)]">{benefit.description}</p>
                   </div>
                 </div>
               ))}
@@ -154,7 +154,7 @@ export function SolutionsEnterprise() {
             transition={{ duration: 0.6 }}
             className="text-center mt-12"
           >
-            <Button asChild size="lg" className="bg-[#dc2626] hover:bg-[#b91c1c] text-white">
+            <Button asChild size="lg" className="bg-[var(--color-primary)] hover:opacity-90 text-white">
               <Link href="/products">
                 Découvrir tous nos produits
                 <ArrowRight className="ml-2 h-5 w-5" />
