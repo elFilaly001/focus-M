@@ -164,8 +164,6 @@ export default function DemoPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

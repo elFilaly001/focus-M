@@ -123,7 +123,7 @@ export default function ReferencesPage() {
         </div>
       </section>
 
-      <Footer />
+
     </div>
   )
 }

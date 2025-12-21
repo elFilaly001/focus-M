@@ -6,6 +6,7 @@ import { SectorProvider } from "@/components/sector-context";
 import { SectorToggle } from "@/components/sector-toggle";
 import { NewsletterPopup } from "@/components/newsletter-popup";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
             <Header />
             <NewsletterPopup />
             {children}
+            <Footer />
           </SectorProvider>
         </ThemeProvider>
       </body>
