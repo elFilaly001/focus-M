@@ -25,12 +25,12 @@ export default function DiagonalSplitSection() {
                     onMouseLeave={() => setHoveredSide(null)}
                 >
                     {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px]" />
+                    {/* <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px]" /> */}
 
                     {/* CONTENT CONTAINER
                         We have to Counter-Rotate (+45deg) the text so it looks straight to the user.
                     */}
-                    <div className="absolute bottom-24 left-1/2 w-full max-w-md -translate-x-1/2 rotate-[45deg] text-center text-white pointer-events-none">
+                    <div className="absolute left-[38%] top-[55%] w-full max-w-md -translate-x-1/2 rotate-[45deg] text-center text-white pointer-events-none">
                         <motion.div
                             animate={{ scale: hoveredSide === 'education' ? 1.05 : 1 }}
                             transition={{ duration: 0.3 }}
@@ -53,7 +53,7 @@ export default function DiagonalSplitSection() {
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 3852.4 501.9"
-                        className="w-[60%] max-w-none"
+                        className="w-[60%] max-w-none z-30"
                         role="img"
                         aria-label="Divider"
                     >
@@ -66,19 +66,24 @@ export default function DiagonalSplitSection() {
     c12.6,35.3,65.8,18.3,95.6-4.4c50.7-38.8,101.5-77.6,152.2-116.4c1.4,84.5,14.3,187.2,91.9,220.7c27.6,11.9,58.6,12.1,88.6,12
     c521.5-0.2,1043-0.4,1564.5-0.6c0-21.5,0-43.1,0-64.6c-516,0.4-1032,0.7-1548.1,1.1C2283.1,425.7,2259.4,424.8,2238,419.6z"/>
                     </svg>
+
                 </div>
 
-                {/* 3. BOTTOM HALF (Which visually becomes the LEFT/DARK side) */}
+                {/* Decorative image placed between halves so it can overlap the red side but sit under the SVG */}
+                <img
+                    src="/LOGO/m1.png"
+                    alt="bg"
+                    className="absolute left-[57.3%] top-[56%] -translate-x-1/2 -translate-y-1/2 w-[50%] max-w-none rotate-[45deg] object-cover pointer-events-none z-10"
+                />
                 <Link
                     href="/entreprise/home"
-                    className="relative flex-1 bg-gray-900 group overflow-hidden"
+                    className="relative flex-1 group overflow-hidden"
                     onMouseEnter={() => setHoveredSide('enterprise')}
                     onMouseLeave={() => setHoveredSide(null)}
                 >
-                    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px]" />
+                    {/* <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px] z-20 " /> */}
 
-                    {/* Counter-Rotated Content */}
-                    <div className="absolute top-24 left-1/2 w-full max-w-md -translate-x-1/2 rotate-[45deg] text-center text-white pointer-events-none">
+                    <div className="absolute top-[15%] right-[20%] w-full max-w-md -translate-x-1/2 rotate-[45deg] text-center text-white pointer-events-none z-20">
                         <motion.div
                             animate={{ scale: hoveredSide === 'enterprise' ? 1.05 : 1 }}
                             transition={{ duration: 0.3 }}
@@ -92,6 +97,7 @@ export default function DiagonalSplitSection() {
                         </motion.div>
                     </div>
                 </Link>
+
             </div>
         </section>
     )
