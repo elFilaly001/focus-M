@@ -80,7 +80,7 @@ export function FinalCTASection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-10 h-16 border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold"
+                className="text-lg px-10 h-16 border-2 border-white/30 text-black hover:bg-white/10 backdrop-blur-sm font-semibold"
               >
                 <Link href="/contact">Contactez-nous</Link>
               </Button>
