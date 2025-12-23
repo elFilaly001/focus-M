@@ -5,8 +5,8 @@ import { Target, Users, Lightbulb, Award } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "About Us - FocusTech",
-  description: "Learn about FocusTech and our mission to revolutionize interactive displays",
+  title: "À propos - Focus M",
+  description: "Découvrez Focus M et notre mission pour révolutionner les écrans interactifs",
 }
 
 export default function AboutPage() {
@@ -18,11 +18,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              About <span className="text-[#dc2626]">FocusTech</span>
+              À propos de <span className="text-[#dc2626]">Focus M</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              We're pioneering the future of interactive collaboration with cutting-edge display technology that
-              empowers businesses and educators worldwide.
+              Nous façonnons l'avenir de la collaboration interactive avec des écrans de pointe qui
+              permettent aux entreprises et aux éducateurs du monde entier de travailler mieux ensemble.
             </p>
           </div>
         </div>
@@ -33,18 +33,18 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="relative h-96 rounded-2xl overflow-hidden">
-              <img src="/modern-office-collaboration-technology.jpg" alt="Our Mission" className="w-full h-full object-cover" />
+              <img src="/modern-office-collaboration-technology.jpg" alt="Notre mission" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h2 className="font-display text-4xl font-bold mb-6">Our Mission</h2>
+              <h2 className="font-display text-4xl font-bold mb-6">Notre mission</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                At FocusTech, we believe that collaboration should be effortless, inspiring, and accessible to everyone.
-                Our mission is to break down barriers between ideas and implementation through innovative interactive
-                technology.
+                Chez Focus M, nous pensons que la collaboration doit être simple, inspirante et accessible à tous.
+                Notre mission est de réduire les obstacles entre les idées et leur réalisation grâce à des
+                technologies interactives innovantes.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We develop solutions that seamlessly integrate with your workflow, enabling teams to connect, create,
-                and innovate without technical complexity getting in the way.
+                Nous créons des solutions qui s'intègrent naturellement à votre flux de travail, permettant aux équipes
+                de se connecter, de créer et d'innover sans que la complexité technique ne soit un frein.
               </p>
             </div>
           </div>
@@ -55,8 +55,8 @@ export default function AboutPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Principles that guide everything we do</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Nos valeurs fondamentales</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Les principes qui guident tout ce que nous faisons</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -66,7 +66,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Innovation</h3>
               <p className="text-muted-foreground">
-                Constantly pushing boundaries to deliver next-generation technology
+                Repousser sans cesse les limites pour proposer des technologies de nouvelle génération
               </p>
             </div>
 
@@ -75,15 +75,15 @@ export default function AboutPage() {
                 <Users className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Collaboration</h3>
-              <p className="text-muted-foreground">Building tools that bring people together and amplify teamwork</p>
+              <p className="text-muted-foreground">Concevoir des outils qui rapprochent les personnes et renforcent le travail d'équipe</p>
             </div>
 
             <div className="bg-white rounded-xl p-8 text-center">
               <div className="h-16 w-16 rounded-full bg-[#fef2f2] flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="h-8 w-8 text-[#dc2626]" />
               </div>
-              <h3 className="font-display text-xl font-bold mb-3">Simplicity</h3>
-              <p className="text-muted-foreground">Making powerful technology accessible and easy to use</p>
+              <h3 className="font-display text-xl font-bold mb-3">Simplicité</h3>
+              <p className="text-muted-foreground">Rendre les technologies puissantes accessibles et faciles à utiliser</p>
             </div>
 
             <div className="bg-white rounded-xl p-8 text-center">
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 <Award className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Excellence</h3>
-              <p className="text-muted-foreground">Delivering quality products that exceed expectations</p>
+              <p className="text-muted-foreground">Fournir des produits de qualité qui dépassent les attentes</p>
             </div>
           </div>
         </div>
@@ -101,22 +101,23 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-4xl font-bold mb-6 text-center">Our Story</h2>
+            <h2 className="font-display text-4xl font-bold mb-6 text-center">Notre histoire</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                FocusTech was founded with a simple observation: traditional meeting rooms and classrooms weren't
-                keeping pace with how people actually work and learn. We saw teams struggling with disconnected tools,
-                educators limited by outdated technology, and countless hours wasted on technical difficulties.
+                Focus M est né d'une constatation simple : les salles de réunion et les salles de classe traditionnelles
+                n'évoluaient pas au rythme des façons réelles de travailler et d'apprendre. Nous avons vu des équipes
+                coincées avec des outils déconnectés, des enseignants limités par des technologies obsolètes et des
+                heures perdues à résoudre des problèmes techniques.
               </p>
               <p>
-                Our founders, a team of engineers and educators, set out to create something better. Not just another
-                display, but a complete ecosystem designed from the ground up for modern collaboration. Every feature,
-                every interaction, every integration was carefully crafted to remove friction and enable flow.
+                Nos fondateurs, une équipe d'ingénieurs et d'enseignants, ont voulu créer quelque chose de meilleur. Pas
+                seulement un nouvel écran, mais un écosystème complet pensé pour la collaboration moderne. Chaque
+                fonctionnalité, interaction et intégration a été conçue pour réduire les frictions et favoriser le flux.
               </p>
               <p>
-                Today, FocusTech powers thousands of meeting rooms, classrooms, and collaborative spaces around the
-                world. But we're just getting started. Our team continues to innovate, listening to our customers and
-                pushing the boundaries of what's possible with interactive technology.
+                Aujourd'hui, Focus M équipe des milliers de salles de réunion, d'espaces pédagogiques et d'environnements
+                collaboratifs dans le monde. Mais ce n'est qu'un début : notre équipe continue d'innover en écoutant
+                ses clients et en repoussant les limites du possible.
               </p>
             </div>
           </div>
@@ -126,12 +127,12 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-[#dc2626] to-[#991b1b] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Space?</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Prêt à transformer votre espace&nbsp;?</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Experience the future of collaboration with a personalized demo.
+            Découvrez l'avenir de la collaboration grâce à une démo personnalisée.
           </p>
           <Button asChild size="lg" variant="secondary" className="text-lg px-8">
-            <Link href="/demo">Schedule Your Demo</Link>
+            <Link href="/demo">Planifiez votre démo</Link>
           </Button>
         </div>
       </section>

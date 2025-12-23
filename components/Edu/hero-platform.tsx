@@ -1,10 +1,16 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Palette, Trash2 } from "lucide-react"
+import { Palette, Trash2, Pen } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
+import { Margarine } from "next/font/google"
+
+const margarine = Margarine({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 const colors = ['#000000', '#dc2626', '#2563eb', '#16a34a', '#ca8a04', '#9333ea', '#ea580c', '#06b6d4']
 
@@ -31,29 +37,18 @@ export default function HeroPlatform() {
     useEffect(() => { colorRef.current = color }, [color])
     useEffect(() => { lineWidthRef.current = lineWidth }, [lineWidth])
 
-    // Initialize default pen color according to theme
     useEffect(() => {
         if (!mounted) return
         const isDark = resolvedTheme === 'dark'
         setColor(isDark ? '#FFFFFF' : '#000000')
     }, [mounted, resolvedTheme])
 
-    // Convert existing strokes when theme changes
     useEffect(() => {
         if (!mounted) return
-        
         const isDark = resolvedTheme === 'dark'
-        
-        // Convert all existing strokes
         strokesRef.current = strokesRef.current.map(stroke => {
-            // If stroke is white and we're switching to light mode, make it black
-            if (stroke.color === '#FFFFFF' && !isDark) {
-                return { ...stroke, color: '#000000' }
-            }
-            // If stroke is black and we're switching to dark mode, make it white
-            if (stroke.color === '#000000' && isDark) {
-                return { ...stroke, color: '#FFFFFF' }
-            }
+            if (stroke.color === '#FFFFFF' && !isDark) return { ...stroke, color: '#000000' }
+            if (stroke.color === '#000000' && isDark) return { ...stroke, color: '#FFFFFF' }
             return stroke
         })
     }, [mounted, resolvedTheme])
@@ -95,7 +90,6 @@ export default function HeroPlatform() {
             if (!drawingEnabledRef.current) return
             if ('button' in e && e.button !== 0) return
             if ((e.target as HTMLElement).closest('button, a, input')) return
-
             isDrawing = true
             const coords = getCoordinates(e)
             strokesRef.current.push({ points: [{ x: coords.x, y: coords.y }], color: colorRef.current, width: lineWidthRef.current })
@@ -104,11 +98,9 @@ export default function HeroPlatform() {
         const moveDrawing = (e: MouseEvent | TouchEvent) => {
             if (!isDrawing || !drawingEnabledRef.current) return
             if (e.cancelable) e.preventDefault()
-
             const coords = getCoordinates(e)
             const currentStroke = strokesRef.current[strokesRef.current.length - 1]
             if (!currentStroke) return
-
             const lastPoint = currentStroke.points[currentStroke.points.length - 1]
             if (Math.hypot(coords.x - lastPoint.x, coords.y - lastPoint.y) > 3) {
                 currentStroke.points.push({ x: coords.x, y: coords.y })
@@ -119,23 +111,19 @@ export default function HeroPlatform() {
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height)
-
             strokesRef.current.forEach(stroke => {
                 if (stroke.points.length < 2) return
                 ctx.beginPath()
                 ctx.lineCap = 'round'
                 ctx.lineJoin = 'round'
                 ctx.lineWidth = stroke.width
-
                 const hex = stroke.color.replace('#', '')
                 const r = parseInt(hex.substring(0, 2), 16)
                 const g = parseInt(hex.substring(2, 4), 16)
                 const b = parseInt(hex.substring(4, 6), 16)
-
                 ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.95)`
                 ctx.shadowBlur = 4
                 ctx.shadowColor = `rgba(${r}, ${g}, ${b}, 0.6)`
-
                 ctx.moveTo(stroke.points[0].x, stroke.points[0].y)
                 for (let i = 1; i < stroke.points.length; i++) {
                     const xc = (stroke.points[i-1].x + stroke.points[i].x) / 2
@@ -147,31 +135,18 @@ export default function HeroPlatform() {
             requestAnimationFrame(animate)
         }
 
-        window.addEventListener('mousedown', startDrawing)
-        window.addEventListener('mousemove', moveDrawing)
-        window.addEventListener('mouseup', stopDrawing)
-        window.addEventListener('touchstart', startDrawing, { passive: false })
-        window.addEventListener('touchmove', moveDrawing, { passive: false })
-        window.addEventListener('touchend', stopDrawing)
+        window.addEventListener('mousedown', startDrawing); window.addEventListener('mousemove', moveDrawing); window.addEventListener('mouseup', stopDrawing)
+        window.addEventListener('touchstart', startDrawing, { passive: false }); window.addEventListener('touchmove', moveDrawing, { passive: false }); window.addEventListener('touchend', stopDrawing)
         window.addEventListener('resize', updateCanvasSize)
         const animId = requestAnimationFrame(animate)
-
         return () => {
-            window.removeEventListener('mousedown', startDrawing)
-            window.removeEventListener('mousemove', moveDrawing)
-            window.removeEventListener('mouseup', stopDrawing)
-            window.removeEventListener('touchstart', startDrawing)
-            window.removeEventListener('touchmove', moveDrawing)
-            window.removeEventListener('touchend', stopDrawing)
-            window.removeEventListener('resize', updateCanvasSize)
-            cancelAnimationFrame(animId)
+            window.removeEventListener('mousedown', startDrawing); window.removeEventListener('mousemove', moveDrawing); window.removeEventListener('mouseup', stopDrawing)
+            window.removeEventListener('touchstart', startDrawing); window.removeEventListener('touchmove', moveDrawing); window.removeEventListener('touchend', stopDrawing)
+            window.removeEventListener('resize', updateCanvasSize); cancelAnimationFrame(animId)
         }
     }, [])
 
-    const clearCanvas = () => {
-        strokesRef.current = []
-    }
-
+    const clearCanvas = () => { strokesRef.current = [] }
     const isDark = mounted && resolvedTheme === 'dark'
 
     return (
@@ -180,133 +155,100 @@ export default function HeroPlatform() {
             
             {/* Palette Button */}
             <Button
-                onClick={(e) => {
-                    e.stopPropagation()
-                    setShowPalette(!showPalette)
-                }}
+                onClick={(e) => { e.stopPropagation(); setShowPalette(!showPalette) }}
                 size="lg"
-                className="absolute top-6 right-6 z-50 bg-[#dc2626] hover:bg-[#b91c1c] rounded-full h-14 w-14 p-0 shadow-lg" 
+                className="absolute top-6 right-6 z-40 bg-[#dc2626] hover:bg-[#b91c1c] rounded-full h-14 w-14 p-0 shadow-lg" 
             >
                 <Palette className="h-6 w-6 text-white" />
             </Button>
 
+            {/* Pen Toggle Button */}
+            <Button
+                onClick={(e) => { e.stopPropagation(); setDrawingEnabled(!drawingEnabled) }}
+                size="lg"
+                className={`absolute top-22 right-8 z-40 rounded-full h-10 w-10 p-0 shadow-lg transition-all ${drawingEnabled ? 'bg-green-600' : 'bg-[#dc2626]'}`}
+            >
+                <Pen className="h-6 w-6 text-white" />
+            </Button>
+
             {/* Palette Panel */}
             {showPalette && (
-                <div className="absolute top-24 right-6 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 border border-gray-200 dark:border-gray-700 z-50 animate-in fade-in slide-in-from-bottom-4 duration-200">
+                <div className="absolute top-40 right-6 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 border border-gray-200 dark:border-gray-700 z-50 animate-in fade-in slide-in-from-bottom-4 duration-200">
                     <div className="space-y-4 min-w-[200px]">
                         <div>
                             <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Couleur</p>
                             <div className="grid grid-cols-4 gap-2">
                                 {colors.map((c) => {
-                                    // In dark mode, show white instead of black
                                     const displayColor = (c === '#000000' && isDark) ? '#FFFFFF' : c
-                                    const isSelected = color === displayColor
-                                    
                                     return (
                                         <button
                                             key={c}
-                                            onClick={(e) => {
-                                                e.stopPropagation()
-                                                setColor(displayColor)
-                                            }}
-                                            className={`h-10 w-10 rounded-lg transition-all hover:scale-110 ${
-                                                isSelected ? 'ring-2 ring-[#dc2626] ring-offset-2 scale-110' : ''
-                                            } ${displayColor === '#FFFFFF' ? 'border border-gray-300 dark:border-gray-600' : ''}`}
+                                            onClick={(e) => { e.stopPropagation(); setColor(displayColor) }}
+                                            className={`h-10 w-10 rounded-lg transition-all hover:scale-110 ${color === displayColor ? 'ring-2 ring-[#dc2626] ring-offset-2 scale-110' : ''}`}
                                             style={{ backgroundColor: displayColor }}
                                         />
                                     )
                                 })}
                             </div>
                         </div>
-
-                        <div>
-                            <p className="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Taille</p>
-                            <input
-                                type="range"
-                                min="1"
-                                max="20"
-                                value={lineWidth}
-                                onChange={(e) => setLineWidth(Number(e.target.value))}
-                                className="w-full accent-[#dc2626]"
-                            />
-                            <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                <span>Fin</span>
-                                <span>Épais</span>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-2 pt-2 border-t border-gray-200 dark:border-gray-700">
-                            <Button
-                                onClick={(e) => {
-                                    e.stopPropagation()
-                                    clearCanvas()
-                                }}
-                                variant="outline"
-                                size="sm"
-                                className="flex-1"
-                            >
-                                <Trash2 className="h-4 w-4 mr-2" />
-                                Effacer
-                            </Button>
-                        </div>
+                        <Button onClick={(e) => { e.stopPropagation(); clearCanvas() }} variant="outline" size="sm" className="w-full">
+                            <Trash2 className="h-4 w-4 mr-2" /> Effacer
+                        </Button>
                     </div>
                 </div>
             )}
 
-            <section className="relative overflow-hidden min-h-[100vh]">
+            <section className="relative overflow-hidden min-h-[100vh] flex items-center">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="container px-4 py-20 md:py-32 relative">
-                    <div className="max-w-6xl mx-auto">
+                
+                
+                
+
+                <div className="container px-4 py-20 relative z-10">
+                    <div className="max-w-4xl">
                         <motion.h1 
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="font-display text-5xl md:text-7xl font-bold mb-8 leading-[0.95] tracking-tight text-foreground"
+                            className="text-5xl md:text-8xl font-bold mb-8 leading-[0.95] tracking-tight text-foreground"
                         >
                             Captivez vos étudiants
                             <br />
-                            <span className="text-[var(--color-primary)]">avec l'interactivité</span>
+                            <span className="text-[#dc2626]">avec l'interactivité</span>
                         </motion.h1>
                         
                         <motion.p 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }} 
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-muted-foreground mb-8 max-w-2xl"
+                            className="text-xl text-muted-foreground mb-8 max-w-xl"
                         >
                             Des écrans tactiles qui transforment chaque leçon en expérience mémorable. 
-                            Dessinez, annotez et collaborez en temps réel pour maintenir l'attention de tous les élèves.
+                            Dessinez, annotez et collaborez en temps réel.
                         </motion.p>
 
-                        <motion.div 
-                            initial={{ opacity: 0, y: 20 }} 
-                            animate={{ opacity: 1, y: 0 }} 
-                            transition={{ delay: 0.3 }} 
-                            className="flex flex-col sm:flex-row gap-4 mb-20"
-                        >
-                            <Button asChild size="lg" className="bg-[var(--color-primary)] text-white text-lg px-8 h-14">
-                                <Link href="/demo">Réserver une démo en classe</Link>
+                        <div className="flex flex-col sm:flex-row gap-4 mb-20">
+                            <Button asChild size="lg" className="bg-[#dc2626] text-white hover:bg-[#b91c1c] text-lg px-8 h-14">
+                                <Link href="/demo">Réserver une démo</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2">
-                                <Link href="/education/solutions">Voir les solutions éducatives</Link>
+                                <Link href="/solutions">Nos solutions</Link>
                             </Button>
-                        </motion.div>
+                        </div>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
-                                { val: "92%", label: "Engagement étudiant" },
-                                { val: "2h", label: "Formation enseignant" },
+                                { val: "92%", label: "Engagement" },
+                                { val: "2h", label: "Formation" },
                                 { val: "K-12", label: "Tous niveaux" },
-                                { val: "24/7", label: "Support dédié" }
+                                { val: "24/7", label: "Support" }
                             ].map((stat, i) => (
                                 <motion.div 
                                     key={i} 
-                                    initial={{ opacity: 0, y: 20 }} 
+                                    initial={{ opacity: 0, y: 10 }} 
                                     animate={{ opacity: 1, y: 0 }} 
-                                    transition={{ delay: 0.4 + i * 0.1 }} 
-                                    className="bg-card rounded-xl p-6 border border-border shadow-sm"
+                                    transition={{ delay: 0.5 + i * 0.1 }} 
+                                    className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border shadow-sm"
                                 >
-                                    <div className="text-3xl font-bold text-[var(--color-primary)] mb-1">{stat.val}</div>
+                                    <div className="text-3xl font-bold text-[#dc2626] mb-1">{stat.val}</div>
                                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                                 </motion.div>
                             ))}

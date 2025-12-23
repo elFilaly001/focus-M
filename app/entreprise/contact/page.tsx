@@ -6,8 +6,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail } from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us - FocusTech",
-  description: "Get in touch with FocusTech",
+  title: "Contact - Focus M",
+  description: "Contactez Focus M",
 }
 
 export default function ContactPage() {
@@ -20,10 +20,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Get in <span className="text-[#dc2626]">Touch</span>
+              Contactez-<span className="text-[#dc2626]">nous</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Des questions ? Nous serions ravis de vous répondre. Envoyez-nous un message et nous répondrons dès que possible.
             </p>
           </div>
         </div>
@@ -35,36 +35,36 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div>
-              <h2 className="font-display text-3xl font-bold mb-6">Send us a Message</h2>
+              <h2 className="font-display text-3xl font-bold mb-6">Envoyez-nous un message</h2>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">First Name</label>
-                    <Input placeholder="John" />
+                    <label className="block text-sm font-medium mb-2">Prénom</label>
+                    <Input placeholder="Jean" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Last Name</label>
-                    <Input placeholder="Doe" />
+                    <label className="block text-sm font-medium mb-2">Nom</label>
+                    <Input placeholder="Dupont" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="john@example.com" />
+                  <label className="block text-sm font-medium mb-2">E-mail</label>
+                  <Input type="email" placeholder="jean@example.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
+                  <label className="block text-sm font-medium mb-2">Téléphone</label>
                   <Input type="tel" placeholder="+1 (555) 123-4567" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Company</label>
-                  <Input placeholder="Your Company" />
+                  <label className="block text-sm font-medium mb-2">Société</label>
+                  <Input placeholder="Votre entreprise" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Message</label>
-                  <Textarea placeholder="Tell us about your project..." rows={5} />
+                  <Textarea placeholder="Parlez-nous de votre projet..." rows={5} />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white">
-                  Send Message
+                  Envoyer le message
                 </Button>
               </form>
             </div>
@@ -72,10 +72,10 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-3xl font-bold mb-6">Contact Information</h2>
+                <h2 className="font-display text-3xl font-bold mb-6">Informations de contact</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Reach out to us through any of these channels. Our team is ready to help you find the perfect
-                  interactive display solution.
+                  Contactez-nous via l'un de ces canaux. Notre équipe est prête à vous aider à trouver la solution
+                  d'écran interactif idéale.
                 </p>
               </div>
 
@@ -85,9 +85,9 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
+                    <h3 className="font-semibold mb-1">Téléphone</h3>
                     <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm EST</p>
+                    <p className="text-sm text-muted-foreground">Lun-Ven 9h-18h (EST)</p>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
+                    <h3 className="font-semibold mb-1">E-mail</h3>
                     <p className="text-muted-foreground">info@focustech.com</p>
                     <p className="text-muted-foreground">support@focustech.com</p>
                   </div>
@@ -107,25 +107,25 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Headquarters</h3>
+                    <h3 className="font-semibold mb-1">Siège social</h3>
                     <p className="text-muted-foreground">123 Tech Boulevard</p>
                     <p className="text-muted-foreground">San Francisco, CA 94107</p>
-                    <p className="text-muted-foreground">United States</p>
+                    <p className="text-muted-foreground">États-Unis</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-8 border-t border-border">
-                <h3 className="font-semibold mb-4">Regional Offices</h3>
+                <h3 className="font-semibold mb-4">Bureaux régionaux</h3>
                 <div className="space-y-3 text-sm">
                   <p className="text-muted-foreground">
-                    <strong>Europe:</strong> London, UK
+                    <strong>Europe :</strong> Londres, Royaume-Uni
                   </p>
                   <p className="text-muted-foreground">
-                    <strong>Asia:</strong> Singapore
+                    <strong>Asie :</strong> Singapour
                   </p>
                   <p className="text-muted-foreground">
-                    <strong>Middle East:</strong> Dubai, UAE
+                    <strong>Moyen-Orient :</strong> Dubaï, ÉAU
                   </p>
                 </div>
               </div>

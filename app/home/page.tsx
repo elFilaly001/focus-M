@@ -89,7 +89,7 @@ export default function DiagonalSplitSection() {
                             transition={{ duration: 0.3 }}
                         >
                             <Building2 className="h-20 w-20 mx-auto mb-6" />
-                            <h2 className="text-6xl font-bold mb-4">Entreprises</h2>
+                            <h2 className="text-6xl font-bold mb-4">Pro</h2>
                             <p className="text-xl opacity-90 mb-6">Solutions professionnelles</p>
                             <div className="inline-flex items-center gap-2 font-bold">
                                 Découvrir <ArrowRight className="h-5 w-5" />

@@ -39,60 +39,64 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-            <Link href={getAssociatLink('/home')} className="flex items-center space-x-2">
-              <img src={logoSrc} alt="logo" className="h-18 mr-2" />
-            </Link>
-        
+          <Link href={getAssociatLink('/home')} className="flex items-center space-x-2">
+            <img src={logoSrc} alt="logo" className="h-18 mr-2" />
+          </Link>
+
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
+            <Link
               href={getAssociatLink('/home')}
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${
-                pathname?.includes('/home') ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/home') ? 'text-[#dc2626]' : ''
+                }`}
             >
               Accueil
             </Link>
 
-            <Link 
-              href= {getAssociatLink('/solutions')} 
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${
-                pathname?.includes('/solutions') ? 'text-[#dc2626]' : ''
-              }`}
+            <Link
+              href={getAssociatLink('/solutions')}
+              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/solutions') ? 'text-[#dc2626]' : ''
+                }`}
             >
               Solutions
             </Link>
 
-            <Link 
-              href={getAssociatLink('/products')} 
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${
-                pathname?.includes('/products') ? 'text-[#dc2626]' : ''
-              }`}
+            <Link
+              href={getAssociatLink('/products')}
+              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
+                }`}
             >
               Produits
             </Link>
-            <Link 
-              href={getAssociatLink('/about')} 
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${
-                pathname === '/about' ? 'text-[#dc2626]' : ''
-              }`}
+            {pathname?.includes('/education') ? (
+              <Link
+                href={getAssociatLink('/products')}
+                className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
+                  }`}
+              >
+                M-club
+              </Link>
+            ) : null}
+            <Link
+              href={getAssociatLink('/about')}
+              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname === '/about' ? 'text-[#dc2626]' : ''
+                }`}
             >
               À propos
             </Link>
-            <Link 
+            <Link
               href={getAssociatLink('/contact')}
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${
-                pathname === '/contact' ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname === '/contact' ? 'text-[#dc2626]' : ''
+                }`}
             >
               Contact
             </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => setTheme(mounted && resolvedTheme === 'dark' ? 'light' : 'dark')} 
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(mounted && resolvedTheme === 'dark' ? 'light' : 'dark')}
               aria-label="Toggle theme"
             >
               {mounted && (resolvedTheme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />)}
@@ -115,19 +119,17 @@ export function Header() {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               href={getAssociatLink('/home')}
-              className={`text-sm font-medium hover:text-[#dc2626] ${
-                pathname === '/' ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/' ? 'text-[#dc2626]' : ''
+                }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Accueil
             </Link>
 
             <Link
-              href= {getAssociatLink('/solutions')}
-              className={`text-sm font-medium hover:text-[#dc2626] ${
-                pathname?.includes('/entreprise') || pathname?.includes('/education') ? 'text-[#dc2626]' : ''
-              }`}
+              href={getAssociatLink('/solutions')}
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname?.includes('/entreprise') || pathname?.includes('/education') ? 'text-[#dc2626]' : ''
+                }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Solutions
@@ -135,37 +137,34 @@ export function Header() {
 
             <Link
               href="/products"
-              className={`text-sm font-medium hover:text-[#dc2626] ${
-                pathname === '/products' ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/products' ? 'text-[#dc2626]' : ''
+                }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Produits
             </Link>
             <Link
               href="/about"
-              className={`text-sm font-medium hover:text-[#dc2626] ${
-                pathname === '/about' ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/about' ? 'text-[#dc2626]' : ''
+                }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               À propos
             </Link>
             <Link
               href="/contact"
-              className={`text-sm font-medium hover:text-[#dc2626] ${
-                pathname === '/contact' ? 'text-[#dc2626]' : ''
-              }`}
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/contact' ? 'text-[#dc2626]' : ''
+                }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
 
             <div className="flex items-center justify-between pt-4">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                onClick={() => setTheme(mounted && resolvedTheme === 'dark' ? 'light' : 'dark')} 
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(mounted && resolvedTheme === 'dark' ? 'light' : 'dark')}
                 aria-label="Toggle theme"
               >
                 {mounted && (resolvedTheme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />)}
