@@ -115,7 +115,7 @@ export function Header() {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               href={getAssociatLink('/home')}
-              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/' ? 'text-[#dc2626]' : ''
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname?.includes('/home') ? 'text-[#dc2626]' : ''
                 }`}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -124,31 +124,36 @@ export function Header() {
 
             <Link
               href={getAssociatLink('/solutions')}
-              className={`text-sm font-medium hover:text-[#dc2626] ${pathname?.includes('/entreprise') || pathname?.includes('/education') ? 'text-[#dc2626]' : ''
+              className={`text-sm font-medium hover:text-[#dc2626] ${pathname?.includes('/solutions') ? 'text-[#dc2626]' : ''
                 }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Solutions
             </Link>
 
+            {pathname?.includes('/education') && (
+              <Link
+                href={getAssociatLink('/products')}
+                className={`text-sm font-medium hover:text-[#dc2626] ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
+                  }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="flex flex-row gap-1">
+                <img src="/LOGO/Brandbook-FOCUS-M-1.png" alt="logo" className="w-5" />
+                club
+                </div>
+              </Link>
+            )}
             <Link
-              href="/products"
-              className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/products' ? 'text-[#dc2626]' : ''
-                }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Produits
-            </Link>
-            <Link
-              href="/about"
+              href={getAssociatLink('/faq')}
               className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/about' ? 'text-[#dc2626]' : ''
                 }`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              À propos
+              FAQ
             </Link>
             <Link
-              href="/contact"
+              href={getAssociatLink('/contact')}
               className={`text-sm font-medium hover:text-[#dc2626] ${pathname === '/contact' ? 'text-[#dc2626]' : ''
                 }`}
               onClick={() => setMobileMenuOpen(false)}
