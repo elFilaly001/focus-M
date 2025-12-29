@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Award, Users, Globe, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { useCountUp } from "@/hooks/use-countup"
 
 export function AboutIntroSection() {
   return (
@@ -61,7 +62,10 @@ export function AboutIntroSection() {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Award className="h-6 w-6 text-[var(--color-primary)]" />
-                      <div className="text-3xl font-bold text-[var(--color-primary)]">15+</div>
+                      {(() => {
+                        const { value, ref } = useCountUp({ end: 15, duration: 1200, startOnView: true })
+                        return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
+                      })()}
                     </div>
                     <p className="text-sm text-muted-foreground">Années d'expertise</p>
                   </motion.div>
@@ -75,7 +79,10 @@ export function AboutIntroSection() {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Users className="h-6 w-6 text-[var(--color-primary)]" />
-                      <div className="text-3xl font-bold text-[var(--color-primary)]">1000+</div>
+                      {(() => {
+                        const { value, ref } = useCountUp({ end: 1000, duration: 1200, startOnView: true })
+                        return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
+                      })()}
                     </div>
                     <p className="text-sm text-muted-foreground">Clients satisfaits</p>
                   </motion.div>
@@ -89,7 +96,10 @@ export function AboutIntroSection() {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Globe className="h-6 w-6 text-[var(--color-primary)]" />
-                      <div className="text-3xl font-bold text-[var(--color-primary)]">50+</div>
+                      {(() => {
+                        const { value, ref } = useCountUp({ end: 50, duration: 1200, startOnView: true })
+                        return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
+                      })()}
                     </div>
                     <p className="text-sm text-muted-foreground">Pays desservis</p>
                   </motion.div>
@@ -103,7 +113,10 @@ export function AboutIntroSection() {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <CheckCircle className="h-6 w-6 text-[var(--color-primary)]" />
-                      <div className="text-3xl font-bold text-[var(--color-primary)]">98%</div>
+                      {(() => {
+                        const { value, ref } = useCountUp({ end: 98, duration: 1200, startOnView: true })
+                        return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}%</div>
+                      })()}
                     </div>
                     <p className="text-sm text-muted-foreground">Taux de satisfaction</p>
                   </motion.div>

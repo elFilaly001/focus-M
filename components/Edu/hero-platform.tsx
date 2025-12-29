@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
 import { Margarine } from "next/font/google"
+import { useCountUp } from "@/hooks/use-countup"
 
 const margarine = Margarine({
   weight: "400",
@@ -248,18 +249,28 @@ export default function HeroPlatform() {
                                 { val: "2h", label: "Formation" },
                                 { val: "K-12", label: "Tous niveaux" },
                                 { val: "24/7", label: "Support" }
-                            ].map((stat, i) => (
-                                <motion.div 
-                                    key={i} 
-                                    initial={{ opacity: 0, y: 10 }} 
-                                    animate={{ opacity: 1, y: 0 }} 
-                                    transition={{ delay: 0.5 + i * 0.1 }} 
-                                    className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border shadow-sm"
-                                >
-                                    <div className="text-3xl font-bold text-[#dc2626] mb-1">{stat.val}</div>
-                                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                                </motion.div>
-                            ))}
+                            ].map((stat, i) => {
+                                // Only animate numbers (with optional % or +)
+                                const match = String(stat.val).match(/^(\d+)([\+%]?)$/)
+                                const isAnim = !!match
+                                const end = match ? Number(match[1]) : 0
+                                const suffix = match ? match[2] : ''
+                                const { value, ref } = useCountUp({ end, duration: 1200, startOnView: true })
+                                return (
+                                    <motion.div 
+                                        key={i} 
+                                        initial={{ opacity: 0, y: 10 }} 
+                                        animate={{ opacity: 1, y: 0 }} 
+                                        transition={{ delay: 0.5 + i * 0.1 }} 
+                                        className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border shadow-sm"
+                                    >
+                                        <div className="text-3xl font-bold text-[#dc2626] mb-1" ref={isAnim ? ref : undefined}>
+                                            {isAnim ? value + suffix : stat.val}
+                                        </div>
+                                        <div className="text-sm text-muted-foreground">{stat.label}</div>
+                                    </motion.div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>

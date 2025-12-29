@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { useCountUp } from "@/hooks/use-countup"
 
 export default function HeroPlatformEnterprise() {
     return (
@@ -67,18 +68,28 @@ export default function HeroPlatformEnterprise() {
                                 { val: "7 jours", label: "Délai typique" },
                                 { val: "Toutes", label: "Tailles" },
                                 { val: "50+", label: "Pays" }
-                            ].map((stat, i) => (
-                                <motion.div 
-                                    key={i} 
-                                    initial={{ opacity: 0, y: 20 }} 
-                                    animate={{ opacity: 1, y: 0 }} 
-                                    transition={{ delay: 0.4 + i * 0.1 }} 
-                                    className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-lg"
-                                >
-                                    <div className="text-3xl font-bold text-[#dc2626] mb-1">{stat.val}</div>
-                                    <div className="text-sm text-white/80">{stat.label}</div>
-                                </motion.div>
-                            ))}
+                            ].map((stat, i) => {
+                                // Extract number and suffix for animation
+                                const match = String(stat.val).match(/^(\d+)([\+%]?)$/)
+                                const isAnim = !!match
+                                const end = match ? Number(match[1]) : 0
+                                const suffix = match ? match[2] : ''
+                                const { value, ref } = useCountUp({ end, duration: 1200, startOnView: true })
+                                return (
+                                    <motion.div 
+                                        key={i} 
+                                        initial={{ opacity: 0, y: 20 }} 
+                                        animate={{ opacity: 1, y: 0 }} 
+                                        transition={{ delay: 0.4 + i * 0.1 }} 
+                                        className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-lg"
+                                    >
+                                        <div className="text-3xl font-bold text-[#dc2626] mb-1" ref={isAnim ? ref : undefined}>
+                                            {isAnim ? value + suffix : stat.val}
+                                        </div>
+                                        <div className="text-sm text-white/80">{stat.label}</div>
+                                    </motion.div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
