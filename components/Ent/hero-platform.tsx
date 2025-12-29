@@ -8,15 +8,15 @@ export default function HeroPlatformEnterprise() {
         <div className="relative bg-background min-h-screen overflow-hidden">
             {/* Video Background */}
             <div className="absolute inset-0 z-0">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    className="w-full h-full object-cover"
-                >
-                    <source src="https://media.istockphoto.com/id/1036766612/video/african-american-business-man-holding-a-presentation-in-the-glass-conference-room.mp4?s=mp4-640x640-is&k=20&c=7S7-7Ef0aNIM_DCXqgP7fcGxzpWCVAs7zcad0PbN4sU=" type="video/mp4" />
-                </video>
+                    <video 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="https://media.istockphoto.com/id/1036766612/video/african-american-business-man-holding-a-presentation-in-the-glass-conference-room.mp4?s=mp4-640x640-is&k=20&c=7S7-7Ef0aNIM_DCXqgP7fcGxzpWCVAs7zcad0PbN4sU=" type="video/mp4" />
+                    </video>
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
             </div>

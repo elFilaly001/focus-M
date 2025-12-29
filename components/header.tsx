@@ -60,20 +60,16 @@ export function Header() {
               Solutions
             </Link>
 
-            <Link
-              href={getAssociatLink('/products')}
-              className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
-                }`}
-            >
-              Produits
-            </Link>
             {pathname?.includes('/education') ? (
               <Link
                 href={getAssociatLink('/products')}
                 className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
                   }`}
               >
-                M-club
+                <div className="flex flex-row gap-1">
+                <img src="/LOGO/Brandbook-FOCUS-M-1.png" alt="logo" className="w-5" />
+                club
+                </div>
               </Link>
             ) : null}
             <Link

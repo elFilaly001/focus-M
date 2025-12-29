@@ -32,34 +32,12 @@ export function SectorToggle() {
           >
             <button
               role="tab"
-              aria-pressed={sector === 'enterprise'}
-              onClick={() => handleSectorChange('enterprise')}
-              className={`relative px-5 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C52133] ${
-                sector === 'enterprise'
-                  ? 'text-white'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-              }`}
-            >
-              {sector === 'enterprise' && (
-                <motion.span
-                  layoutId="sector-bg"
-                  className="absolute inset-0 rounded-md bg-gradient-to-r from-[#C52133] to-[#b71c27] shadow-md"
-                  transition={transition}
-                />
-              )}
-              <Building2 className="h-4 w-4 relative z-10" />
-              <span className="relative z-10">Enterprise</span>
-            </button>
-
-            <button
-              role="tab"
               aria-pressed={sector === 'education'}
               onClick={() => handleSectorChange('education')}
-              className={`relative px-5 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C52133] ${
-                sector === 'education'
+              className={`relative px-5 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C52133] ${sector === 'education'
                   ? 'text-white'
                   : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-              }`}
+                }`}
             >
               {sector === 'education' && (
                 <motion.span
@@ -70,6 +48,26 @@ export function SectorToggle() {
               )}
               <GraduationCap className="h-4 w-4 relative z-10" />
               <span className="relative z-10">Education</span>
+            </button>
+
+            <button
+              role="tab"
+              aria-pressed={sector === 'enterprise'}
+              onClick={() => handleSectorChange('enterprise')}
+              className={`relative px-5 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C52133] ${sector === 'enterprise'
+                  ? 'text-white'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                }`}
+            >
+              {sector === 'enterprise' && (
+                <motion.span
+                  layoutId="sector-bg"
+                  className="absolute inset-0 rounded-md bg-gradient-to-r from-[#C52133] to-[#b71c27] shadow-md"
+                  transition={transition}
+                />
+              )}
+              <Building2 className="h-4 w-4 relative z-10" />
+              <span className="relative z-10">Enterprise</span>
             </button>
           </div>
         </div>

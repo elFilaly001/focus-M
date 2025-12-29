@@ -49,7 +49,7 @@ export function NewsletterPopup() {
               <div className="w-[150px] mb-4" >
                 <img src="/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png" alt="Newsletter" className="w-full h-full object-contain" />
               </div>
-              <h2 className="font-display text-black text-2xl font-bold mb-2">Restez informé</h2>
+              <h2 className="font-display text-black text-2xl font-bold mb-2">Participer à notre tombola</h2>
               <p className="text-muted-foreground text-sm">Recevez les dernières nouvelles sur nos écrans tactiles.</p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
