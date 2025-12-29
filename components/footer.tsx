@@ -107,32 +107,32 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Produits</h3>
+            <h3 className="font-semibold text-foreground mb-4">Solutions</h3>
             <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/entreprise/solutions" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Solutions Entreprise
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/education/solutions" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Solutions Éducation
+                </Link>
+              </li>
               <li>
                 <Link 
                   href="/products/interactive-displays" 
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
                   Écrans Interactifs
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/products/software" 
-                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
-                >
-                  Logiciels
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/products/accessories" 
-                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
-                >
-                  Accessoires
                 </Link>
               </li>
               <li>
