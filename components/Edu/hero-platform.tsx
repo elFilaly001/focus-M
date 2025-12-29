@@ -206,18 +206,18 @@ export default function HeroPlatform() {
                 </div>
             )}
 
-            <section className="relative overflow-hidden min-h-[100vh] flex items-center">
+            <section className="relative overflow-hidden min-h-[100vh] flex items-start md:items-center">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
                 
                 
                 
 
-                <div className="container px-4 py-20 relative z-10">
+                <div className="container px-4 pt-32 pb-20 md:py-20 relative z-10">
                     <div className="max-w-4xl">
                         <motion.h1 
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="text-5xl md:text-8xl font-bold mb-8 leading-[0.95] tracking-tight text-foreground"
+                            className="text-4xl md:text-7xl font-bold mt-32 mb-8 leading-[0.95] tracking-tight text-foreground"
                         >
                             Captivez vos étudiants
                             <br />
@@ -227,7 +227,7 @@ export default function HeroPlatform() {
                         <motion.p 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }} 
-                            className="text-xl text-muted-foreground mb-8 max-w-xl"
+                            className="text-xl text-muted-foreground mb-8 max-w-xl hidden md:block"
                         >
                             Des écrans tactiles qui transforment chaque leçon en expérience mémorable. 
                             Dessinez, annotez et collaborez en temps réel.

@@ -111,7 +111,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="md:hidden absolute top-full left-0 right-0 z-50 border-t border-border bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               href={getAssociatLink('/home')}
