@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* <Header /> */}
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-background dark:to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
@@ -29,7 +29,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white dark:bg-gray-950">
+      <section className="py-20 bg-white dark:bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}

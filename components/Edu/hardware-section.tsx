@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function HardwareSection() {
   return (
-    <section className="py-32 bg-white dark:bg-slate-900">
+    <section className="py-32 bg-white dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
@@ -18,9 +18,9 @@ export default function HardwareSection() {
           <div className="grid md:grid-cols-2 gap-8">
             <Link
               href="/products"
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 border-2 border-border dark:border-neutral-700 hover:border-[#dc2626]/30 transition-all duration-300 p-8"
+              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-white dark:from-background dark:to-background border-2 border-border dark:border-neutral-700 hover:border-[#dc2626]/30 transition-all duration-300 p-8"
             >
-              <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-100 dark:from-slate-700 dark:to-slate-800 rounded-xl mb-6 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-100 dark:from-background dark:to-background rounded-xl mb-6 overflow-hidden">
                 <img src="/modern-tech-display-monitor.jpg" alt="Touch X2" className="w-full h-full object-cover" />
               </div>
               <div className="flex items-start justify-between mb-4">
@@ -39,9 +39,9 @@ export default function HardwareSection() {
 
             <Link
               href="/products"
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 border-2 border-border dark:border-neutral-700 hover:border-[#dc2626]/30 transition-all duration-300 p-8"
+              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-white dark:from-background dark:to-background border-2 border-border dark:border-neutral-700 hover:border-[#dc2626]/30 transition-all duration-300 p-8"
             >
-              <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-100 dark:from-slate-700 dark:to-slate-800 rounded-xl mb-6 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-100 dark:from-background dark:to-background rounded-xl mb-6 overflow-hidden">
                 <img src="/ultrawide-tech-monitor-display.jpg" alt="Touch Ultra" className="w-full h-full object-cover" />
               </div>
               <div className="flex items-start justify-between mb-4">
