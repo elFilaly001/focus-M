@@ -158,7 +158,7 @@ export default function HeroPlatform() {
     const isDark = mounted && resolvedTheme === 'dark'
 
     return (
-        <div ref={containerRef} className="relative select-none touch-none bg-background min-h-screen overflow-auto">
+        <div ref={containerRef} className="relative select-none bg-background min-h-screen overflow-auto">
             <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-20" />
             
             {/* Palette Button */}
