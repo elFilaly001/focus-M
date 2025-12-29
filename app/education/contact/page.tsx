@@ -1,3 +1,5 @@
+
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -5,21 +7,19 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail } from "lucide-react"
 
-export const metadata = {
-  title: "Contact - Focus M",
-  description: "Contactez Focus M",
-}
+
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
+      {/* <Header /> */}
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Contactez-<span className="text-[#dc2626]">nous</span>
+              Contactez-<span className="text-primary">nous</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Des questions ? Nous serions ravis de vous répondre. Envoyez-nous un message et nous répondrons dès que possible.
@@ -29,7 +29,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <Textarea placeholder="Parlez-nous de votre projet..." rows={5} />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white">
+                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-[#991b1b] text-white">
                   Envoyer le message
                 </Button>
               </form>
@@ -80,8 +80,8 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-[#dc2626]" />
+                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Téléphone</h3>
@@ -91,8 +91,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-[#dc2626]" />
+                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">E-mail</h3>
@@ -102,8 +102,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-[#dc2626]" />
+                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Siège social</h3>

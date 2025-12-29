@@ -157,7 +157,7 @@ export default function HeroPlatform() {
             <Button
                 onClick={(e) => { e.stopPropagation(); setShowPalette(!showPalette) }}
                 size="lg"
-                className="absolute top-6 right-6 z-40 bg-[#dc2626] hover:bg-[#b91c1c] rounded-full h-14 w-14 p-0 shadow-lg" 
+                className="absolute top-6 right-6 md:top-6 md:right-6 z-40 bg-[#dc2626] hover:bg-[#b91c1c] rounded-full h-14 w-14 p-0 shadow-lg" 
             >
                 <Palette className="h-6 w-6 text-white" />
             </Button>
@@ -166,7 +166,7 @@ export default function HeroPlatform() {
             <Button
                 onClick={(e) => { e.stopPropagation(); setDrawingEnabled(!drawingEnabled) }}
                 size="lg"
-                className={`absolute top-22 right-8 z-40 rounded-full h-10 w-10 p-0 shadow-lg transition-all ${drawingEnabled ? 'bg-green-600' : 'bg-[#dc2626]'}`}
+                className={`absolute top-8 right-24 md:top-22 md:right-8 z-40 rounded-full h-10 w-10 p-0 shadow-lg transition-all ${drawingEnabled ? 'bg-green-600' : 'bg-[#dc2626]'}`}
             >
                 <Pen className="h-6 w-6 text-white" />
             </Button>

@@ -1,55 +1,167 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react"
+import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-muted">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
             <div className="mb-4">
               <Image
                 src="/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png"
                 alt="Logo FocusTech"
-                width={200}
-                height={200}
-                className="rounded"
+                width={0}
+                height={0}
+                sizes="64px"
+                className="h-16 w-auto rounded"
+                priority
               />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Solutions d'affichage interactif de nouvelle génération pour les entreprises et l'éducation modernes.
             </p>
+            <div className="flex items-center space-x-3 mt-6">
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-[#dc2626] transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-[#dc2626] transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-[#dc2626] transition-colors"
+                aria-label="Youtube"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="text-muted-foreground hover:text-[#dc2626] transition-colors"
+                aria-label="Linkedin"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
+          {/* Company Links */}
           <div>
-            <h3 className="font-semibold mb-4">Entreprise</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-foreground mb-4">Entreprise</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-[#dc2626]">
+                <Link 
+                  href="/about" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
                   À propos
                 </Link>
               </li>
               <li>
-                <Link href="/references" className="text-sm text-muted-foreground hover:text-[#dc2626]">
+                <Link 
+                  href="/references" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
                   Références
                 </Link>
               </li>
               <li>
-                <Link href="/downloads" className="text-sm text-muted-foreground hover:text-[#dc2626]">
+                <Link 
+                  href="/downloads" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
                   Téléchargements
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/careers" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Carrières
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Products */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Téléphone : +1 (555) 123-4567</li>
-              <li>E-mail : info@focustech.com</li>
+            <h3 className="font-semibold text-foreground mb-4">Produits</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/products/interactive-displays" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Écrans Interactifs
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/products/software" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Logiciels
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/products/accessories" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Accessoires
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/support" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <Phone className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Mail className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
+                <a 
+                  href="mailto:info@focustech.com" 
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  info@focustech.com
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">
+                  123 Avenue Tech<br />
+                  Casablanca, Maroc
+                </span>
+              </li>
               <li className="pt-2">
-                <Link href="/contact" className="text-[#dc2626] hover:text-[#991b1b] font-medium">
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center text-sm font-medium text-[#dc2626] hover:text-[#991b1b] transition-colors"
+                >
                   Contactez-nous →
                 </Link>
               </li>
@@ -57,21 +169,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground">© 2025 FocusTech. Tous droits réservés.</p>
-          <div className="flex items-center space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-[#dc2626]">
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-[#dc2626]">
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-[#dc2626]">
-              <Youtube className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-[#dc2626]">
-              <Linkedin className="h-5 w-5" />
-            </a>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-border gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2025 FocusTech. Tous droits réservés.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link 
+              href="/privacy" 
+              className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+            >
+              Politique de confidentialité
+            </Link>
+            <Link 
+              href="/terms" 
+              className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+            >
+              Conditions d'utilisation
+            </Link>
           </div>
         </div>
       </div>
