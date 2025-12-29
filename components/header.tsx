@@ -73,11 +73,11 @@ export function Header() {
               </Link>
             ) : null}
             <Link
-              href={getAssociatLink('/about')}
+              href={getAssociatLink('/faq')}
               className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname === '/about' ? 'text-[#dc2626]' : ''
                 }`}
             >
-              À propos
+              FAQ
             </Link>
             <Link
               href={getAssociatLink('/contact')}

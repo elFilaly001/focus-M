@@ -11,10 +11,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
@@ -29,7 +29,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="relative h-96 rounded-2xl overflow-hidden">
@@ -60,8 +60,8 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl p-8 text-center">
-              <div className="h-16 w-16 rounded-full bg-[#fef2f2] flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white dark:bg-gray-950 rounded-xl p-8 text-center">
+              <div className="h-16 w-16 rounded-full bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center mx-auto mb-6">
                 <Target className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Innovation</h3>
@@ -70,24 +70,24 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center">
-              <div className="h-16 w-16 rounded-full bg-[#fef2f2] flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white dark:bg-gray-950 rounded-xl p-8 text-center">
+              <div className="h-16 w-16 rounded-full bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Collaboration</h3>
               <p className="text-muted-foreground">Concevoir des outils qui rapprochent les personnes et renforcent le travail d'équipe</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center">
-              <div className="h-16 w-16 rounded-full bg-[#fef2f2] flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white dark:bg-gray-950 rounded-xl p-8 text-center">
+              <div className="h-16 w-16 rounded-full bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Simplicité</h3>
               <p className="text-muted-foreground">Rendre les technologies puissantes accessibles et faciles à utiliser</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center">
-              <div className="h-16 w-16 rounded-full bg-[#fef2f2] flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white dark:bg-gray-950 rounded-xl p-8 text-center">
+              <div className="h-16 w-16 rounded-full bg-[#fef2f2] dark:bg-[#2f1515] flex items-center justify-center mx-auto mb-6">
                 <Award className="h-8 w-8 text-[#dc2626]" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">Excellence</h3>
@@ -98,7 +98,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-4xl font-bold mb-6 text-center">Notre histoire</h2>
