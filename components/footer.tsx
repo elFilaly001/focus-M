@@ -1,17 +1,30 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
 
 export function Footer() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const darkLogo = "/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png"
+  const lightLogo = "/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png"
+  const logoSrc = mounted && resolvedTheme === 'dark' ? darkLogo : lightLogo
   return (
     <footer className="border-t border-border bg-muted">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
               <Image
-                src="/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png"
+                src={logoSrc}
                 alt="Logo FocusTech"
                 width={0}
                 height={0}
