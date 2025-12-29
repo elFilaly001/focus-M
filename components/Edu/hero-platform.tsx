@@ -17,7 +17,7 @@ const colors = ['#000000', '#dc2626', '#2563eb', '#16a34a', '#ca8a04', '#9333ea'
 export default function HeroPlatform() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const containerRef = useRef<HTMLDivElement>(null)
-    const [drawingEnabled, setDrawingEnabled] = useState<boolean>(true)
+    const [drawingEnabled, setDrawingEnabled] = useState<boolean>(false) // Start disabled
     const [showPalette, setShowPalette] = useState(false)
     const [color, setColor] = useState('#000000')
     const [lineWidth, setLineWidth] = useState(5)
@@ -29,6 +29,14 @@ export default function HeroPlatform() {
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => setMounted(true), [])
+
+    // Enable drawing by default on desktop, disable on mobile
+    useEffect(() => {
+        if (mounted) {
+            const isMobile = window.innerWidth < 768
+            setDrawingEnabled(!isMobile)
+        }
+    }, [mounted])
 
     useEffect(() => {
         drawingEnabledRef.current = drawingEnabled
