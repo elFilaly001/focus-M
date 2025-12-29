@@ -11,18 +11,27 @@ export function NewsletterPopup() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 3000)
-    return () => clearTimeout(timer)
+    // Check if user has already seen the popup
+    const hasSeenPopup = localStorage.getItem('newsletter-popup-shown')
+    
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => setIsOpen(true), 3000)
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   const handleClose = (e?: React.MouseEvent | React.TouchEvent) => {
     if (e) e.stopPropagation(); // CRITICAL: Stop drawing events
     setIsOpen(false)
+    // Mark as seen when closed
+    localStorage.setItem('newsletter-popup-shown', 'true')
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitted(true)
+    // Mark as seen when submitted
+    localStorage.setItem('newsletter-popup-shown', 'true')
     setTimeout(() => handleClose(), 2000)
   }
 
