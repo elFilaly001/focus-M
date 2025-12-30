@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Sun, Moon } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { get } from "http"
@@ -14,6 +14,7 @@ export function Header() {
   const { theme, resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
+  const menuRef = useRef<HTMLDivElement>(null)
 
   // useEffect(() => setMounted(true), [])
 
@@ -30,6 +31,22 @@ export function Header() {
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   const darkLogo = "/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png"
   const lightLogo = "/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png"
@@ -111,7 +128,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 z-50 border-t border-border bg-background">
+        <div ref={menuRef} className="md:hidden absolute top-full left-0 right-0 z-50 border-t border-border bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               href={getAssociatLink('/home')}

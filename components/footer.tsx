@@ -183,7 +183,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-border gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-12 pt-8 border-t border-border gap-4">
           <p className="text-sm text-muted-foreground">
             © 2025 FocusTech. Tous droits réservés.
           </p>
