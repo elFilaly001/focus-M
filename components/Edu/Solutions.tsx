@@ -10,21 +10,21 @@ const solutions = [
     title: "Salles de classe",
     description: "Transformez vos cours en expériences interactives captivantes. Dessinez, annotez et collaborez en temps réel avec vos étudiants sur un écran tactile intuitif.",
     features: ["Annotations en direct", "Applications éducatives", "Sauvegarde de leçons"],
-    imagePlaceholder: "classroom-interactive-board.jpg"
+    imagePlaceholder: "/modern-tech-display-monitor.jpg"
   },
   {
     icon: Users,
     title: "Espaces collaboratifs",
     description: "Encouragez le travail d'équipe avec des écrans tactiles multi-utilisateurs. Parfait pour les projets de groupe, les ateliers et les activités collaboratives.",
     features: ["Multi-touch 20 points", "Partage d'écran", "Travail simultané"],
-    imagePlaceholder: "collaborative-learning-space.jpg"
+    imagePlaceholder: "/ultrawide-tech-monitor-display.jpg"
   },
   {
     icon: GraduationCap,
     title: "Amphithéâtres",
     description: "Captez l'attention de grands groupes avec des écrans haute résolution. Idéal pour les présentations, conférences et cours magistraux interactifs.",
     features: ["4K Ultra HD", "Grand format", "Visibilité optimale"],
-    imagePlaceholder: "lecture-hall-display.jpg"
+    imagePlaceholder: "/modern-tech-display-monitor.jpg"
   }
 ]
 
@@ -83,13 +83,14 @@ export function SolutionsEducation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group bg-[var(--color-card)] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border"
               >
-                {/* Image Placeholder */}
+                {/* Solution Image */}
                 <div className="relative aspect-video bg-[var(--color-card-light)] overflow-hidden">
-                  {/* Placeholder content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--color-muted-foreground)]">
-                    <ImageIcon className="h-12 w-12 mb-2 opacity-50" />
-                    <span className="text-xs font-mono opacity-50">{solution.imagePlaceholder}</span>
-                  </div>
+                  <img
+                    src={solution.imagePlaceholder}
+                    alt={solution.title}
+                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
