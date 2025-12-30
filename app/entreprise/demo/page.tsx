@@ -1,4 +1,4 @@
-import { Header } from "@/components/header"
+
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,11 +12,10 @@ export const metadata = {
 
 export default function DemoPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
@@ -30,7 +29,7 @@ export default function DemoPage() {
       </section>
 
       {/* Demo Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Form */}
@@ -99,7 +98,7 @@ export default function DemoPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                     <Clock className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
@@ -111,7 +110,7 @@ export default function DemoPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                     <Users className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
@@ -123,7 +122,7 @@ export default function DemoPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-[#fef2f2] flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                     <Calendar className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
@@ -135,7 +134,7 @@ export default function DemoPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 border border-border">
+              <div className="bg-muted rounded-xl p-8 border border-border">
                 <h3 className="font-display text-xl font-bold mb-4">During Your Demo</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
