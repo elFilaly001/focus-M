@@ -67,45 +67,47 @@ const eduSolutions = [
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-8 py-16 px-4 md:px-12">
-      {eduSolutions.map((item, i) => {
-        const isImageLeft = i % 2 === 0;
-        return (
+    <div className="px-8 md:px-32">
+      <div className="mb-2">
+        <span className="text-xs sm:text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-3 sm:mb-4 block">Solutions interactives</span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#162030] dark:text-white mb-3 sm:mb-4 leading-tight">Des solutions pour chaque salle de classe</h2>
+        <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 max-w-2xl mb-2">Découvrez nos fonctionnalités phares pour dynamiser l'apprentissage, encourager la collaboration et garantir la sécurité dans les environnements éducatifs.</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12">
+        {eduSolutions.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.85, y: 12 }}
+            initial={{ opacity: 0, scale: 0.95, y: 8 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ type: 'spring', stiffness: 140, damping: 18 }}
-            whileHover={{ scale: 1.02, y: -6 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ type: 'spring', stiffness: 70, damping: 20, duration: 0.6 }}
+            whileHover={{ scale: 1.01, y: -2 }}
             style={{ transformOrigin: 'center' }}
-            className={cn(
-              "w-full p-10 md:p-14 bg-white dark:bg-[#1a2233] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-center gap-8",
-              isImageLeft ? "md:flex-row" : "md:flex-row-reverse"
-            )}
+            className={
+              "w-full p-0 md:p-0 bg-white dark:bg-[#162030] border border-gray-100 dark:border-gray-900 rounded-xl shadow transition-shadow flex flex-col items-stretch gap-0"
+            }
           >
             {/* Unsplash image */}
-            <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-gray-100 dark:bg-[#232b3a] rounded-2xl flex items-center justify-center mb-6 md:mb-0 overflow-hidden">
+            <div className="w-full h-48 md:h-56 rounded-t-xl overflow-hidden relative">
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={160}
-                height={160}
-                className="object-cover w-full h-full rounded-2xl"
+                fill
+                className="object-cover w-full h-full rounded-t-xl"
                 loading="lazy"
-                sizes="(min-width: 768px) 10rem, 8rem"
+                sizes="(min-width: 768px) 100vw, 100vw"
                 unoptimized
               />
             </div>
             {/* Icon and content */}
-            <div className="flex-1">
-              <div className="mb-4">{item.icon}</div>
-              <h3 className="text-2xl font-bold mb-3 text-[#162030] dark:text-white">{item.title}</h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">{item.desc}</p>
+            <div className="flex-1 text-center flex flex-col items-center px-6 md:px-8 py-6 md:py-8">
+              <div className="mb-2 flex justify-center">{item.icon}</div>
+              <h3 className="text-lg font-semibold mb-2 text-[#162030] dark:text-white">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-normal">{item.desc}</p>
             </div>
           </motion.div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   )
 }
