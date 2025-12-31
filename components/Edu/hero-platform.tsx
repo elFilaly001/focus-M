@@ -99,8 +99,20 @@ export default function HeroPlatform() {
             if (!drawingEnabledRef.current) return
             if ('button' in e && e.button !== 0) return
             if ((e.target as HTMLElement).closest('button, a, input')) return
-            isDrawing = true
+            // Prevent drawing below the buttons section on mobile screens
+            const isMobile = window.innerWidth < 768
             const coords = getCoordinates(e)
+            if (isMobile) {
+                // Find the bottom of the buttons section
+                const btnSection = container?.querySelector('.mobile-draw-limit') as HTMLElement
+                if (btnSection) {
+                    const btnRect = btnSection.getBoundingClientRect()
+                    const containerRect = container.getBoundingClientRect()
+                    const btnBottom = btnRect.bottom - containerRect.top
+                    if (coords.y > btnBottom) return
+                }
+            }
+            isDrawing = true
             strokesRef.current.push({ points: [{ x: coords.x, y: coords.y }], color: colorRef.current, width: lineWidthRef.current })
         }
 
@@ -108,6 +120,17 @@ export default function HeroPlatform() {
             if (!isDrawing || !drawingEnabledRef.current) return
             if (e.cancelable) e.preventDefault()
             const coords = getCoordinates(e)
+            // Prevent drawing below the buttons section on mobile screens
+            const isMobile = window.innerWidth < 768
+            if (isMobile) {
+                const btnSection = container?.querySelector('.mobile-draw-limit') as HTMLElement
+                if (btnSection) {
+                    const btnRect = btnSection.getBoundingClientRect()
+                    const containerRect = container.getBoundingClientRect()
+                    const btnBottom = btnRect.bottom - containerRect.top
+                    if (coords.y > btnBottom) return
+                }
+            }
             const currentStroke = strokesRef.current[strokesRef.current.length - 1]
             if (!currentStroke) return
             const lastPoint = currentStroke.points[currentStroke.points.length - 1]
@@ -234,7 +257,7 @@ export default function HeroPlatform() {
                             Dessinez, annotez et collaborez en temps réel.
                         </motion.p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 mb-20">
+                        <div className="flex flex-col sm:flex-row gap-4 mb-20 mobile-draw-limit">
                             <Button asChild size="lg" className="bg-[#dc2626] text-white hover:bg-[#b91c1c] text-lg px-8 h-14">
                                 <Link href="/demo">Demander une démo</Link>
                             </Button>
