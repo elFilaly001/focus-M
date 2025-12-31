@@ -21,7 +21,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
   return (
     <section
       className={cn(
-        "w-full flex flex-col-reverse md:flex-row items-stretch justify-between overflow-hidden min-h-screen pb-6 md:pb-10",
+        "w-full flex flex-col-reverse md:flex-row items-stretch justify-between overflow-hidden min-h-screen pb-6 md:pb-10 dark:bg-[#080c13]",
         className
       )}
     >

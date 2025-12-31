@@ -101,22 +101,22 @@ export function ContactHero({ className }: ContactHeroProps) {
               transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="text" placeholder="Prénom" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full" />
-                <input type="text" placeholder="Nom" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full" />
-                <input type="text" placeholder="Pays" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full" />
-                <input type="text" placeholder="Téléphone" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+                <input type="text" placeholder="Prénom" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+                <input type="text" placeholder="Nom" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+                <input type="text" placeholder="Pays" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+                <input type="text" placeholder="Téléphone" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full" />
               </div>
-              <input type="email" placeholder="Adresse e-mail" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+              <input type="email" placeholder="Adresse e-mail" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full" />
               <div>
                 <label className="block text-sm font-medium mb-2">Type de demande</label>
                 <div className="flex flex-wrap gap-2">
-                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Réservation</button>
-                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="true">Général</button>
-                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Entreprise</button>
-                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Autres</button>
+                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Réservation</button>
+                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="true">Général</button>
+                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Entreprise</button>
+                  <button type="button" className="rounded-full border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary data-[active=true]:bg-primary data-[active=true]:text-white" data-active="false">Autres</button>
                 </div>
               </div>
-              <textarea placeholder="Message" rows={4} className="rounded-2xl border px-4 py-2 bg-background/80 focus:outline-none focus:ring-2 focus:ring-primary w-full resize-none" />
+              <textarea placeholder="Message" rows={4} className="rounded-2xl border px-4 py-2 bg-background/80 dark:bg-[#080c13] focus:outline-none focus:ring-2 focus:ring-primary w-full resize-none" />
               <div className="flex items-center gap-2">
                 <input type="checkbox" id="offers" className="accent-primary" />
                 <label htmlFor="offers" className="text-sm text-muted-foreground">Je souhaite recevoir des offres et actualités exclusives</label>
