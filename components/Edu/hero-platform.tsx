@@ -261,7 +261,7 @@ export default function HeroPlatform() {
                             <Button asChild size="lg" className="bg-[#dc2626] text-white hover:bg-[#b91c1c] text-lg px-8 h-14">
                                 <Link href="/demo">Demander une démo</Link>
                             </Button>
-                            <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2">
+                            <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 hover:bg-gray-200 ">
                                 <Link href="/solutions">Nos solutions</Link>
                             </Button>
                         </div>

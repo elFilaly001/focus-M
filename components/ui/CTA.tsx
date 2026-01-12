@@ -69,7 +69,7 @@ export function FinalCTASection() {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-white text-[#dc2626] hover:bg-white/90 text-lg px-10 h-16 font-semibold group shadow-xl"
+                className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
               >
                 <Link href="/demo">
                   Demander une démo
@@ -80,7 +80,7 @@ export function FinalCTASection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-10 h-16 border-2 border-white/30 text-black hover:bg-white/10 backdrop-blur-sm font-semibold"
+                className="text-lg px-10 h-16 border-2 border-white/30 text-black hover:bg-white/10 hover:text-white backdrop-blur-sm font-semibold dark:text-white dark:border-white/30"
               >
                 <Link href="/contact">Contactez-nous</Link>
               </Button>

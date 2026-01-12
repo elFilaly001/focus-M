@@ -57,7 +57,7 @@ export default function HeroPlatformEnterprise() {
                             <Button asChild size="lg" className="bg-[#dc2626] hover:bg-[#b91c1c] text-white text-lg px-8 h-14">
                                 <Link href="/demo">Demander une démo</Link>
                             </Button>
-                            <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
+                            <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 dark:border-white/40">
                                 <Link href="/products">Voir les produits</Link>
                             </Button>
                         </motion.div>
