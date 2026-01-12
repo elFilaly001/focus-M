@@ -23,11 +23,11 @@ export function AboutIntroSection() {
                 À propos de Focus-M
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
-                Votre partenaire en solutions tactiles
+                Votre partenaire en solutions interactives
               </h2>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
                 Depuis plus de 15 ans, Focus-M accompagne les entreprises et établissements éducatifs 
-                dans leur transformation digitale. Notre expertise en écrans tactiles interactifs 
+                dans leur transformation digitale. Notre expertise en écrans interactifs 
                 combine innovation technologique et service personnalisé.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
@@ -84,7 +84,7 @@ export function AboutIntroSection() {
                         return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
                       })()}
                     </div>
-                    <p className="text-sm text-muted-foreground">Clients satisfaits</p>
+                    <p className="text-sm text-muted-foreground">Clients </p>
                   </motion.div>
 
                   <motion.div
@@ -101,7 +101,7 @@ export function AboutIntroSection() {
                         return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
                       })()}
                     </div>
-                    <p className="text-sm text-muted-foreground">Pays desservis</p>
+                    <p className="text-sm text-muted-foreground">Entreprises accompagnées</p>
                   </motion.div>
 
                   <motion.div
@@ -136,9 +136,9 @@ export function AboutIntroSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1 dark:text-white">Expertise reconnue</h4>
-                      <p className="text-sm text-muted-foreground dark:text-slate-300">
+                      {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Leaders dans l'intégration de solutions tactiles innovantes
-                      </p>
+                      </p> */}
                     </div>
                   </motion.div>
 
@@ -154,9 +154,9 @@ export function AboutIntroSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1 dark:text-white">Support 24/7</h4>
-                      <p className="text-sm text-muted-foreground dark:text-slate-300">
+                      {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Une équipe dédiée à votre service à tout moment
-                      </p>
+                      </p> */}
                     </div>
                   </motion.div>
 
@@ -172,9 +172,9 @@ export function AboutIntroSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1 dark:text-white">Installation garantie</h4>
-                      <p className="text-sm text-muted-foreground dark:text-slate-300">
+                      {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Formation complète et accompagnement personnalisé
-                      </p>
+                      </p> */}
                     </div>
                   </motion.div>
                 </div>

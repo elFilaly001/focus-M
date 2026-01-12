@@ -21,9 +21,8 @@ export function NewsletterPopup() {
   }, [])
 
   const handleClose = (e?: React.MouseEvent | React.TouchEvent) => {
-    if (e) e.stopPropagation(); // CRITICAL: Stop drawing events
+    if (e) e.stopPropagation(); 
     setIsOpen(false)
-    // Mark as seen when closed
     localStorage.setItem('newsletter-popup-shown', 'true')
   }
 
@@ -58,8 +57,8 @@ export function NewsletterPopup() {
               <div className="w-[150px] mb-4" >
                 <img src="/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png" alt="Newsletter" className="w-full h-full object-contain" />
               </div>
-              <h2 className="font-display text-black text-2xl font-bold mb-2">Participer à notre tombola</h2>
-              <p className="text-muted-foreground text-sm">Recevez les dernières nouvelles sur nos écrans tactiles.</p>
+              <h2 className="font-display text-black text-2xl font-bold mb-2">Profitez d’une remise de 10% sur votre achat </h2>
+              <p className="text-muted-foreground text-sm">Restez informé des tendances en solutions pédagogiques et collaboratives.</p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input

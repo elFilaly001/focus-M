@@ -1,8 +1,8 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Users, TrendingUp } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+"use client";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles, Users, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function FinalCTASection() {
   return (
@@ -12,35 +12,8 @@ export function FinalCTASection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
       </div>
 
-      {/* Floating Elements */}
-      <motion.div
-        animate={{ 
-          y: [0, -20, 0],
-          rotate: [0, 5, 0]
-        }}
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{ 
-          y: [0, 20, 0],
-          rotate: [0, -5, 0]
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute bottom-20 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"
-      />
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
-          
           {/* Main Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,26 +22,25 @@ export function FinalCTASection() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-
             {/* Headline */}
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Prêt à transformer
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">
-                votre espace de travail ?
+              Prêt à toucher l’avenir ?
+              <span className="block mb-3 mt-1 p-2 text-transparent text-4xl bg-clip-text bg-gradient-to-r from-white via-white to-white/70">
+                Rendez vos espaces pédagogiques plus intelligents
               </span>
             </h2>
 
             {/* Description */}
-            <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Des milliers d'entreprises et établissements font déjà confiance à nos solutions interactives
+            <p className="text-l md:text-xl  text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto">
+              Engagez vos étudiants, stimulez leur créativité et rendez chaque
+              apprentissage mémorable.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
               >
                 <Link href="/demo">
@@ -100,7 +72,9 @@ export function FinalCTASection() {
                 <Users className="h-6 w-6 text-white/80" />
                 <div className="text-4xl md:text-5xl font-bold">1000+</div>
               </div>
-              <p className="text-white/70 text-sm md:text-base">Clients satisfaits</p>
+              <p className="text-white/70 text-sm md:text-base">
+                Clients satisfaits
+              </p>
             </div>
 
             <div className="text-center">
@@ -108,7 +82,9 @@ export function FinalCTASection() {
                 <TrendingUp className="h-6 w-6 text-white/80" />
                 <div className="text-4xl md:text-5xl font-bold">98%</div>
               </div>
-              <p className="text-white/70 text-sm md:text-base">Taux de satisfaction</p>
+              <p className="text-white/70 text-sm md:text-base">
+                Taux de satisfaction
+              </p>
             </div>
 
             <div className="text-center col-span-2 md:col-span-1">
@@ -116,11 +92,13 @@ export function FinalCTASection() {
                 <Sparkles className="h-6 w-6 text-white/80" />
                 <div className="text-4xl md:text-5xl font-bold">50+</div>
               </div>
-              <p className="text-white/70 text-sm md:text-base">Pays dans le monde</p>
+              <p className="text-white/70 text-sm md:text-base">
+              Entreprises accompagnées
+              </p>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
