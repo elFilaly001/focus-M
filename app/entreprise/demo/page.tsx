@@ -6,8 +6,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Calendar, Clock, Users } from "lucide-react"
 
 export const metadata = {
-  title: "Book a Demo - FocusTech",
-  description: "Schedule a personalized demo of FocusTech interactive displays",
+  title: "Réservez une Démo - FocusTech",
+  description: "Planifiez une démonstration personnalisée des écrans interactifs FocusTech",
 }
 
 export default function DemoPage() {
@@ -19,10 +19,10 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Book Your <span className="text-[#dc2626]">Demo</span>
+              Réservez Votre <span className="text-[#dc2626]">Démo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Experience FocusTech firsthand with a personalized demonstration tailored to your needs.
+              Découvrez FocusTech en personne avec une démonstration personnalisée adaptée à vos besoins.
             </p>
           </div>
         </div>
@@ -34,54 +34,54 @@ export default function DemoPage() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Form */}
             <div>
-              <h2 className="font-display text-3xl font-bold mb-6">Schedule Your Demo</h2>
+              <h2 className="font-display text-3xl font-bold mb-6">Planifiez Votre Démo</h2>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">First Name *</label>
-                    <Input placeholder="John" required />
+                    <label className="block text-sm font-medium mb-2">Prénom *</label>
+                    <Input placeholder="Jean" required />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Last Name *</label>
-                    <Input placeholder="Doe" required />
+                    <label className="block text-sm font-medium mb-2">Nom *</label>
+                    <Input placeholder="Dupont" required />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Work Email *</label>
-                  <Input type="email" placeholder="john@company.com" required />
+                  <label className="block text-sm font-medium mb-2">E-mail Professionnel *</label>
+                  <Input type="email" placeholder="jean@entreprise.com" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone Number *</label>
+                  <label className="block text-sm font-medium mb-2">Numéro de Téléphone *</label>
                   <Input type="tel" placeholder="+1 (555) 123-4567" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Company Name *</label>
-                  <Input placeholder="Your Company" required />
+                  <label className="block text-sm font-medium mb-2">Nom de l'Entreprise *</label>
+                  <Input placeholder="Votre Entreprise" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Industry</label>
-                  <Input placeholder="e.g., Education, Corporate, Healthcare" />
+                  <label className="block text-sm font-medium mb-2">Secteur d'Activité</label>
+                  <Input placeholder="ex. : Éducation, Entreprise, Santé" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Number of Displays Needed</label>
+                  <label className="block text-sm font-medium mb-2">Nombre d'Écrans Nécessaires</label>
                   <Input type="number" placeholder="1" min="1" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Preferred Date</label>
+                  <label className="block text-sm font-medium mb-2">Date Préférée</label>
                   <Input type="date" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Additional Information</label>
+                  <label className="block text-sm font-medium mb-2">Informations Supplémentaires</label>
                   <Textarea
-                    placeholder="Tell us about your project, specific requirements, or questions you have..."
+                    placeholder="Parlez-nous de votre projet, exigences spécifiques ou questions..."
                     rows={4}
                   />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white">
-                  Request Demo
+                  Demander une Démo
                 </Button>
                 <p className="text-sm text-muted-foreground text-center">
-                  * Required fields. We'll contact you within 24 hours to confirm your demo.
+                  * Champs obligatoires. Nous vous contacterons dans les 24 heures pour confirmer votre démo.
                 </p>
               </form>
             </div>
@@ -89,10 +89,9 @@ export default function DemoPage() {
             {/* Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-3xl font-bold mb-6">What to Expect</h2>
+                <h2 className="font-display text-3xl font-bold mb-6">À Quoi Vous Attendre</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Our product specialists will guide you through a comprehensive demonstration of FocusTech's
-                  capabilities, customized to your specific use case.
+                  Nos spécialistes produits vous guideront à travers une démonstration complète des capacités de FocusTech, personnalisée selon votre cas d'usage spécifique.
                 </p>
               </div>
 
@@ -102,9 +101,9 @@ export default function DemoPage() {
                     <Clock className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">45-Minute Session</h3>
+                    <h3 className="font-semibold mb-2">Session de 45 Minutes</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      A thorough walkthrough of features, integrations, and capabilities relevant to your needs.
+                      Un aperçu approfondi des fonctionnalités, intégrations et capacités pertinentes pour vos besoins.
                     </p>
                   </div>
                 </div>
@@ -114,9 +113,9 @@ export default function DemoPage() {
                     <Users className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Personalized Experience</h3>
+                    <h3 className="font-semibold mb-2">Expérience Personnalisée</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Tailored to your industry, team size, and specific collaboration challenges.
+                      Adaptée à votre secteur, taille d'équipe et défis de collaboration spécifiques.
                     </p>
                   </div>
                 </div>
@@ -126,36 +125,36 @@ export default function DemoPage() {
                     <Calendar className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Flexible Scheduling</h3>
+                    <h3 className="font-semibold mb-2">Planification Flexible</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Available for virtual or in-person demos at your convenience.
+                      Disponible pour des démos virtuelles ou en personne selon votre convenance.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-muted rounded-xl p-8 border border-border">
-                <h3 className="font-display text-xl font-bold mb-4">During Your Demo</h3>
+                <h3 className="font-display text-xl font-bold mb-4">Pendant Votre Démo</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>See interactive touch technology in action</span>
+                    <span>Découvrez la technologie tactile interactive en action</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Explore collaboration features and software integrations</span>
+                    <span>Explorez les fonctionnalités de collaboration et les intégrations logicielles</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Learn about deployment and support options</span>
+                    <span>Apprenez-en plus sur les options de déploiement et de support</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Get answers to all your technical questions</span>
+                    <span>Obtenez des réponses à toutes vos questions techniques</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Receive a customized quote for your organization</span>
+                    <span>Recevez un devis personnalisé pour votre organisation</span>
                   </li>
                 </ul>
               </div>

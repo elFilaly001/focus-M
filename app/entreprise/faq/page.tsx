@@ -13,9 +13,9 @@ export default function FaqPage() {
   return (
     <div className="min-h-screen">
       {/* Contact/Hero Section */}
-            <ContactHero />
+            {/* <ContactHero /> */}
               {/* Map Banner */}
-              <MapBanner />
+              {/* <MapBanner /> */}
       
             {/* FAQ Section */}
             <FaqSection />

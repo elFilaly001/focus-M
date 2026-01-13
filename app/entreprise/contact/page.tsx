@@ -31,7 +31,7 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="py-20 bg-white dark:bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Form */}
             <div>
               <h2 className="font-display text-3xl font-bold mb-6">Envoyez-nous un message</h2>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            {/* <div className="space-y-8">
               <div>
                 <h2 className="font-display text-3xl font-bold mb-6">Informations de contact</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

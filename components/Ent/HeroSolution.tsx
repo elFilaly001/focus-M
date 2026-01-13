@@ -49,7 +49,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.18, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          L'innovation au service de la pédagogie
+          Des solutions professionnelles pour donner une nouvelle dimension à vos projets.
         </motion.h1>
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -58,7 +58,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Focus-M accompagne les écoles et universités dans leur transformation numérique. Nous intégrons des solutions globales qui simplifient l'enseignement et placent l'élève au cœur de l'apprentissage. </motion.p>
+          Découvrez les 4 étapes clés pour moderniser vos espaces de travail avec Focus-M. De l'installation à la prise en main opérationnelle, nous simplifions l'intégration des nouvelles technologies pour booster la performance de vos équipes. </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"
           initial="hidden"
