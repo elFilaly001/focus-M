@@ -78,13 +78,13 @@ export function Header() {
 
             {pathname?.includes('/education') ? (
               <Link
-                href={getAssociatLink('/products')}
-                className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/products') ? 'text-[#dc2626]' : ''
+                href={getAssociatLink('/mclub')}
+                className={`text-sm font-medium hover:text-[#dc2626] transition-colors ${pathname?.includes('/mclub') ? 'text-[#dc2626]' : ''
                   }`}
               >
                 <div className="flex flex-row gap-1">
                 <img src="/LOGO/Brandbook-FOCUS-M-1.png" alt="logo" className="w-5" />
-                club
+                Club
                 </div>
               </Link>
             ) : null}

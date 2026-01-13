@@ -52,32 +52,50 @@ const projects = [
     textColor: "#ffffff",
   },
   {
-      title: "Mobilier connecté ",
-      description:
+    title: "Mobilier connecté ",
+    description:
       "Faites de votre salle de classe un espace intelligent et interactif, où chaque étudiant et enseignant peut capturer, partager et diffuser facilement des contenus pédagogiques. Le mobilier connecté favorise l’organisation, la participation et l’engagement dans toutes les activités de la classe, créant un environnement dynamique, motivant et parfaitement adapté aux méthodes pédagogiques modernes et collaboratives. (on peut prendre des vidéos à partir des sites, avec des matériels type A25 Flexcharge (sans montrer la marque), également pour IPEVO (on peut montrer la marque).",
-      src: "house.jpg",
-      link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-      color: "#ffffff",
-      textColor: "#000000",
-    },
-    {
-        title: "CDI / BCD",
-        description:
-        "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, mais aussi numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant ainsi un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, tout en rendant le savoir accessible, stimulant et motivant pour tous.",
-        src: "cactus.jpg",
-        link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
-        color: "#dc2626",
-        textColor: "#ffffff",
-    },
-    {
-        title: "Radio",
-        description:
-        "Donnez la parole aux étudiants en créant un espace où ils peuvent produire, diffuser et partager des contenus audio, développer leurs compétences en communication et renforcer leur créativité et leur expression collective. Cette activité favorise l’engagement, le travail collaboratif et la participation active, tout en offrant une expérience motivante qui allie apprentissage, communication et expression personnelle.",
-        src: "house.jpg",
-        link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-        color: "#ffffff",
-        textColor: "#000000",
-      },
+    src: "house.jpg",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ffffff",
+    textColor: "#000000",
+  },
+  {
+    title: "CDI / BCD",
+    description:
+      "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, mais aussi numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant ainsi un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, tout en rendant le savoir accessible, stimulant et motivant pour tous.",
+    src: "cactus.jpg",
+    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
+    color: "#dc2626",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Radio",
+    description:
+      "Donnez la parole aux étudiants en créant un espace où ils peuvent produire, diffuser et partager des contenus audio, développer leurs compétences en communication et renforcer leur créativité et leur expression collective. Cette activité favorise l’engagement, le travail collaboratif et la participation active, tout en offrant une expérience motivante qui allie apprentissage, communication et expression personnelle.",
+    src: "house.jpg",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ffffff",
+    textColor: "#000000",
+  },
+  {
+    title: "Amphithéâtre et espace ludique interactif",
+    description:
+      " Transformez vos grands espaces en lieux d’échange dynamiques et immersifs où il est possible de diffuser des contenus, interagir avec le public et capter l’attention des participants. Ces espaces permettent de créer des expériences pédagogiques et collaboratives uniques, où les cours, conférences et ateliers deviennent plus stimulants, engageants et mémorables pour tous les utilisateurs, tout en encourageant l’interaction et la participation active.",
+    src: "cactus.jpg",
+    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
+    color: "#dc2626",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Chromebook",
+    description:
+      " Équipez vos étudiants avec des outils fiables et adaptés à l’éducation, qui remplacent plusieurs cahiers et manuels tout en centralisant leur apprentissage dans un seul outil performant. Simples, robustes et efficaces, les Chromebooks leur permettent de collaborer facilement, d’accéder instantanément à tous leurs cours et ressources, et de réaliser leurs projets avec fluidité, offrant une expérience numérique motivante et moderne",
+    src: "house.jpg",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ffffff",
+    textColor: "#000000",
+  },
 ];
 
 export default function SolutionsSolu() {
@@ -92,11 +110,14 @@ export default function SolutionsSolu() {
       <main className="bg-white" ref={container}>
         <section className="w-full bg-white">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
+            const maxVisibleCards = 5;
+            const stackPosition = Math.min(i, maxVisibleCards - 1);
+            const targetScale = 1;
             return (
               <Card
                 key={`p_${i}`}
                 i={i}
+                stackPosition={stackPosition}
                 url={project?.link}
                 src={project?.src}
                 title={project?.title}
@@ -104,12 +125,15 @@ export default function SolutionsSolu() {
                 textColor={project?.textColor}
                 description={project?.description}
                 progress={scrollYProgress}
-                range={[i * 0.25, 1]}
+                range={[i / projects.length, 1]}
                 targetScale={targetScale}
               />
             );
           })}
         </section>
+
+        {/* Spacer to prevent last card from overlapping footer */}
+        <div className="h-[50vh]"></div>
       </main>
     </ReactLenis>
   );
@@ -117,6 +141,7 @@ export default function SolutionsSolu() {
 
 interface CardProps {
   i: number;
+  stackPosition: number;
   title: string;
   description: string;
   src: string;
@@ -130,6 +155,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   i,
+  stackPosition,
   title,
   description,
   src,
@@ -149,17 +175,30 @@ export const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  // Calculate opacity: only show 5 cards at a time
+  const maxVisibleCards = 5;
+  const opacity = useTransform(
+    progress,
+    [
+      (i - maxVisibleCards) / projects.length,
+      i / projects.length,
+      (i + 1) / projects.length,
+    ],
+    [0, 1, 1]
+  );
+
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center sticky top-20 md:top-24"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          opacity,
+          top: `calc(-5vh + ${stackPosition * 0}px)`,
         }}
-        className="flex flex-col relative -top-[25%] h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
+        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
       >
         {/* Desktop layout - colored background with separate image */}
         <div
