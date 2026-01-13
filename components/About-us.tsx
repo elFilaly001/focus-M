@@ -34,13 +34,6 @@ export function AboutIntroSection() {
                 De la salle de classe à la salle de réunion, nous créons des expériences interactives 
                 qui inspirent, engagent et transforment la façon dont vous collaborez.
               </p>
-
-              <Button asChild size="lg" className="bg-[var(--color-primary)] hover:opacity-90 text-white">
-                <Link href="/about">
-                  Découvrir notre histoire
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
             </motion.div>
 
             {/* Right Column - Stats & Features */}

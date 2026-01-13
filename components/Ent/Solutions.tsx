@@ -7,21 +7,21 @@ import { motion } from "framer-motion"
 const solutions = [
   {
     icon: Users,
-    title: "Salles de réunion",
+    title: "Salle de Réunion Interactive",
     description: "Transformez vos réunions avec des écrans interactifs 4K. Partage d'écran sans fil, annotations en temps réel et intégration avec vos outils de visioconférence.",
     features: ["Partage sans fil", "4K Ultra HD", "Multi-touch 20 points"],
     imagePlaceholder: "/modern-tech-display-monitor.jpg"
   },
   {
     icon: PresentationIcon,
-    title: "Espaces de formation",
+    title: "Espace de Formation 3.0",
     description: "Créez des sessions de formation interactives et engageantes. Idéal pour l'onboarding, le développement des compétences et les présentations clients.",
     features: ["Contenu interactif", "Enregistrement sessions", "Intégration LMS"],
     imagePlaceholder: "/ultrawide-tech-monitor-display.jpg"
   },
   {
     icon: Building2,
-    title: "Halls d'accueil",
+    title: "Halls d’Accueil Connecté",
     description: "Impressionnez vos visiteurs avec des écrans tactiles informatifs. Affichage dynamique, navigation intuitive et image de marque professionnelle.",
     features: ["Affichage dynamique", "Interface personnalisée", "Gestion à distance"],
     imagePlaceholder: "/modern-tech-display-monitor.jpg"
@@ -140,12 +140,6 @@ export function SolutionsEnterprise() {
             transition={{ duration: 0.6 }}
             className="text-center mt-12"
           >
-            <Button asChild size="lg" className="bg-[var(--color-primary)] hover:opacity-90 text-white">
-              <Link href="/products">
-                Découvrir tous nos produits
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </motion.div>
         </div>
       </div>

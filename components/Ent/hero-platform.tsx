@@ -2,8 +2,21 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
 
 export default function HeroPlatformEnterprise() {
+
+  const pathname = usePathname()
+  
+    function getAssociatLink(link: string) {
+    if (pathname?.includes('/entreprise')) {
+      return `/entreprise${link}`;
+    } else if (pathname?.includes('/education')) {
+      return `/education${link}`;
+    } else {
+      return `/entreprise${link}`;
+    }
+  }
     return (
         <div className="relative bg-background min-h-screen overflow-hidden">
             {/* Video Background */}
@@ -53,7 +66,7 @@ export default function HeroPlatformEnterprise() {
                             className="flex flex-col sm:flex-row gap-4 mb-20"
                         >
                             <Button asChild size="lg" className="bg-[#dc2626] hover:bg-[#b91c1c] text-white text-lg px-8 h-14">
-                                <Link href="/demo">Demander une démo</Link>
+                                <Link href={getAssociatLink('/demo')}>Demander une démo</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 dark:border-white/40">
                                 <Link href="/products">Voir les produits</Link>
