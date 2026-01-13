@@ -22,7 +22,7 @@ export default function DemoPage() {
               Réservez Votre <span className="text-[#dc2626]">Démo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Découvrez FocusTech en personne avec une démonstration personnalisée adaptée à vos besoins.
+              Découvrez FocusM en personne avec une démonstration personnalisée adaptée à vos besoins.
             </p>
           </div>
         </div>
@@ -101,9 +101,9 @@ export default function DemoPage() {
                     <Clock className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Session de 45 Minutes</h3>
+                    <h3 className="font-semibold mb-2">Une session de formation dédiée</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Un aperçu approfondi des fonctionnalités, intégrations et capacités pertinentes pour vos besoins.
+                      Une présentation structurée pour comprendre en profondeur les fonctionnalités et les usages de la solution.
                     </p>
                   </div>
                 </div>
@@ -113,9 +113,9 @@ export default function DemoPage() {
                     <Users className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Expérience Personnalisée</h3>
+                    <h3 className="font-semibold mb-2">Une expérience personnalisée</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Adaptée à votre secteur, taille d'équipe et défis de collaboration spécifiques.
+                      Une démonstration adaptée à votre secteur, à vos enjeux métiers et à votre environnement de travail.
                     </p>
                   </div>
                 </div>
@@ -125,9 +125,9 @@ export default function DemoPage() {
                     <Calendar className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Planification Flexible</h3>
+                    <h3 className="font-semibold mb-2">Un calendrier flexible</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Disponible pour des démos virtuelles ou en personne selon votre convenance.
+                      Des créneaux de démonstration disponibles en ligne ou sur site, selon vos contraintes et disponibilités.
                     </p>
                   </div>
                 </div>
