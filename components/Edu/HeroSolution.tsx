@@ -33,7 +33,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.7 }}
       >
-        <motion.span
+        {/* <motion.span
           className="text-xs sm:text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           viewport={{ once: true }}
         >
           Salle de réunion intelligente
-        </motion.span>
+        </motion.span> */}
         <motion.h1
           className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#162030] dark:text-white mb-3 sm:mb-4 leading-tight"
           initial={{ opacity: 0, y: 24 }}

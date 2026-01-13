@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            {/* <div className="space-y-8">
               <div>
                 <h2 className="font-display text-3xl font-bold mb-6">Informations de contact</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
