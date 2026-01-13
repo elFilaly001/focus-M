@@ -6,7 +6,7 @@ import {
   Cpu, LayoutDashboard, Share2 
 } from "lucide-react"
 import Image from "next/image"
-import { HeroSolution } from "@/components/HeroSolution"
+import { HeroSolution } from "@/components/Ent/HeroSolution"
 import { HowItWorks } from "@/components/ui/HowItWorks"
 
 const corpSolutions = [

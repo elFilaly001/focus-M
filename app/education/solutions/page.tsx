@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { HeroSolution } from "@/components/Edu/HeroSolution";
 import { HowItWorks } from "@/components/ui/HowItWorks";
+import SolutionsSolu from "@/components/Edu/SolutionsSolu";
 
 const eduSolutions = [
   {
@@ -77,6 +78,8 @@ export default function Page() {
       <div className="mb-8">
         <HeroSolution />
       </div>
+
+      <SolutionsSolu />
     </>
   );
 }
