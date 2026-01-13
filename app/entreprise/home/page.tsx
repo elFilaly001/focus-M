@@ -1,13 +1,12 @@
 "use client"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import HeroPlatform  from "@/components/Ent/hero-platform"
 import { AboutIntroSection } from "@/components/About-us"
 import { SolutionsEnterprise } from "@/components/Ent/Solutions"
-import HardwareSection from "@/components/Ent/hardware-section"
-import { FinalCTASection } from "@/components/ui/CTA"
+import LogoSlider from "@/components/Ent/Brandslider"
+import { FinalCTASection } from "@/components/Ent/cta-section"
 
 export default function Home() {
+  
   return (
     <div className="min-h-screen">
 
@@ -17,11 +16,11 @@ export default function Home() {
 
       <SolutionsEnterprise/>
 
-      <HardwareSection />
+      <LogoSlider />
 
       <FinalCTASection/>
 
-      
+
     </div>
   )
 }
