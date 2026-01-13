@@ -11,10 +11,10 @@ interface HeroSolutionProps {
 }
 
 const features = [
-  "Réduisez la dépendance aux câbles et PC",
-  "Investissez dans une salle de réunion intelligente",
-  "Profitez d'une expérience tactile fluide et fiable",
-  "Personnalisez votre solution d'affichage interactif"
+  "Analyse de vos besoins ",
+  "Installation et Intégration",
+  "Accompagnement et Formation ",
+  "Soutien technique continu"
 ]
 
 export function HeroSolution({ className }: HeroSolutionProps) {
@@ -49,8 +49,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.18, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Dynamisez vos réunions.<br />
-          Adoptez l'écran tactile intelligent.
+          L'innovation au service de la pédagogie
         </motion.h1>
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -59,8 +58,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Découvrez une nouvelle façon de collaborer grâce à nos écrans tactiles connectés : partage sans fil, sécurité d'entreprise, gestion centralisée et expérience utilisateur premium.
-        </motion.p>
+          Focus-M accompagne les écoles et universités dans leur transformation numérique. Nous intégrons des solutions globales qui simplifient l'enseignement et placent l'élève au cœur de l'apprentissage. </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"
           initial="hidden"
