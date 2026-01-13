@@ -32,9 +32,9 @@ export default function HeroPlatformEnterprise() {
                             transition={{ duration: 0.8 }}
                             className="font-display text-5xl md:text-7xl font-bold mb-8 leading-[0.95] tracking-tight text-white"
                         >
-                            Écrans tactiles
+                            Donnez une nouvelle dimension
                             <br />
-                            <span className="text-[#dc2626]">à la demande</span>
+                            <span className="text-[#dc2626]">à vos espaces professionnels</span>
                         </motion.h1>
                         
                         <motion.p 
@@ -43,8 +43,7 @@ export default function HeroPlatformEnterprise() {
                             transition={{ delay: 0.2 }}
                             className="text-xl text-white/90 mb-8 max-w-2xl"
                         >
-                            Transformez vos salles de réunion avec des écrans interactifs professionnels. 
-                            Augmentez la productivité de 40% et impressionnez vos clients.
+                            Des solutions interactives pensées pour structurer les échanges, valoriser vos environnements et accompagner la performance de votre organisation.
                         </motion.p>
 
                         <motion.div 
