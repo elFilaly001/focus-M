@@ -54,7 +54,7 @@ const projects = [
   {
     title: "Mobilier connecté ",
     description:
-      "Faites de votre salle de classe un espace intelligent et interactif, où chaque étudiant et enseignant peut capturer, partager et diffuser facilement des contenus pédagogiques. Le mobilier connecté favorise l’organisation, la participation et l’engagement dans toutes les activités de la classe, créant un environnement dynamique, motivant et parfaitement adapté aux méthodes pédagogiques modernes et collaboratives. (on peut prendre des vidéos à partir des sites, avec des matériels type A25 Flexcharge (sans montrer la marque), également pour IPEVO (on peut montrer la marque).",
+      "Faites de votre salle de classe un espace intelligent et interactif, où chaque étudiant et enseignant peut capturer, partager et diffuser facilement des contenus pédagogiques. Le mobilier connecté favorise l’organisation, la participation et l’engagement dans toutes les activités de la classe, créant un environnement dynamique, motivant et parfaitement adapté aux méthodes pédagogiques modernes et collaboratives.",
     src: "house.jpg",
     link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
     color: "#ffffff",

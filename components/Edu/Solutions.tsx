@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 const solutions = [
   {
     icon: BookOpen,
-    title: "Salles de classe",
+    title: "Salles de Classe Connectées",
     description:
       "Transformez vos cours en expériences interactives captivantes. Dessinez, annotez et collaborez en temps réel avec vos étudiants sur un écran tactile intuitif.",
     features: [
@@ -31,7 +31,7 @@ const solutions = [
   },
   {
     icon: Users,
-    title: "Espaces collaboratifs",
+    title: "Espaces Interactifs",
     description:
       "Encouragez le travail d'équipe avec des écrans tactiles multi-utilisateurs. Parfait pour les projets de groupe, les ateliers et les activités collaboratives.",
     features: ["Multi-touch 20 points", "Partage d'écran", "Travail simultané"],
@@ -39,7 +39,7 @@ const solutions = [
   },
   {
     icon: GraduationCap,
-    title: "Amphithéâtres",
+    title: "Amphithéâtres 3.0",
     description:
       "Captez l'attention de grands groupes avec des écrans haute résolution. Idéal pour les présentations, conférences et cours magistraux interactifs.",
     features: ["4K Ultra HD", "Grand format", "Visibilité optimale"],
