@@ -27,7 +27,7 @@ const solutions = [
       "Applications éducatives",
       "Sauvegarde de leçons",
     ],
-    imagePlaceholder: "/modern-tech-display-monitor.jpg",
+    imagePlaceholder: "https://images.pexels.com/photos/7743260/pexels-photo-7743260.jpeg?_gl=1*zbq8m4*_ga*MTYyMjAwMTQxMi4xNzY2MzkzNTA3*_ga_8JE65Q40S6*czE3NjgzMTc2NzAkbzE2JGcxJHQxNzY4MzE3NjcxJGo1OSRsMCRoMA..",
   },
   {
     icon: Users,

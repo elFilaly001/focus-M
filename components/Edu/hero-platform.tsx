@@ -337,7 +337,7 @@ export default function HeroPlatform() {
                 size="lg"
                 className="bg-[#dc2626] text-white hover:bg-[#b91c1c] text-lg px-8 h-14"
               >
-                <Link href="/demo">Demander une démo</Link>
+                <Link href="/education/demo">Demander une démo</Link>
               </Button>
               <Button
                 asChild
@@ -345,7 +345,7 @@ export default function HeroPlatform() {
                 variant="outline"
                 className="text-lg px-8 h-14 border-2 hover:bg-gray-200 "
               >
-                <Link href="/solutions">Nos solutions</Link>
+                <Link href="/education/solutions">Nos solutions</Link>
               </Button>
             </div>
           </div>
