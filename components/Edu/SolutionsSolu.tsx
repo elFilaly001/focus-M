@@ -133,7 +133,7 @@ export default function SolutionsSolu() {
         </section>
 
         {/* Spacer to prevent last card from overlapping footer */}
-        <div className="h-[50vh]"></div>
+        {/* <div className="h-[50vh]"></div> */}
       </main>
     </ReactLenis>
   );

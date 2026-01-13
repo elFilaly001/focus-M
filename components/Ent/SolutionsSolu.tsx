@@ -7,77 +7,77 @@ import { text } from "stream/consumers";
 
 const projects = [
   {
-    title: "Classe connectée",
+    title: "Salle de réunion interactive",
     description:
-      " Transformez l’enseignement à distance en une expérience fluide et engageante. Interagissez avec vos étudiants en temps réel, partagez vos contenus et maintenez le lien, où qu’ils soient. Cours, quiz, travaux collaboratifs ou échanges instantanés deviennent simples et naturels, rendant l’apprentissage à distance efficace et motivant.",
+      " Optimisez vos espaces de travail en intégrant des solutions interactives conçues pour améliorer la collaboration et l’efficacité des échanges. Le partage de contenus en temps réel et l’interaction fluide permettent à vos équipes de travailler de manière plus structurée, tout en facilitant la prise de décision et la communication.",
     src: "rock.jpg",
     link: "https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop",
     color: "#dc2626",
     textColor: "#ffffff",
   },
   {
-    title: "Classe inversée",
+    title: "Espaces de formation 3.0",
     description:
-      " Redonnez le rôle principal à l’étudiant. Encouragez l’autonomie et la participation active. Les étudiants découvrent le cours par eux-mêmes, présentent leurs idées, échangent et construisent le savoir ensemble. Cette pédagogie transforme l’apprentissage en expérience collaborative et dynamique, stimulante pour tous.",
+      "Modernisez vos dispositifs de formation en proposant des environnements pédagogiques connectés, adaptés aux nouveaux usages professionnels. Ces espaces favorisent l’interactivité, l’engagement des participants et la diffusion efficace des connaissances, en présentiel comme à distance.",
     src: "tree.jpg",
     link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
     color: "#ffffff",
     textColor: "#000000",
   },
   {
-    title: "Hyflex",
+    title: "Hall d’accueil connecté",
     description:
-      " Offrez une liberté totale d’apprentissage. Enseignez en présentiel, à distance ou en mode hybride, sans compromis sur l’interaction et la qualité pédagogique. Les enseignants peuvent engager tous les étudiants, où qu’ils soient, et les étudiants choisissent le mode qui correspond le mieux à leur situation, pour un apprentissage flexible et inclusif.",
+      "Valorisez l’image de votre entreprise dès le premier contact en transformant votre hall d’accueil en un espace digital informatif et interactif. Diffusez des contenus dynamiques, facilitez l’orientation des visiteurs et renforcez votre identité grâce à une communication visuelle moderne.",
     src: "water.jpg",
     link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
     color: "#dc2626",
     textColor: "#ffffff",
   },
   {
-    title: "FabLab",
+    title: "Système de visioconférence",
     description:
-      "Donnez vie aux idées de vos étudiants en leur offrant un espace stimulant et collaboratif où ils peuvent concevoir, expérimenter et réaliser des projets concrets, développer leur créativité, leur pensée critique et leur capacité à résoudre des problèmes, tout en renforçant leur autonomie et leur engagement, le tout dans un FabLab équipé de machines CNC, découpe laser et imprimantes 3D qui leur permet de prototyper et matérialiser leurs idées pour un apprentissage pratique, immersif et motivant.",
+      "Équipez vos espaces de communication à distance avec des solutions fiables garantissant une qualité audio et vidéo optimale. Facilitez les réunions à distance, les échanges avec vos partenaires et la collaboration entre sites, tout en assurant la sécurité et la stabilité des connexions.",
     src: "house.jpg",
     link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
     color: "#ffffff",
     textColor: "#000000",
   },
   {
-    title: "MOOC",
+    title: "Solution pour espace de coworking",
     description:
-      "Produisez des contenus pédagogiques de qualité professionnelle dans un environnement pensé pour l’enseignement digital, où les enseignants peuvent enregistrer, diffuser et partager leurs cours de manière claire, engageante et accessible. Cette solution permet aux étudiants de suivre les leçons à leur rythme, de revisiter les concepts clés et de bénéficier d’un apprentissage numérique immersif qui combine interactivité, flexibilité et qualité pédagogique.",
+      "Accompagnez les nouveaux modes de travail en équipant vos espaces de coworking de solutions flexibles et connectées. Favorisez la collaboration, la productivité et le partage des ressources dans des environnements adaptés aux besoins des utilisateurs.",
     src: "cactus.jpg",
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#dc2626",
     textColor: "#ffffff",
   },
   {
-      title: "Mobilier connecté ",
-      description:
-      "Faites de votre salle de classe un espace intelligent et interactif, où chaque étudiant et enseignant peut capturer, partager et diffuser facilement des contenus pédagogiques. Le mobilier connecté favorise l’organisation, la participation et l’engagement dans toutes les activités de la classe, créant un environnement dynamique, motivant et parfaitement adapté aux méthodes pédagogiques modernes et collaboratives. (on peut prendre des vidéos à partir des sites, avec des matériels type A25 Flexcharge (sans montrer la marque), également pour IPEVO (on peut montrer la marque).",
-      src: "house.jpg",
-      link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-      color: "#ffffff",
-      textColor: "#000000",
-    },
-    {
-        title: "CDI / BCD",
-        description:
-        "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, mais aussi numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant ainsi un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, tout en rendant le savoir accessible, stimulant et motivant pour tous.",
-        src: "cactus.jpg",
-        link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
-        color: "#dc2626",
-        textColor: "#ffffff",
-    },
-    {
-        title: "Radio",
-        description:
-        "Donnez la parole aux étudiants en créant un espace où ils peuvent produire, diffuser et partager des contenus audio, développer leurs compétences en communication et renforcer leur créativité et leur expression collective. Cette activité favorise l’engagement, le travail collaboratif et la participation active, tout en offrant une expérience motivante qui allie apprentissage, communication et expression personnelle.",
-        src: "house.jpg",
-        link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-        color: "#ffffff",
-        textColor: "#000000",
-      },
+    title: "Espace de réalité virtuelle",
+    description:
+      "Intégrez des espaces dédiés à des expériences immersives pour la formation, la simulation ou la présentation de projets. La réalité virtuelle permet de reproduire des situations réelles, de tester des scénarios et d’améliorer l’apprentissage et la compréhension par l’expérience.",
+    src: "house.jpg",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ffffff",
+    textColor: "#000000",
+  },
+  {
+    title: "Solution traduction instantanée",
+    description:
+      "Facilitez la communication entre interlocuteurs de différentes langues grâce à des solutions de traduction en temps réel. Idéales pour les réunions internationales, conférences ou formations multilingues, elles permettent à chacun de comprendre et de participer sans contrainte linguistique.",
+    src: "cactus.jpg",
+    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
+    color: "#dc2626",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Système de visioconférence nomade",
+    description:
+      "Permettez à vos équipes de rester connectées où qu’elles se trouvent grâce à des solutions de visioconférence mobiles et faciles à déployer. Adaptées aux déplacements, aux sites temporaires ou aux réunions improvisées, elles garantissent une communication fluide et efficace.",
+    src: "house.jpg",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ffffff",
+    textColor: "#000000",
+  },
 ];
 
 export default function SolutionsSolu() {
@@ -92,11 +92,14 @@ export default function SolutionsSolu() {
       <main className="bg-white" ref={container}>
         <section className="w-full bg-white">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
+            const maxVisibleCards = 5;
+            const stackPosition = Math.min(i, maxVisibleCards - 1);
+            const targetScale = 1;
             return (
               <Card
                 key={`p_${i}`}
                 i={i}
+                stackPosition={stackPosition}
                 url={project?.link}
                 src={project?.src}
                 title={project?.title}
@@ -104,12 +107,15 @@ export default function SolutionsSolu() {
                 textColor={project?.textColor}
                 description={project?.description}
                 progress={scrollYProgress}
-                range={[i * 0.25, 1]}
+                range={[i / projects.length, 1]}
                 targetScale={targetScale}
               />
             );
           })}
         </section>
+
+        {/* Spacer to prevent last card from overlapping footer */}
+        {/* <div className="h-[50vh]"></div> */}
       </main>
     </ReactLenis>
   );
@@ -117,6 +123,7 @@ export default function SolutionsSolu() {
 
 interface CardProps {
   i: number;
+  stackPosition: number;
   title: string;
   description: string;
   src: string;
@@ -130,6 +137,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   i,
+  stackPosition,
   title,
   description,
   src,
@@ -149,17 +157,30 @@ export const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  // Calculate opacity: only show 5 cards at a time
+  const maxVisibleCards = 5;
+  const opacity = useTransform(
+    progress,
+    [
+      (i - maxVisibleCards) / projects.length,
+      i / projects.length,
+      (i + 1) / projects.length,
+    ],
+    [0, 1, 1]
+  );
+
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center sticky top-20 md:top-24"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          opacity,
+          top: `calc(-5vh + ${stackPosition * 0}px)`,
         }}
-        className="flex flex-col relative -top-[25%] h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
+        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
       >
         {/* Desktop layout - colored background with separate image */}
         <div
