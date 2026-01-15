@@ -11,8 +11,6 @@ export const metadata = {
 export default function DownloadsPage() {
   return (
     <div className="min-h-screen">
-      <Header />
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-4">
@@ -184,7 +182,6 @@ export default function DownloadsPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

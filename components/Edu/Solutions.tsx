@@ -52,19 +52,19 @@ const benefits = [
     icon: Activity,
     title: "Expérience d’apprentissage engageante ",
     description:
-      "Des espaces interactifs qui stimulent l’attention et la participation des étudiants.",
+      "Stimulez l’attention et la participation grâce à des espaces interactifs",
   },
   {
     icon: Sliders,
-    title: "Solutions flexibles",
+    title: "Solutions pédagogiques flexibles",
     description:
-      "adaptées à chaque besoin, inclusives et conçues pour accompagner tous les parcours pédagogiques.",
+      "Répondez aux besoins pédagogiques avec des dispositifs flexibles et inclusifs.",
   },
   {
     icon: Headphones,
-    title: "Accompagnement professionnel",
+    title: "Accompagnement professionnel dédié ",
     description:
-      " Formation des équipes pédagogiques et support technique dédié.",
+      "Formez les équipes pédagogiques et bénéficiez d’un support technique dédié.",
   },
 ];
 

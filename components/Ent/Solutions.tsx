@@ -31,18 +31,18 @@ const solutions = [
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Productivité +40%",
-    description: "Réduisez le temps de réunion et augmentez la collaboration"
+    title: "Productivité accrue ",
+    description: "Réduisez le temps de réunion et optimisez la collaboration des équipes."
   },
   {
     icon: Video,
-    title: "Intégration totale",
-    description: "Compatible Teams, Zoom, Google Meet et plus"
+    title: " Intégration complète des outils collaboratifs",
+    description: "Connectez Teams, Zoom, Google Meet et d’autres solutions collaboratives."
   },
   {
     icon: Shield,
-    title: "Sécurité enterprise",
-    description: "Chiffrement de bout en bout et conformité garantie"
+    title: "Sécurité de niveau entreprise ",
+    description: "Garantissez le chiffrement de bout en bout et la conformité aux standards entreprise."
   }
 ]
 

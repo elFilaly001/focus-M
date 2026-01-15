@@ -1,22 +1,41 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react"
-import { useTheme } from "next-themes"
-import { useState, useEffect } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
-  const { resolvedTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+
+  // Determine sector from pathname
+  const isEducation = pathname?.includes("/education");
+  const isEntreprise = pathname?.includes("/entreprise");
+  const basePath = isEducation
+    ? "/education"
+    : isEntreprise
+    ? "/entreprise"
+    : "";
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  const darkLogo = "/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png"
-  const lightLogo = "/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png"
-  const logoSrc = mounted && resolvedTheme === 'dark' ? darkLogo : lightLogo
+  const darkLogo = "/LOGO/focus-m-12-19-2025_10_27_PM-removebg-preview.png";
+  const lightLogo = "/LOGO/Screenshot_2025-12-19_153602-removebg-preview.png";
+  const logoSrc = mounted && resolvedTheme === "dark" ? darkLogo : lightLogo;
   return (
     <footer className="border-t border-border bg-muted">
       <div className="container mx-auto px-4 py-12">
@@ -34,32 +53,33 @@ export function Footer() {
               />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Solutions d'affichage interactif de nouvelle génération pour les entreprises et l'éducation modernes.
+              Solutions d'affichage interactif de nouvelle génération pour les
+              entreprises et l'éducation modernes.
             </p>
             <div className="flex items-center space-x-3 mt-6">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-muted-foreground hover:text-[#dc2626] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-muted-foreground hover:text-[#dc2626] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-muted-foreground hover:text-[#dc2626] transition-colors"
                 aria-label="Youtube"
               >
                 <Youtube className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-muted-foreground hover:text-[#dc2626] transition-colors"
                 aria-label="Linkedin"
               >
@@ -70,81 +90,95 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Entreprise</h3>
+            <h3 className="font-semibold text-foreground mb-4">
+              {isEducation ? "Éducation" : "Entreprise"}
+            </h3>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  href="/about" 
+                <Link
+                  href={`${basePath}/home`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  À propos
+                  Accueil
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/references" 
+                <Link
+                  href={`${basePath}/home#references`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
                   Références
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/downloads" 
+                <Link
+                  href={`${basePath}/downloads`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
                   Téléchargements
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/careers" 
+                <Link
+                  href={`${basePath}/faq`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  Carrières
+                  FAQ
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Solutions */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-foreground mb-4">Solutions</h3>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  href="/entreprise/solutions" 
+                <Link
+                  href={`${basePath}/solutions`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  Solutions Entreprise
+                  {isEducation ? "Solutions Éducation" : "Solutions Entreprise"}
+                </Link>
+              </li>
+              {isEntreprise && (
+                <li>
+                  <Link
+                    href={`${basePath}/products`}
+                    className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                  >
+                    Produits
+                  </Link>
+                </li>
+              )}
+              {isEducation && (
+                <li>
+                  <Link
+                    href={`${basePath}/mclub`}
+                    className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                  >
+                    M-Club
+                  </Link>
+                </li>
+              )}
+              <li>
+                <Link
+                  href={`${basePath}/demo`}
+                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
+                >
+                  Démo
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/education/solutions" 
+                <Link
+                  href={`${basePath}/contact`}
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  Solutions Éducation
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/products/interactive-displays" 
-                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
-                >
-                  Écrans Interactifs
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/support" 
-                  className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
-                >
-                  Support
+                  Contact
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>
@@ -152,27 +186,28 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-sm text-muted-foreground">
+                  +212 5XX-XXXXXX
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
-                <a 
-                  href="mailto:info@focustech.com" 
+                <a
+                  href="mailto:contact@focus-m.ma"
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  info@focustech.com
+                  contact@focus-m.ma
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  123 Avenue Tech<br />
                   Casablanca, Maroc
                 </span>
               </li>
               <li className="pt-2">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href={`${basePath}/contact`}
                   className="inline-flex items-center text-sm font-medium text-[#dc2626] hover:text-[#991b1b] transition-colors"
                 >
                   Contactez-nous →
@@ -185,24 +220,24 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-12 pt-8 border-t border-border gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 FocusTech. Tous droits réservés.
+            © 2025 Focus-M. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
-            <Link 
-              href="/privacy" 
+            <Link
+              href={`${basePath}/about`}
               className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
             >
-              Politique de confidentialité
+              Mentions légales
             </Link>
-            <Link 
-              href="/terms" 
+            <Link
+              href={`${basePath}/about`}
               className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
             >
-              Conditions d'utilisation
+              Mentions légales
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
