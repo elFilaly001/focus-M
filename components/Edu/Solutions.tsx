@@ -27,7 +27,7 @@ const solutions = [
       "Applications éducatives",
       "Sauvegarde de leçons",
     ],
-    imagePlaceholder: "https://images.pexels.com/photos/7743260/pexels-photo-7743260.jpeg?_gl=1*zbq8m4*_ga*MTYyMjAwMTQxMi4xNzY2MzkzNTA3*_ga_8JE65Q40S6*czE3NjgzMTc2NzAkbzE2JGcxJHQxNzY4MzE3NjcxJGo1OSRsMCRoMA..",
+    imagePlaceholder: "/Solution home/Edu/img1.png",
   },
   {
     icon: Users,
@@ -35,7 +35,7 @@ const solutions = [
     description:
       "Encouragez le travail d'équipe avec des écrans tactiles multi-utilisateurs. Parfait pour les projets de groupe, les ateliers et les activités collaboratives.",
     features: ["Multi-touch 20 points", "Partage d'écran", "Travail simultané"],
-    imagePlaceholder: "/ultrawide-tech-monitor-display.jpg",
+    imagePlaceholder: "/Solution home/Edu/img2.png",
   },
   {
     icon: GraduationCap,
@@ -43,7 +43,7 @@ const solutions = [
     description:
       "Captez l'attention de grands groupes avec des écrans haute résolution. Idéal pour les présentations, conférences et cours magistraux interactifs.",
     features: ["4K Ultra HD", "Grand format", "Visibilité optimale"],
-    imagePlaceholder: "/modern-tech-display-monitor.jpg",
+    imagePlaceholder: "/Solution home/Edu/img3.png",
   },
 ];
 
@@ -171,7 +171,7 @@ export function SolutionsEducation() {
               size="lg"
               className="bg-[var(--color-primary)] hover:opacity-90 text-white"
             >
-              <Link href="/products">
+              <Link href="/education/solutions">
                 Découvrir nos solutions éducatives
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

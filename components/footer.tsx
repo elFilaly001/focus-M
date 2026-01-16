@@ -56,7 +56,7 @@ export function Footer() {
               Solutions d'affichage interactif de nouvelle génération pour les
               entreprises et l'éducation modernes.
             </p>
-            <div className="flex items-center space-x-3 mt-6">
+            {/* <div className="flex items-center space-x-3 mt-6">
               <a
                 href="#"
                 className="text-muted-foreground hover:text-[#dc2626] transition-colors"
@@ -85,7 +85,7 @@ export function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Company Links */}

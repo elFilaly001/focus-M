@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface HeroSolutionProps {
-  className?: string
+  className?: string;
 }
 
 const features = [
   "Analyse de vos besoins ",
   "Installation et Intégration",
   "Accompagnement et Formation ",
-  "Soutien technique continu"
-]
+  "Soutien technique continu",
+];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
   return (
@@ -31,7 +32,12 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.7 }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+          damping: 18,
+          duration: 0.7,
+        }}
       >
         <motion.span
           className="text-xs sm:text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-3 sm:mb-4"
@@ -49,7 +55,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.18, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Des solutions professionnelles pour donner une nouvelle dimension à vos projets.
+          Des solutions professionnelles pour donner une nouvelle dimension à
+          vos projets.
         </motion.h1>
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -58,7 +65,11 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Découvrez les 4 étapes clés pour moderniser vos espaces de travail avec Focus-M. De l'installation à la prise en main opérationnelle, nous simplifions l'intégration des nouvelles technologies pour booster la performance de vos équipes. </motion.p>
+          Découvrez les 4 étapes clés pour moderniser vos espaces de travail
+          avec Focus-M. De l'installation à la prise en main opérationnelle,
+          nous simplifions l'intégration des nouvelles technologies pour booster
+          la performance de vos équipes.{" "}
+        </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"
           initial="hidden"
@@ -67,8 +78,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           variants={{
             hidden: {},
             visible: {
-              transition: { staggerChildren: 0.13, delayChildren: 0.38 }
-            }
+              transition: { staggerChildren: 0.13, delayChildren: 0.38 },
+            },
           }}
         >
           {features.map((f, i) => (
@@ -81,7 +92,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
-              <CheckCircle className="w-5 h-5 text-[#C52133] flex-shrink-0" /> {f}
+              <CheckCircle className="w-5 h-5 text-[#C52133] flex-shrink-0" />{" "}
+              {f}
             </motion.li>
           ))}
         </motion.ul>
@@ -91,9 +103,14 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.55, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Button size="lg" className="w-full sm:w-auto bg-[#C52133] text-white hover:bg-[#a81a29] transition-colors font-semibold rounded-xl px-8 py-3 shadow-md">
-            Demander une démo
-          </Button>
+          <Link href="/entreprise/demo">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-[#C52133] text-white hover:bg-[#a81a29] transition-colors font-semibold rounded-xl px-8 py-3 shadow-md"
+            >
+              Demander une démo
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
       {/* Right: Image */}
@@ -102,7 +119,12 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         initial={{ opacity: 0, x: 40, y: 0 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.8 }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+          damping: 18,
+          duration: 0.8,
+        }}
       >
         <Image
           src="/Solutions/Ent/hero.png"
@@ -113,5 +135,5 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         />
       </motion.div>
     </section>
-  )
+  );
 }

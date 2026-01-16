@@ -43,7 +43,7 @@ export function FinalCTASection() {
                 size="lg"
                 className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
               >
-                <Link href="/demo">
+                <Link href="/education/demo">
                   Demander une démo
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -54,7 +54,7 @@ export function FinalCTASection() {
                 variant="outline"
                 className="text-lg px-10 h-16 border-2 border-white/30 text-black hover:bg-white/10 hover:text-white backdrop-blur-sm font-semibold dark:text-white dark:border-white/30"
               >
-                <Link href="/contact">Contactez-nous</Link>
+                <Link href="/education/contact">Contactez-nous</Link>
               </Button>
             </div>
           </motion.div>

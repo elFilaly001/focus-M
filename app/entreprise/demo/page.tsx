@@ -1,19 +1,18 @@
-
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Calendar, Clock, Users } from "lucide-react"
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Calendar, Clock, Users } from "lucide-react";
 
 export const metadata = {
   title: "Réservez une Démo - FocusTech",
-  description: "Planifiez une démonstration personnalisée des écrans interactifs FocusTech",
-}
+  description:
+    "Planifiez une démonstration personnalisée des écrans interactifs FocusTech",
+};
 
 export default function DemoPage() {
   return (
     <div className="min-h-screen bg-background">
-
       {/* Hero Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -22,7 +21,8 @@ export default function DemoPage() {
               Réservez Votre <span className="text-[#dc2626]">Démo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Découvrez FocusM en personne avec une démonstration personnalisée adaptée à vos besoins.
+              Découvrez FocusM en personne avec une démonstration personnalisée
+              adaptée à vos besoins.
             </p>
           </div>
         </div>
@@ -34,54 +34,86 @@ export default function DemoPage() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Form */}
             <div>
-              <h2 className="font-display text-3xl font-bold mb-6">Planifiez Votre Démo</h2>
+              <h2 className="font-display text-3xl font-bold mb-6">
+                Planifiez Votre Démo
+              </h2>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Prénom *</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Prénom *
+                    </label>
                     <Input placeholder="Jean" required />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Nom *</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Nom *
+                    </label>
                     <Input placeholder="Dupont" required />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">E-mail Professionnel *</label>
-                  <Input type="email" placeholder="jean@entreprise.com" required />
+                  <label className="block text-sm font-medium mb-2">
+                    E-mail Professionnel *
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="jean@entreprise.com"
+                    required
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Numéro de Téléphone *</label>
-                  <Input type="tel" placeholder="+1 (555) 123-4567" required />
+                  <label className="block text-sm font-medium mb-2">
+                    Numéro de Téléphone *
+                  </label>
+                  <Input type="tel" placeholder="+212 1 23 45 67 89" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Nom de l'Entreprise *</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Nom de l'Entreprise *
+                  </label>
                   <Input placeholder="Votre Entreprise" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Secteur d'Activité</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Secteur d'Activité
+                  </label>
                   <Input placeholder="ex. : Éducation, Entreprise, Santé" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Nombre d'Écrans Nécessaires</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Nombre d'Écrans Nécessaires
+                  </label>
                   <Input type="number" placeholder="1" min="1" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Date Préférée</label>
-                  <Input type="date" />
+                  <label className="block text-sm font-medium mb-2">
+                    Date Préférée
+                  </label>
+                  <Input
+                    type="date"
+                    min={new Date().toISOString().split("T")[0]}
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Informations Supplémentaires</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Informations Supplémentaires
+                  </label>
                   <Textarea
                     placeholder="Parlez-nous de votre projet, exigences spécifiques ou questions..."
                     rows={4}
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white"
+                >
                   Demander une Démo
                 </Button>
                 <p className="text-sm text-muted-foreground text-center">
-                  * Champs obligatoires. Nous vous contacterons dans les 24 heures pour confirmer votre démo.
+                  * Champs obligatoires. Nous vous contacterons dans les 24
+                  heures pour confirmer votre démo.
                 </p>
               </form>
             </div>
@@ -89,9 +121,13 @@ export default function DemoPage() {
             {/* Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-3xl font-bold mb-6">À Quoi Vous Attendre</h2>
+                <h2 className="font-display text-3xl font-bold mb-6">
+                  À Quoi Vous Attendre
+                </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Nos spécialistes produits vous guideront à travers une démonstration complète des capacités de FocusTech, personnalisée selon votre cas d'usage spécifique.
+                  Nos spécialistes produits vous guideront à travers une
+                  démonstration complète des capacités de FocusTech,
+                  personnalisée selon votre cas d'usage spécifique.
                 </p>
               </div>
 
@@ -101,9 +137,12 @@ export default function DemoPage() {
                     <Clock className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Une session de formation dédiée</h3>
+                    <h3 className="font-semibold mb-2">
+                      Une session de formation dédiée
+                    </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Une présentation structurée pour comprendre en profondeur les fonctionnalités et les usages de la solution.
+                      Une présentation structurée pour comprendre en profondeur
+                      les fonctionnalités et les usages de la solution.
                     </p>
                   </div>
                 </div>
@@ -113,9 +152,12 @@ export default function DemoPage() {
                     <Users className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Une expérience personnalisée</h3>
+                    <h3 className="font-semibold mb-2">
+                      Une expérience personnalisée
+                    </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Une démonstration adaptée à votre secteur, à vos enjeux métiers et à votre environnement de travail.
+                      Une démonstration adaptée à votre secteur, à vos enjeux
+                      métiers et à votre environnement de travail.
                     </p>
                   </div>
                 </div>
@@ -125,36 +167,53 @@ export default function DemoPage() {
                     <Calendar className="h-6 w-6 text-[#dc2626]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Un calendrier flexible</h3>
+                    <h3 className="font-semibold mb-2">
+                      Un calendrier flexible
+                    </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Des créneaux de démonstration disponibles en ligne ou sur site, selon vos contraintes et disponibilités.
+                      Des créneaux de démonstration disponibles en ligne ou sur
+                      site, selon vos contraintes et disponibilités.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-muted rounded-xl p-8 border border-border">
-                <h3 className="font-display text-xl font-bold mb-4">Pendant Votre Démo</h3>
+                <h3 className="font-display text-xl font-bold mb-4">
+                  Pendant Votre Démo
+                </h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Découvrez la technologie tactile interactive en action</span>
+                    <span>
+                      Découvrez la technologie tactile interactive en action
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Explorez les fonctionnalités de collaboration et les intégrations logicielles</span>
+                    <span>
+                      Explorez les fonctionnalités de collaboration et les
+                      intégrations logicielles
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Apprenez-en plus sur les options de déploiement et de support</span>
+                    <span>
+                      Apprenez-en plus sur les options de déploiement et de
+                      support
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Obtenez des réponses à toutes vos questions techniques</span>
+                    <span>
+                      Obtenez des réponses à toutes vos questions techniques
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
-                    <span>Recevez un devis personnalisé pour votre organisation</span>
+                    <span>
+                      Recevez un devis personnalisé pour votre organisation
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -162,7 +221,6 @@ export default function DemoPage() {
           </div>
         </div>
       </section>
-
     </div>
-  )
+  );
 }

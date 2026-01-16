@@ -65,7 +65,7 @@ export default function DemoPage() {
                   <label className="block text-sm font-medium mb-2">
                     Numéro de Téléphone *
                   </label>
-                  <Input type="tel" placeholder="+33 6 12 34 56 78" required />
+                  <Input type="tel" placeholder="+212 1 23 45 67 89" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">
@@ -89,7 +89,10 @@ export default function DemoPage() {
                   <label className="block text-sm font-medium mb-2">
                     Date Préférée
                   </label>
-                  <Input type="date" />
+                  <Input
+                    type="date"
+                    min={new Date().toISOString().split("T")[0]}
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">
@@ -137,7 +140,8 @@ export default function DemoPage() {
                       Une session de formation dédiée
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Une présentation structurée pour comprendre en profondeur les fonctionnalités et les usages de la solution.
+                      Une présentation structurée pour comprendre en profondeur
+                      les fonctionnalités et les usages de la solution.
                     </p>
                   </div>
                 </div>
@@ -151,7 +155,8 @@ export default function DemoPage() {
                       Une expérience personnalisée
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Une démonstration adaptée à votre secteur, à vos enjeux métiers et à votre environnement de travail.
+                      Une démonstration adaptée à votre secteur, à vos enjeux
+                      métiers et à votre environnement de travail.
                     </p>
                   </div>
                 </div>
@@ -165,7 +170,8 @@ export default function DemoPage() {
                       Un calendrier flexible
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Des créneaux de démonstration disponibles en ligne ou sur site, selon vos contraintes et disponibilités.
+                      Des créneaux de démonstration disponibles en ligne ou sur
+                      site, selon vos contraintes et disponibilités.
                     </p>
                   </div>
                 </div>

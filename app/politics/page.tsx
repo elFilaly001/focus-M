@@ -248,7 +248,7 @@ export default function PoliticsPage() {
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Elles peuvent être transmises à des prestataires techniques
                 (hébergement, maintenance, outils CRM) uniquement dans le cadre
-                strict de leur mission et dans le respect du RGPD.
+                strict de leur mission et dans le respect du CNDP.
               </p>
               <div className="mt-6 p-6 bg-[#C52133]/5 dark:bg-[#C52133]/10 rounded-lg border border-[#C52133]/20">
                 <p className="text-[#C52133] font-semibold">
