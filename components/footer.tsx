@@ -224,16 +224,16 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href={`${basePath}/about`}
+              href={`/mention-legal`}
               className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
             >
               Mentions légales
             </Link>
             <Link
-              href={`${basePath}/about`}
+              href={`/politics`}
               className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
             >
-              Mentions légales
+              Politique de Confidentialité
             </Link>
           </div>
         </div>

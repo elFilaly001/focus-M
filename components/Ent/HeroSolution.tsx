@@ -105,7 +105,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.8 }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1640184713839-9b87bde3cba5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG91Y2glMjBzY3JlZW58ZW58MHx8MHx8fDA%3D"
+          src="/Solutions/Ent/hero.png"
           alt="Salle de réunion moderne avec écran tactile Focus-M"
           fill
           className="object-cover object-center w-full h-full"

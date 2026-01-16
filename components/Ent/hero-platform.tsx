@@ -69,7 +69,7 @@ export default function HeroPlatformEnterprise() {
                                 <Link href={getAssociatLink('/demo')}>Demander une démo</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-2 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 dark:border-white/40">
-                                <Link href="/products">Voir les produits</Link>
+                                <Link href={getAssociatLink('/solutions')}>Voir les solutions</Link>
                             </Button>
                         </motion.div>
 

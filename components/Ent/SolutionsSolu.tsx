@@ -11,7 +11,7 @@ const projects = [
     description:
       " Optimisez vos espaces de travail en intégrant des solutions interactives conçues pour améliorer la collaboration et l’efficacité des échanges. Le partage de contenus en temps réel et l’interaction fluide permettent à vos équipes de travailler de manière plus structurée, tout en facilitant la prise de décision et la communication.",
     src: "rock.jpg",
-    link: "https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop",
+    link: "/Solutions/Ent/img1.png",
     color: "#dc2626",
     textColor: "#ffffff",
   },
@@ -20,7 +20,7 @@ const projects = [
     description:
       "Modernisez vos dispositifs de formation en proposant des environnements pédagogiques connectés, adaptés aux nouveaux usages professionnels. Ces espaces favorisent l’interactivité, l’engagement des participants et la diffusion efficace des connaissances, en présentiel comme à distance.",
     src: "tree.jpg",
-    link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
+    link: "/Solutions/Ent/img2.png",
     color: "#ffffff",
     textColor: "#000000",
   },
@@ -29,7 +29,7 @@ const projects = [
     description:
       "Valorisez l’image de votre entreprise dès le premier contact en transformant votre hall d’accueil en un espace digital informatif et interactif. Diffusez des contenus dynamiques, facilitez l’orientation des visiteurs et renforcez votre identité grâce à une communication visuelle moderne.",
     src: "water.jpg",
-    link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
+    link: "/Solutions/Ent/img3.png",
     color: "#dc2626",
     textColor: "#ffffff",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Équipez vos espaces de communication à distance avec des solutions fiables garantissant une qualité audio et vidéo optimale. Facilitez les réunions à distance, les échanges avec vos partenaires et la collaboration entre sites, tout en assurant la sécurité et la stabilité des connexions.",
     src: "house.jpg",
-    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    link: "/Solutions/Ent/img4.png",
     color: "#ffffff",
     textColor: "#000000",
   },
@@ -47,7 +47,7 @@ const projects = [
     description:
       "Accompagnez les nouveaux modes de travail en équipant vos espaces de coworking de solutions flexibles et connectées. Favorisez la collaboration, la productivité et le partage des ressources dans des environnements adaptés aux besoins des utilisateurs.",
     src: "cactus.jpg",
-    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
+    link: "/Solutions/Ent/img5.png",
     color: "#dc2626",
     textColor: "#ffffff",
   },
@@ -56,7 +56,7 @@ const projects = [
     description:
       "Intégrez des espaces dédiés à des expériences immersives pour la formation, la simulation ou la présentation de projets. La réalité virtuelle permet de reproduire des situations réelles, de tester des scénarios et d’améliorer l’apprentissage et la compréhension par l’expérience.",
     src: "house.jpg",
-    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    link: "/Solutions/Ent/img6.png",
     color: "#ffffff",
     textColor: "#000000",
   },
@@ -65,7 +65,7 @@ const projects = [
     description:
       "Facilitez la communication entre interlocuteurs de différentes langues grâce à des solutions de traduction en temps réel. Idéales pour les réunions internationales, conférences ou formations multilingues, elles permettent à chacun de comprendre et de participer sans contrainte linguistique.",
     src: "cactus.jpg",
-    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
+    link: "/Solutions/Ent/img7.png",
     color: "#dc2626",
     textColor: "#ffffff",
   },
@@ -74,7 +74,7 @@ const projects = [
     description:
       "Permettez à vos équipes de rester connectées où qu’elles se trouvent grâce à des solutions de visioconférence mobiles et faciles à déployer. Adaptées aux déplacements, aux sites temporaires ou aux réunions improvisées, elles garantissent une communication fluide et efficace.",
     src: "house.jpg",
-    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    link: "/Solutions/Ent/img8.png",
     color: "#ffffff",
     textColor: "#000000",
   },
@@ -229,7 +229,17 @@ export const Card: React.FC<CardProps> = ({
                 className="w-full h-full"
                 style={{ scale: imageScale }}
               >
-                <Image fill src={url} alt="image" className="object-cover" />
+                <Image
+                  fill
+                  src={url}
+                  alt={title}
+                  className="object-cover"
+                  {...(i === 0
+                    ? { priority: true }
+                    : { loading: "lazy" as const })}
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                />
               </motion.div>
             </div>
           </div>
@@ -241,7 +251,15 @@ export const Card: React.FC<CardProps> = ({
             className="absolute inset-0"
             style={{ scale: imageScale }}
           >
-            <Image fill src={url} alt="image" className="object-cover" />
+            <Image
+              fill
+              src={url}
+              alt={title}
+              className="object-cover"
+              {...(i === 0 ? { priority: true } : { loading: "lazy" as const })}
+              quality={85}
+              sizes="100vw"
+            />
           </motion.div>
 
           {/* Overlay gradient for text readability */}

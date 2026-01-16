@@ -1,9 +1,9 @@
-"use client"
-import HeroPlatform  from "@/components/Edu/hero-platform"
-import { AboutIntroSection } from "@/components/About-us"
-import { SolutionsEducation } from "@/components/Edu/Solutions"
-import { FinalCTASection } from "@/components/ui/CTA"
-import LogoSlider from "@/components/Edu/Brandslider"
+"use client";
+import HeroPlatform from "@/components/Edu/hero-platform";
+import { AboutIntroSection } from "@/components/Edu/About-us";
+import { SolutionsEducation } from "@/components/Edu/Solutions";
+import { FinalCTASection } from "@/components/ui/CTA";
+import LogoSlider from "@/components/Edu/Brandslider";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
       <LogoSlider />
 
-     <FinalCTASection/>
+      <FinalCTASection />
     </div>
-  )
+  );
 }

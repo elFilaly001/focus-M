@@ -23,16 +23,18 @@ export function AboutIntroSection() {
                 À propos de Focus-M
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
-                Votre partenaire en solutions interactives
+               Votre partenaire en solutions interactives pour l’éducation
               </h2>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 15 ans, Focus-M accompagne les entreprises et établissements éducatifs 
-                dans leur transformation digitale. Notre expertise en écrans interactifs 
-                combine innovation technologique et service personnalisé.
+                Depuis plus de 15 ans, Focus-M accompagne les établissements scolaires et universitaires dans leur transformation numérique.
+Notre expertise en tableaux et écrans interactifs dédiés à l’enseignement associe innovation technologique, pédagogie active et accompagnement sur mesure.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
                 De la salle de classe à la salle de réunion, nous créons des expériences interactives 
                 qui inspirent, engagent et transforment la façon dont vous collaborez.
+              </p>
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+                Nous intervenons à chaque étape du projet : conseil, vente ou location longue durée des équipements, installation, formation des équipes et support technique, afin de garantir une intégration durable et adaptée aux usages éducatifs.
               </p>
 
               
@@ -75,7 +77,7 @@ export function AboutIntroSection() {
                     <div className="flex items-center gap-3 mb-2">
                       <Users className="h-6 w-6 text-[var(--color-primary)]" />
                       {(() => {
-                        const { value, ref } = useCountUp({ end: 1000, duration: 1200, startOnView: true })
+                        const { value, ref } = useCountUp({ end: 100, duration: 1200, startOnView: true })
                         return <div className="text-3xl font-bold text-[var(--color-primary)]" ref={ref}>{value}+ </div>
                       })()}
                     </div>
@@ -166,7 +168,7 @@ export function AboutIntroSection() {
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1 dark:text-white">Installation garantie</h4>
+                      <h4 className="font-semibold mb-1 dark:text-white">Installation gratuite</h4>
                       {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Formation complète et accompagnement personnalisé
                       </p> */}

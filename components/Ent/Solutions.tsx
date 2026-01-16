@@ -10,21 +10,21 @@ const solutions = [
     title: "Salle de Réunion Interactive",
     description: "Transformez vos réunions avec des écrans interactifs 4K. Partage d'écran sans fil, annotations en temps réel et intégration avec vos outils de visioconférence.",
     features: ["Partage sans fil", "4K Ultra HD", "Multi-touch 20 points"],
-    imagePlaceholder: "/modern-tech-display-monitor.jpg"
+    imagePlaceholder: "/Solution home/Ent/img1.png"
   },
   {
     icon: PresentationIcon,
     title: "Espace de Formation 3.0",
     description: "Créez des sessions de formation interactives et engageantes. Idéal pour l'onboarding, le développement des compétences et les présentations clients.",
     features: ["Contenu interactif", "Enregistrement sessions", "Intégration LMS"],
-    imagePlaceholder: "/ultrawide-tech-monitor-display.jpg"
+    imagePlaceholder: "/Solution home/Ent/img2.png"
   },
   {
     icon: Building2,
     title: "Halls d’Accueil Connecté",
     description: "Impressionnez vos visiteurs avec des écrans tactiles informatifs. Affichage dynamique, navigation intuitive et image de marque professionnelle.",
     features: ["Affichage dynamique", "Interface personnalisée", "Gestion à distance"],
-    imagePlaceholder: "/modern-tech-display-monitor.jpg"
+    imagePlaceholder: "/Solution home/Ent/img3.png"
   }
 ]
 

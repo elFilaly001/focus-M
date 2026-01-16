@@ -1,21 +1,23 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface HeroSolutionProps {
-  className?: string
+  className?: string;
 }
 
 const features = [
-  "Analyse de vos besoins ",
-  "Installation et Intégration",
-  "Accompagnement et Formation ",
-  "Soutien technique continu"
-]
+  "Analyse de vos besoins pédagogiques et techniques",
+  "Vente ou location longue durée de tableaux interactifs",
+  "Installation et intégration sur site",
+  "Accompagnement et formation des équipes",
+  "Soutien technique continu",
+];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
   return (
@@ -31,7 +33,12 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.7 }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+          damping: 18,
+          duration: 0.7,
+        }}
       >
         {/* <motion.span
           className="text-xs sm:text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-3 sm:mb-4"
@@ -58,7 +65,14 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Focus-M accompagne les écoles et universités dans leur transformation numérique. Nous intégrons des solutions globales qui simplifient l'enseignement et placent l'élève au cœur de l'apprentissage. </motion.p>
+          Focus-M accompagne les écoles et universités dans leur transformation
+          numérique. Nous proposons des tableaux et écrans interactifs
+          disponibles à la vente ou en location longue durée, intégrés au sein
+          de solutions globales qui simplifient l’enseignement et placent
+          l’élève au cœur de l’apprentissage. Nos dispositifs s’adaptent à vos
+          contraintes pédagogiques, techniques et budgétaires, tout en
+          garantissant une expérience d’usage fluide et durable.
+        </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"
           initial="hidden"
@@ -67,8 +81,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           variants={{
             hidden: {},
             visible: {
-              transition: { staggerChildren: 0.13, delayChildren: 0.38 }
-            }
+              transition: { staggerChildren: 0.13, delayChildren: 0.38 },
+            },
           }}
         >
           {features.map((f, i) => (
@@ -81,7 +95,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
-              <CheckCircle className="w-5 h-5 text-[#C52133] flex-shrink-0" /> {f}
+              <CheckCircle className="w-5 h-5 text-[#C52133] flex-shrink-0" />{" "}
+              {f}
             </motion.li>
           ))}
         </motion.ul>
@@ -91,9 +106,14 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.55, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Button size="lg" className="w-full sm:w-auto bg-[#C52133] text-white hover:bg-[#a81a29] transition-colors font-semibold rounded-xl px-8 py-3 shadow-md">
-            Demander une démo
-          </Button>
+          <Link href="/education/demo">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-[#C52133] text-white hover:bg-[#a81a29] transition-colors font-semibold rounded-xl px-8 py-3 shadow-md"
+            >
+              Demander une démo
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
       {/* Right: Image */}
@@ -102,10 +122,15 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         initial={{ opacity: 0, x: 40, y: 0 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 0.8 }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+          damping: 18,
+          duration: 0.8,
+        }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1640184713839-9b87bde3cba5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG91Y2glMjBzY3JlZW58ZW58MHx8MHx8fDA%3D"
+          src="/Solutions/Edu/Hero.png"
           alt="Salle de réunion moderne avec écran tactile Focus-M"
           fill
           className="object-cover object-center w-full h-full"
@@ -113,5 +138,5 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         />
       </motion.div>
     </section>
-  )
+  );
 }
