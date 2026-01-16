@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Téléphone</label>
-                  <Input type="tel" placeholder="+1 (555) 123-4567" />
+                  <Input type="tel" placeholder="+212 1 23 45 67 89" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Société</label>

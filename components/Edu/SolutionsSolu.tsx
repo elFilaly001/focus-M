@@ -172,7 +172,13 @@ export const Card: React.FC<CardProps> = ({
     offset: ["start end", "start start"],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  // Add extra zoom for last card to hide watermark
+  const isLastCard = i === projects.length - 1;
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isLastCard ? [2.5, 1.5] : [2, 1]
+  );
   const scale = useTransform(progress, range, [1, targetScale]);
 
   // Calculate opacity: only show 5 cards at a time

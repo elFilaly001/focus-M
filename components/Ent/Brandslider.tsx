@@ -36,6 +36,24 @@ const LogoSlider = () => {
       src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-2.png",
       height: "60px",
     },
+    {
+      id: 7,
+      name: "CDM",
+      src: "https://www.creditdumaroc.ma/sites/all/themes/custom/cdm_rebrand/assets/images/icons/logo_cdm.svg",
+      height: "30px",
+    },
+    {
+      id: 8,
+      name: "Deloitte",
+      src: "https://cdn.worldvectorlogo.com/logos/deloitte-2.svg",
+      height: "40px",
+    },
+    {
+      id: 9,
+      name: "PWC",
+      src: "https://icon2.cleanpng.com/20180805/vvi/24dc02a6ed9faaac5bfccb97fb7a67ca.webp",
+      height: "40px",
+    },
   ];
 
   // Triple the logos to ensure smooth infinite scroll
