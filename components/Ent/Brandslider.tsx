@@ -10,7 +10,7 @@ const LogoSlider = () => {
       id: 2,
       name: "Ebertec",
       src: "https://red.ma/wp-content/uploads/2022/12/EBERTEC-TEC.png",
-      height: "60px",
+      height: "150px",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const LogoSlider = () => {
     {
       id: 6,
       name: "Concept Cerame",
-      src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-2.png",
+      src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-4.png",
       height: "60px",
     },
     {
@@ -52,6 +52,12 @@ const LogoSlider = () => {
       id: 9,
       name: "PWC",
       src: "https://icon2.cleanpng.com/20180805/vvi/24dc02a6ed9faaac5bfccb97fb7a67ca.webp",
+      height: "70px",
+    },
+    {
+      id: 10,
+      name: "Nexia",
+      src: "/LOGO/Ent/Nexa Morocco Logo.png",
       height: "40px",
     },
   ];
