@@ -1,0 +1,103 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles, Users, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export function FinalCTASection() {
+  return (
+    <section className="relative py-32 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] text-white overflow-hidden">
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            {/* Headline */}
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Prêt à toucher l’avenir ?
+              <span className="block mb-3 mt-1 p-2 text-transparent text-4xl bg-clip-text bg-gradient-to-r from-white via-white to-white/70">
+                Donnez une nouvelle intelligence à vos espaces pédagogiques. 
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-l md:text-xl  text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto">
+              Engagez vos apprenants, stimulez leur créativité et faites de chaque apprentissage une expérience mémorable.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
+              >
+                <Link href="/entreprise/demo">
+                  Réserver une DEMO
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="text-lg px-10 h-16 border-2 border-white/30 text-black hover:bg-white/10 hover:text-white backdrop-blur-sm font-semibold dark:text-white dark:border-white/30"
+              >
+                <Link href="/entreprise/contact">Contactez-nous</Link>
+              </Button>
+            </div>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Users className="h-6 w-6 text-white/80" />
+                <div className="text-4xl md:text-5xl font-bold">100+</div>
+              </div>
+              <p className="text-white/70 text-sm md:text-base">
+                Clients satisfaits
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <TrendingUp className="h-6 w-6 text-white/80" />
+                <div className="text-4xl md:text-5xl font-bold">98%</div>
+              </div>
+              <p className="text-white/70 text-sm md:text-base">
+                Taux de satisfaction
+              </p>
+            </div>
+
+            <div className="text-center col-span-2 md:col-span-1">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Sparkles className="h-6 w-6 text-white/80" />
+                <div className="text-4xl md:text-5xl font-bold">50+</div>
+              </div>
+              <p className="text-white/70 text-sm md:text-base">
+              Entreprises accompagnées
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}

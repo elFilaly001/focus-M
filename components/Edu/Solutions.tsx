@@ -82,15 +82,13 @@ export function SolutionsEducation() {
             className="text-center mb-16"
           >
             <p className="text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-4">
-              Solutions Éducatives
+              Solutions éducatives innovantes
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
               Repenser l’apprentissage, repenser l’espace
             </h2>
             <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto">
-              Nos solutions transforment chaque cours en une expérience
-              interactive unique, adaptée à tous les niveaux et tous les espaces
-              éducatifs.
+              Découvrez comment nos solutions transforment chaque environnement éducatif en une expérience interactive immersive, pensée pour tous les niveaux et tous les usages.
             </p>
           </motion.div>
 

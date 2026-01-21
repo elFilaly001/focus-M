@@ -2,7 +2,7 @@
 import HeroPlatform from "@/components/Edu/hero-platform";
 import { AboutIntroSection } from "@/components/Edu/About-us";
 import { SolutionsEducation } from "@/components/Edu/Solutions";
-import { FinalCTASection } from "@/components/ui/CTA";
+import { FinalCTASection } from "@/components/Edu/CTA";
 import LogoSlider from "@/components/Edu/Brandslider";
 
 export default function Home() {

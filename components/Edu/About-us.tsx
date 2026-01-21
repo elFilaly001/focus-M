@@ -22,25 +22,19 @@ export function AboutIntroSection() {
                 À propos de Focus-M
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
-                Votre partenaire en solutions interactives pour l’éducation
+                Votre partenaire en solutions interactives pour réinventer l’éducation
               </h2>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 15 ans, Focus-M accompagne les établissements
-                scolaires et universitaires dans leur transformation numérique.
-                Notre expertise en tableaux et écrans interactifs dédiés à
-                l’enseignement associe innovation technologique, pédagogie
-                active et accompagnement sur mesure.
+                Depuis plus de 20 ans, Focus-M accompagne les établissements scolaires, universitaires et centres de formation dans la conception et le déploiement de nouveaux espaces d’apprentissage interactifs, au cœur de leur transition vers une éducation plus connectée, plus engageante et résolument tournée vers l’avenir. Experts en solutions pédagogiques interactives, nous concevons la technologie comme un véritable levier de transformation éducative, et non comme une fin en soi.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                De la salle de classe à la salle de réunion, nous créons des
-                expériences interactives qui inspirent, engagent et transforment
-                la façon dont vous collaborez.
+                Salle de classe, laboratoire, salle de technologie ou FabLab : nos solutions transforment les espaces en environnements d’apprentissage dynamiques, favorisant l’échange, l’engagement et la collaboration.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Nous intervenons à chaque étape du projet : conseil, vente ou
-                location longue durée des équipements, installation, formation
-                des équipes et support technique, afin de garantir une
-                intégration durable et adaptée aux usages éducatifs.
+                Notre démarche repose sur une approche structurée et sur mesure. Elle débute par un diagnostic approfondi de l’existant et une analyse des besoins présents et futurs, afin de proposer des solutions parfaitement alignées avec les usages pédagogiques. Qu’il s’agisse d’une acquisition ou d’une location longue durée, nous assurons l’installation, l’intégration et la programmation des équipements, ainsi qu’un accompagnement complet à la prise en main.
+              </p>
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+                Des formations initiales et continues sont dispensées aux équipes pédagogiques, en individuel ou en groupe, au sein des établissements ou dans notre centre de formation. De l’étude au service après-vente, en passant par l’assistance technique, Focus-M intervient sur l’ensemble du cycle de vie du projet pour garantir une adoption durable, fluide et pleinement intégrée aux pratiques éducatives.
               </p>
             </motion.div>
 
@@ -59,13 +53,13 @@ export function AboutIntroSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.7 }}
-                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-6 border border-border"
+                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-start gap-3 mb-2">
                     <Award className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 15,
+                        end: 29,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -89,13 +83,13 @@ export function AboutIntroSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.7, delay: 0.08 }}
-                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-6 border border-border"
+                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-start gap-3 mb-2">
                     <Users className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 100,
+                        end: 37000,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -109,7 +103,9 @@ export function AboutIntroSection() {
                       );
                     })()}
                   </div>
-                  <p className="text-sm text-muted-foreground">Clients </p>
+                  <p className="text-sm text-muted-foreground">
+                    Etudiants Engages{" "}
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -117,9 +113,9 @@ export function AboutIntroSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.7, delay: 0.16 }}
-                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-6 border border-border"
+                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-start gap-3 mb-2">
                     <Globe className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
@@ -138,7 +134,7 @@ export function AboutIntroSection() {
                     })()}
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Entreprises accompagnées
+                    Etablissements accompagnés
                   </p>
                 </motion.div>
 
@@ -147,13 +143,13 @@ export function AboutIntroSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.7, delay: 0.24 }}
-                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-6 border border-border"
+                  className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-start gap-3 mb-2">
                     <CheckCircle className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 98,
+                        end: 100,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -187,7 +183,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                      Expertise reconnue
+                      Expertise pédagogique éprouvée
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Leaders dans l'intégration de solutions tactiles innovantes
@@ -207,7 +203,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                      Support 24/7
+                       Accompagnement continu et réactif
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Une équipe dédiée à votre service à tout moment
@@ -227,7 +223,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                      Installation gratuite
+                       Déploiement clé en main gratuit
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Formation complète et accompagnement personnalisé

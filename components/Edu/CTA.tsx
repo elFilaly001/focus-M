@@ -26,14 +26,13 @@ export function FinalCTASection() {
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Prêt à toucher l’avenir ?
               <span className="block mb-3 mt-1 p-2 text-transparent text-4xl bg-clip-text bg-gradient-to-r from-white via-white to-white/70">
-                Rendez vos espaces pédagogiques plus intelligents
+                Donnez une nouvelle intelligence à vos espaces pédagogiques. 
               </span>
             </h2>
 
             {/* Description */}
             <p className="text-l md:text-xl  text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Engagez vos étudiants, stimulez leur créativité et rendez chaque
-              apprentissage mémorable.
+              Engagez vos apprenants, stimulez leur créativité et faites de chaque apprentissage une expérience mémorable.
             </p>
 
             {/* CTA Buttons */}
@@ -44,7 +43,7 @@ export function FinalCTASection() {
                 className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
               >
                 <Link href="/education/demo">
-                  Demander une démo
+                  Réserver une DEMO
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -70,17 +69,17 @@ export function FinalCTASection() {
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Users className="h-6 w-6 text-white/80" />
-                <div className="text-4xl md:text-5xl font-bold">100+</div>
+                <div className="text-4xl md:text-5xl font-bold">37 000+</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
-                Clients satisfaits
+                 Etudiants engages
               </p>
             </div>
 
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <TrendingUp className="h-6 w-6 text-white/80" />
-                <div className="text-4xl md:text-5xl font-bold">98%</div>
+                <div className="text-4xl md:text-5xl font-bold">100%</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
                 Taux de satisfaction
@@ -93,7 +92,7 @@ export function FinalCTASection() {
                 <div className="text-4xl md:text-5xl font-bold">50+</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
-              Entreprises accompagnées
+              Etablissements accompagnes
               </p>
             </div>
           </motion.div>

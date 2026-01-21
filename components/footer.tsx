@@ -53,8 +53,7 @@ export function Footer() {
               />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Solutions d'affichage interactif de nouvelle génération pour les
-              entreprises et l'éducation modernes.
+              Un partenaire engagé, de la réflexion à l’usage, pour des environnements interactifs, performants et optimisés 
             </p>
             {/* <div className="flex items-center space-x-3 mt-6">
               <a
@@ -187,7 +186,7 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  +212 5XX-XXXXXX
+                  +212 522222222
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -196,13 +195,13 @@ export function Footer() {
                   href="mailto:contact@focus-m.ma"
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  contact@focus-m.ma
+                  Contact@focusm.ma
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  Casablanca, Maroc
+                  Rabat, Maroc
                 </span>
               </li>
               <li className="pt-2">

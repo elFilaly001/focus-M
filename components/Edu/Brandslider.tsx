@@ -38,6 +38,30 @@ const LogoSlider = () => {
       src: "https://www.ecolebelge.org/web/image/website/1/logo/Ecole%20Belge%20Maroc?unique=2e6cccb",
       height: "60px",
     },
+    {
+      id: 7,
+      name: "CMC",
+      src: "https://cmc.ac.ma/sites/default/files/images/header/cmc-logo.png",
+      height: "80px",
+    },
+    {
+      id: 8,
+      name: "OFPPT",
+      src: "https://www.ofppt.ma/themes/custom/ofppt/assets/images/logo.png",
+      height: "90px",
+    },
+    {
+      id: 9,
+      name: "1337",
+      src: "https://myapi.um6p.ma/sites/default/files/2025-05/UM6P_1337.png",
+      height: "130px",
+    },
+    {
+      id: 10,
+      name: "LYDEX",
+      src: "https://lydex-rabat.ma/demo/images/logo.png",
+      height: "60px",
+    }
   ];
 
   // Triple the logos to ensure smooth infinite scroll
