@@ -8,7 +8,7 @@ import SolutionsSolu from "@/components/Ent/SolutionsSolu"
 export default function SolutionsPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <HeroSolution />
       </div>
       <SolutionsSolu />

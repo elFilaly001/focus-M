@@ -24,7 +24,7 @@ export function AboutIntroSection() {
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)]">
                 Votre partenaire en solutions interactives pour l’entreprise
               </h2>
-              <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
+              {/* <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
                 Depuis plus de 15 ans, Focus-M accompagne les entreprises et
                 organisations dans leur transformation digitale. Notre expertise
                 en écrans interactifs et solutions collaboratives allie
@@ -41,6 +41,19 @@ export function AboutIntroSection() {
                 ou location longue durée des équipements, installation,
                 formation des utilisateurs et support technique, pour des
                 solutions fiables, évolutives et adaptées à vos enjeux métiers.
+              </p> */}
+
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
+                Depuis plus de 20 ans, Focus-M accompagne les entreprises et organisations dans leur transformation digitale. Notre expertise en écrans interactifs et solutions collaboratives associe innovation technologique, performance opérationnelle et accompagnement sur mesure.
+              </p>
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+                Des espaces de réunion aux environnements de travail collaboratifs, salle de conseil, salle de contrôle nous concevons des expériences interactives qui favorisent l’engagement, la collaboration et l’efficacité collective.
+              </p>
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+                Nous intervenons à chaque étape du projet conseil, vente ou location longue durée, installation, formation des utilisateurs et support technique  pour déployer des solutions fiables, évolutives et parfaitement alignées avec vos enjeux métiers. 
+              </p>
+              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+                Choisir les solutions Focus-M, c’est faire le choix d’une gestion intelligente et centralisée de vos équipements interactifs. Grâce à nos plateformes de pilotage à distance, vous gardez une visibilité complète sur votre parc : supervision en temps réel, paramétrage, mises à jour, maintenance préventive et reporting détaillé. Vous optimisez ainsi la performance de vos espaces, anticipez les besoins techniques et maîtrisez vos coûts, tout en garantissant une continuité d’usage fluide pour vos équipes. Focus-M vous offre bien plus qu’une technologie : un contrôle total, une exploitation simplifiée et une prise de décision éclairée.
               </p>
             </motion.div>
 

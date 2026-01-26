@@ -75,7 +75,7 @@ const eduSolutions = [
 export default function Page() {
   return (
     <>
-      <div className="mb-8">
+      <div className="">
         <HeroSolution />
       </div>
 

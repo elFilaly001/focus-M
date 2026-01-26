@@ -89,8 +89,8 @@ export default function SolutionsSolu() {
 
   return (
     <ReactLenis root>
-      <main className="bg-white" ref={container}>
-        <section className="w-full bg-white">
+      <main className="bg-white dark:bg-[#080c13]" ref={container}>
+        <section className="w-full bg-white dark:bg-[#080c13]">
           {projects.map((project, i) => {
             const maxVisibleCards = 5;
             const stackPosition = Math.min(i, maxVisibleCards - 1);
@@ -202,9 +202,9 @@ export const Card: React.FC<CardProps> = ({
           >
             {title}
           </h2>
-          <div className="flex h-full mt-5 gap-10">
+          <div className={`flex h-full mt-5 gap-10 ${i % 2 === 0 ? 'flex-row-reverse' : ''}`}>
             <div className="w-[40%] relative top-[10%]">
-              <p className={`text-sm`} style={{ color: textColor }}>
+              <p className={`text-base`} style={{ color: textColor }}>
                 {description}
               </p>
               {/* <span className='flex items-center gap-2 pt-2'>

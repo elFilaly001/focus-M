@@ -195,7 +195,7 @@ export function Footer() {
                   href="mailto:contact@focus-m.ma"
                   className="text-sm text-muted-foreground hover:text-[#dc2626] transition-colors"
                 >
-                  Contact@focusm.ma
+                  contact@focusm.ma
                 </a>
               </li>
               <li className="flex items-start gap-2">

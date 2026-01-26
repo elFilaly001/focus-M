@@ -16,7 +16,7 @@ const features = [
   "Vente ou location longue durée de tableaux interactifs",
   "Installation et intégration sur site",
   "Accompagnement et formation des équipes",
-  "Soutien technique continu",
+  "Support technique continu",
 ];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
@@ -58,7 +58,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         >
           L'innovation au service de la pédagogie
         </motion.h1>
-        <motion.p
+        {/* <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,6 +72,42 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           l’élève au cœur de l’apprentissage. Nos dispositifs s’adaptent à vos
           contraintes pédagogiques, techniques et budgétaires, tout en
           garantissant une expérience d’usage fluide et durable.
+        </motion.p> */}
+        <motion.p
+          className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Chez Focus-M, nous accompagnons les établissements éducatifs  écoles, universités et centres de formation professionnelle  dans leur transformation numérique. Nous proposons des solutions interactives disponibles à la vente ou en location longue durée, intégrant la livraison, l’installation, la formation ainsi que la maintenance.
+        </motion.p>
+        <motion.p
+          className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Nos dispositifs s’adaptent à vos contraintes pédagogiques, techniques et budgétaires, tout en garantissant une expérience d’usage fluide, intuitive et durable, aussi bien pour le corps professoral que pour les apprenants.
+        </motion.p>
+        <motion.p
+          className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Au-delà d’un simple fournisseur, Focus-M se positionne comme un partenaire fiable à forte valeur ajoutée, en concevant des espaces pédagogiques innovants qui favorisent de nouveaux modes d’apprentissage, adaptés aux attentes d’une nouvelle génération.
+        </motion.p>
+        <motion.p
+          className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Choisir les solutions Focus-M, c’est faire le choix d’une gestion intelligente et centralisée de vos équipements interactifs. Grâce à nos plateformes de pilotage à distance, vous gardez une visibilité complète sur votre parc : supervision en temps réel, paramétrage, mises à jour, maintenance préventive et reporting détaillé. Vous optimisez ainsi la performance de vos espaces, anticipez les besoins techniques et maîtrisez vos coûts, tout en garantissant une continuité d’usage fluide pour vos équipes. Focus-M vous offre bien plus qu’une technologie : un contrôle total, une exploitation simplifiée et une prise de décision éclairée.
         </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"

@@ -51,7 +51,7 @@ const LogoSlider = () => {
     {
       id: 9,
       name: "PWC",
-      src: "https://icon2.cleanpng.com/20180805/vvi/24dc02a6ed9faaac5bfccb97fb7a67ca.webp",
+      src: "https://www.pwc.com/etc.clientlibs/pwc/clientlibs/rebrand-clientlibs/components-colors/resources/images/slim-header-v2/PwC-logo-white.svg",
       height: "70px",
     },
     {
