@@ -72,7 +72,7 @@ export function FinalCTASection() {
                 <div className="text-4xl md:text-5xl font-bold">37 000+</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
-                 Etudiants engages
+                 Etudiants engagés
               </p>
             </div>
 
@@ -92,7 +92,7 @@ export function FinalCTASection() {
                 <div className="text-4xl md:text-5xl font-bold">50+</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
-              Etablissements accompagnes
+              Etablissements accompagnés
               </p>
             </div>
           </motion.div>

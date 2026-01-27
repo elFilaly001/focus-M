@@ -78,7 +78,7 @@ export function AboutIntroSection() {
                     <Award className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 15,
+                        end: 20,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -108,7 +108,7 @@ export function AboutIntroSection() {
                     <Users className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 100,
+                        end: 500000,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -122,7 +122,7 @@ export function AboutIntroSection() {
                       );
                     })()}
                   </div>
-                  <p className="text-sm text-muted-foreground">Clients </p>
+                  <p className="text-sm text-muted-foreground">Solutions installées</p>
                 </motion.div>
 
                 <motion.div
@@ -136,7 +136,7 @@ export function AboutIntroSection() {
                     <Globe className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 50,
+                        end: 1000,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -166,7 +166,7 @@ export function AboutIntroSection() {
                     <CheckCircle className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 98,
+                        end: 100,
                         duration: 1200,
                         startOnView: true,
                       });

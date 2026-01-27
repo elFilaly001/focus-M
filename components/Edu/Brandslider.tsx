@@ -61,6 +61,12 @@ const LogoSlider = () => {
       name: "LYDEX",
       src: "https://lydex-rabat.ma/demo/images/logo.png",
       height: "60px",
+    },
+    {
+      id: 11,
+      name: "MAUPASSANT",
+      src: "/maupassant.png",
+      height: "100px",
     }
   ];
 

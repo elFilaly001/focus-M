@@ -104,7 +104,7 @@ export function AboutIntroSection() {
                     })()}
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Etudiants Engages{" "}
+                    Etudiants engagés{" "}
                   </p>
                 </motion.div>
 
