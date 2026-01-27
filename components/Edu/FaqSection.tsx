@@ -55,12 +55,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       01
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Puis-je visiter vos locaux sans rendez-vous ?
+                      Quels sont les horaires d’ouverture de Focus-M ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, nos solutions sont conçues avec des mesures de sécurité
-                    avancées et une interface intuitive pour une gestion facile.
+                    Notre showroom est ouvert du lundi au vendredi, de 9h à 18h, ainsi que le samedi de manière exceptionnelle. En dehors de ces horaires, vous pouvez nous contacter via notre formulaire en ligne.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 2 */}
@@ -70,12 +69,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       02
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Proposez-vous un accompagnement pour l'installation ?
+                      Puis-je visiter vos locaux sans rendez-vous ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Absolument, nos plateformes supportent le travail à distance
-                    et hybride avec des outils de collaboration intégrés.
+                    Non. Les visites se font uniquement sur rendez-vous.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 3 */}
@@ -85,13 +83,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       03
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Vos solutions sont-ils adaptés aux élèves ayant des
-                      besoins spécifiques ?
+                      Proposez-vous des démonstrations sur site ou à distance ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Nous vous recommandons de prendre rendez-vous afin de
-                    garantir la disponibilité d'un conseiller.
+                    Nous pouvons venir dans votre établissement pour vous présenter nos solutions et accessoires principaux et vous montrer leur utilisation en contexte, ou vous accueillir dans notre showroom pour découvrir et tester toute notre gamme de produits.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 4 */}
@@ -101,12 +97,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       04
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Proposez-vous un accompagnement pour l'installation ?
+                      Les solutions sont-elles adaptées aux établissements publics et privés ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, nous proposons un accompagnement complet pour
-                    l'installation et la configuration de nos solutions.
+                    Oui, nos solutions pédagogiques et intelligentes conviennent aussi bien aux établissements publics qu’aux établissements privés.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 5 */}
@@ -116,14 +111,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       05
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Vos solutions sont-ils adaptés aux élèves ayant des
-                      besoins spécifiques ?
+                      Vos solutions sont-elles adaptées aux élèves ayant des besoins spécifiques ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, nos solutions sont conçues pour être inclusives et
-                    adaptées aux élèves ayant des besoins spécifiques, avec des
-                    fonctionnalités d'accessibilité.
+                    Oui, nos solutions prennent en compte les besoins éducatifs spécifiques et favorisent l’accessibilité et l’inclusion.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 6 */}
@@ -133,12 +125,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       06
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Un service de navette aéroport est-il disponible ?
+                      Les enseignants peuvent-ils prendre en main les solutions facilement ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, nous proposons un service de navette gratuit pour
-                    garantir un trajet sans encombre.
+                    Oui, nos outils sont intuitifs et faciles à utiliser, même sans compétences techniques avancées.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 7 */}
@@ -148,12 +139,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       07
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      À quelle distance se trouve FocusTech du centre-ville ?
+                      Proposez-vous un accompagnement pour l’installation des solutions ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Nous sommes situés à environ 10 minutes en voiture du
-                    centre-ville.
+                    Oui, nous assurons un accompagnement complet, de l’installation à la mise en service.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 8 */}
@@ -163,12 +153,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       08
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Y a-t-il un parking gratuit sur place ?
+                      Proposez-vous une formation pour les équipes pédagogiques après l’installation ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, un parking gratuit est disponible pour tous nos
-                    visiteurs.
+                    Oui, nous accompagnons vos équipes pédagogiques avec une formation complète pour assurer une prise en main facile et efficace.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 9 */}
@@ -178,12 +167,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       09
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Comment puis-je réserver une démonstration ?
+                      Proposez-vous une assistance technique ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Vous pouvez réserver une démonstration via notre formulaire
-                    de contact ou en nous appelant directement.
+                    Oui, notre équipe assure une assistance technique réactive en cas de besoin.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 10 */}
@@ -193,12 +181,11 @@ export function FaqSection({ className }: FaqSectionProps) {
                       10
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Proposez-vous une assistance technique ?
+                      Disposez-vous d’un service après-vente ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Oui, notre équipe d’assistance technique est disponible
-                    24h/24 et 7j/7.
+                    Oui, nous disposons d’un service après-vente dédié pour assurer le suivi et la maintenance de nos solutions.
                   </AccordionContent>
                 </AccordionItem>
                 {/* FAQ Item 11 */}
@@ -208,11 +195,24 @@ export function FaqSection({ className }: FaqSectionProps) {
                       11
                     </span>
                     <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
-                      Quels sont les horaires d'ouverture de FocusTech ?
+                      Les produits Focus-M sont-ils garantis ?
                     </AccordionTrigger>
                   </div>
                   <AccordionContent className="pl-14 pb-6 text-muted-foreground">
-                    Nous sommes ouverts du lundi au vendredi, de 9h00 à 18h00.
+                    Oui, tous nos produits bénéficient d’une garantie fiable, pour assurer aux établissements une utilisation sereine et sans souci.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="faq11" className="border-0">
+                  <div className="flex items-center py-10">
+                    <span className="text-xl font-semibold text-muted-foreground w-12 flex-shrink-0">
+                      12
+                    </span>
+                    <AccordionTrigger className="flex-1 text-lg font-medium text-left px-2 py-0 bg-transparent shadow-none hover:bg-transparent focus:outline-none">
+                      Les solutions sont-elles compatibles avec les logiciels éducatifs existants ?
+                    </AccordionTrigger>
+                  </div>
+                  <AccordionContent className="pl-14 pb-6 text-muted-foreground">
+                    Oui, nos écrans interactifs sont compatibles avec les logiciels pédagogiques couramment utilisés, incluant les logiciels de mathématiques, de sciences, de gestion de classe ou d’apprentissage en ligne, pour une intégration facile dans vos pratiques pédagogiques.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
