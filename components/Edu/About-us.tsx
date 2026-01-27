@@ -25,16 +25,13 @@ export function AboutIntroSection() {
                 Votre partenaire en solutions interactives pour réinventer l’éducation
               </h2>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 20 ans, Focus-M accompagne les établissements scolaires, universitaires et centres de formation dans la conception et le déploiement de nouveaux espaces d’apprentissage interactifs, au cœur de leur transition vers une éducation plus connectée, plus engageante et résolument tournée vers l’avenir. Experts en solutions pédagogiques interactives, nous concevons la technologie comme un véritable levier de transformation éducative, et non comme une fin en soi.
+                Depuis plus de 20 ans, Focus M accompagne les établissements scolaires, universitaires et centres de formation dans la conception et le déploiement d’espaces d’apprentissage interactifs.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Salle de classe, laboratoire, salle de technologie ou FabLab : nos solutions transforment les espaces en environnements d’apprentissage dynamiques, favorisant l’échange, l’engagement et la collaboration.
+                Experts en solutions pédagogiques interactives, nous concevons la technologie comme un levier de transformation éducative au service de l’humain, en créant des environnements dynamiques favorisant l’engagement et la collaboration.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Notre démarche repose sur une approche structurée et sur mesure. Elle débute par un diagnostic approfondi de l’existant et une analyse des besoins présents et futurs, afin de proposer des solutions parfaitement alignées avec les usages pédagogiques. Qu’il s’agisse d’une acquisition ou d’une location longue durée, nous assurons l’installation, l’intégration et la programmation des équipements, ainsi qu’un accompagnement complet à la prise en main.
-              </p>
-              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Des formations initiales et continues sont dispensées aux équipes pédagogiques, en individuel ou en groupe, au sein des établissements ou dans notre centre de formation. De l’étude au service après-vente, en passant par l’assistance technique, Focus-M intervient sur l’ensemble du cycle de vie du projet pour garantir une adoption durable, fluide et pleinement intégrée aux pratiques éducatives.
+                Notre approche structurée et sur mesure intègre diagnostic, installation, formation et accompagnement continu, afin de garantir une adoption durable et pleinement intégrée aux pratiques éducatives.
               </p>
             </motion.div>
 
@@ -44,7 +41,7 @@ export function AboutIntroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.75, delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-6 pt-45"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8 mt-32">

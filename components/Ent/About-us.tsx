@@ -44,16 +44,13 @@ export function AboutIntroSection() {
               </p> */}
 
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 20 ans, Focus-M accompagne les entreprises et organisations dans leur transformation digitale. Notre expertise en écrans interactifs et solutions collaboratives associe innovation technologique, performance opérationnelle et accompagnement sur mesure.
+                Depuis plus de 20 ans, Focus M accompagne les entreprises et organisations dans leur transformation digitale, en concevant des environnements interactifs et collaboratifs alliant innovation technologique et performance opérationnelle.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Des espaces de réunion aux environnements de travail collaboratifs, salle de conseil, salle de contrôle nous concevons des expériences interactives qui favorisent l’engagement, la collaboration et l’efficacité collective.
+                Des espaces de travail collaboratifs aux environnements immersifs, nous créons des expériences interactives favorisant l’engagement, la collaboration et l’efficacité collective.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Nous intervenons à chaque étape du projet conseil, vente ou location longue durée, installation, formation des utilisateurs et support technique  pour déployer des solutions fiables, évolutives et parfaitement alignées avec vos enjeux métiers. 
-              </p>
-              <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Choisir les solutions Focus-M, c’est faire le choix d’une gestion intelligente et centralisée de vos équipements interactifs. Grâce à nos plateformes de pilotage à distance, vous gardez une visibilité complète sur votre parc : supervision en temps réel, paramétrage, mises à jour, maintenance préventive et reporting détaillé. Vous optimisez ainsi la performance de vos espaces, anticipez les besoins techniques et maîtrisez vos coûts, tout en garantissant une continuité d’usage fluide pour vos équipes. Focus-M vous offre bien plus qu’une technologie : un contrôle total, une exploitation simplifiée et une prise de décision éclairée.
+                Notre approche globale et sur mesure couvre l’ensemble du projet, du conseil à l’installation, en passant par la formation et le support technique, afin de proposer des solutions fiables, évolutives et alignées avec vos enjeux métiers.
               </p>
             </motion.div>
 
@@ -63,7 +60,7 @@ export function AboutIntroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.75, delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-6 pt-32"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8 mt-32">

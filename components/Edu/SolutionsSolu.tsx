@@ -63,7 +63,7 @@ const projects = [
   {
     title: "CDI / BCD",
     description:
-      "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, mais aussi numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant ainsi un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, tout en rendant le savoir accessible, stimulant et motivant pour tous.",
+      "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, rendant le savoir accessible et motivant pour tous.",
     src: "cactus.jpg",
     link: "/Solutions/Edu/img2.png",
     color: "#dc2626",

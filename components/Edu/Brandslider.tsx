@@ -33,6 +33,12 @@ const LogoSlider = () => {
       height: "60px",
     },
     {
+      id: 12,
+      name: "MAUPASSANT",
+      src: "/germain.png",
+      height: "100px",
+    },
+    {
       id: 6,
       name: "ECOLE BELGE",
       src: "https://www.ecolebelge.org/web/image/website/1/logo/Ecole%20Belge%20Maroc?unique=2e6cccb",
