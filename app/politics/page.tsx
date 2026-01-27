@@ -10,7 +10,7 @@ export default function PoliticsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className=" text-black py-20">
+      <div className=" text-black dark:text-white py-20">
         <div className="container mx-auto px-4 md:px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
             Politique de Confidentialité
