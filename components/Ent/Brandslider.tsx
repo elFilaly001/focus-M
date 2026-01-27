@@ -47,12 +47,14 @@ const LogoSlider = () => {
       name: "Deloitte",
       src: "https://cdn.worldvectorlogo.com/logos/deloitte-2.svg",
       height: "40px",
+      invertInDark: true,
     },
     {
       id: 9,
       name: "PWC",
       src: "https://www.pwc.com/etc.clientlibs/pwc/clientlibs/rebrand-clientlibs/components-colors/resources/images/slim-header-v2/PwC-logo-white.svg",
       height: "70px",
+      invertInDark: true,
     },
     {
       id: 10,
@@ -91,7 +93,7 @@ const LogoSlider = () => {
                   src={logo.src}
                   alt={logo.name}
                   style={{ height: logo.height }}
-                  className="w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                  className={`${logo.invertInDark ? 'dark:invert' : ''} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0`}
                 />
               </div>
             ))}
