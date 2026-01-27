@@ -20,7 +20,7 @@ const solutions = [
     description:
       "Transformez vos réunions avec des écrans interactifs 4K. Partage d'écran sans fil, annotations en temps réel et intégration avec vos outils de visioconférence.",
     features: ["Partage sans fil", "4K Ultra HD", "Multi-touch 20 points"],
-    imagePlaceholder: "/Solution home/Ent/img1.png",
+    imagePlaceholder: "/focus-m-visual-9.jpg",
   },
   {
     icon: PresentationIcon,
@@ -32,7 +32,7 @@ const solutions = [
       "Enregistrement sessions",
       "Intégration LMS",
     ],
-    imagePlaceholder: "/Solution home/Ent/img2.png",
+    imagePlaceholder: "/focus-m-visual-11.jpg",
   },
   {
     icon: Building2,

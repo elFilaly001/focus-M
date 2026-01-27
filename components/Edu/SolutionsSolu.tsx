@@ -11,7 +11,7 @@ const projects = [
     description:
       " Transformez l’enseignement à distance en une expérience fluide et engageante. Interagissez avec vos étudiants en temps réel, partagez vos contenus et maintenez le lien, où qu’ils soient. Cours, quiz, travaux collaboratifs ou échanges instantanés deviennent simples et naturels, rendant l’apprentissage à distance efficace et motivant.",
     src: "rock.jpg",
-    link: "/Solutions/Edu/img10.png",
+    link: "/focus-m-visual-15.jpg",
     color: "#dc2626",
     textColor: "#ffffff",
   },

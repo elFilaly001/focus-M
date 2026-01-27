@@ -13,9 +13,9 @@ export default function Home() {
 
       <AboutIntroSection />
 
-      <SolutionsEducation />
+      {/* <SolutionsEducation /> */}
 
-      {/* <ShowcaseSection /> */}
+      <ShowcaseSection />
 
       <LogoSlider />
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface ShowcaseItem {
   id: number;
-  type: 'guest' | 'product' | 'event' | 'other';
+  type: 'kids' | 'coworking' | 'classroom' | 'lab' | 'other';
   title: string;
   description: string;
   image: string;
@@ -14,31 +14,39 @@ interface ShowcaseItem {
 const showcaseItems: ShowcaseItem[] = [
   {
     id: 1,
-    type: 'guest',
-    title: 'Invité Spécial',
-    description: 'Rencontre avec un expert en éducation digitale',
+    type: 'kids',
+    title: 'Espace Enfants',
+    description: 'Un environnement ludique et sécurisé pour les plus jeunes, favorisant l\'apprentissage par le jeu',
     image: '/placeholder.jpg',
   },
   {
     id: 2,
-    type: 'product',
-    title: 'Nouveau Produit',
-    description: 'Découvrez notre dernière innovation',
+    type: 'coworking',
+    title: 'Espace Coworking',
+    description: 'Des postes de travail flexibles et connectés pour la collaboration et la productivité',
     image: '/placeholder.jpg',
   },
   {
     id: 3,
-    type: 'event',
-    title: 'Événement à Venir',
-    description: 'Webinaire sur les technologies éducatives',
+    type: 'classroom',
+    title: 'Salle de Classe Interactive',
+    description: 'Une salle équipée de technologies avancées pour un enseignement moderne et engageant',
     image: '/placeholder.jpg',
   },
 ];
 
 export function ShowcaseSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-950">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[var(--color-background)] relative overflow-hidden">
+      {/* Festive decorations */}
+      {/* <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-pink-400 rounded-full opacity-10 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-400 rounded-full opacity-10 animate-pulse delay-500"></div>
+        <div className="absolute bottom-10 right-1/3 w-24 h-24 bg-green-400 rounded-full opacity-10 animate-pulse delay-1500"></div>
+      </div> */}
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +54,7 @@ export function ShowcaseSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4"
           >
-            Showcase de la Semaine
+            Showcase des Espaces Organisés
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,50 +63,11 @@ export function ShowcaseSection() {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Découvrez nos temps forts de la semaine : invités, produits innovants et événements spéciaux.
+            Découvrez nos espaces organisés et équipés pour différents besoins : enfants, coworking, salles de classe et plus encore !
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {showcaseItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                    {item.type === 'guest' ? 'Invité' : item.type === 'product' ? 'Produit' : item.type === 'event' ? 'Événement' : 'Autre'}
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {item.description}
-                </p>
-                {item.link && (
-                  <button className="text-primary hover:text-primary/80 font-semibold transition-colors">
-                    En savoir plus →
-                  </button>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +77,7 @@ export function ShowcaseSection() {
           className="text-center mt-12"
         >
           <p className="text-sm text-muted-foreground">
-            Contenu mis à jour chaque semaine
+            ✨ Espaces organisés et équipés pour tous vos besoins ✨
           </p>
         </motion.div>
       </div>
