@@ -56,16 +56,16 @@ const projects = [
     description:
       "Faites de votre salle de classe un espace intelligent et interactif, où chaque étudiant et enseignant peut capturer, partager et diffuser facilement des contenus pédagogiques. Le mobilier connecté favorise l’organisation, la participation et l’engagement dans toutes les activités de la classe, créant un environnement dynamique, motivant et parfaitement adapté aux méthodes pédagogiques modernes et collaboratives.",
     src: "house.jpg",
-    link: "/Solutions/Edu/img3.png",
+    link: "/focus-m-visual-2.png",
     color: "#ffffff",
     textColor: "#000000",
   },
   {
     title: "CDI / BCD",
     description:
-      "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active, rendant le savoir accessible et motivant pour tous.",
+      "Modernisez l’accès au savoir en transformant les espaces de documentation en centres interactifs et connectés, où les étudiants et les enseignants peuvent consulter, organiser et partager les ressources pédagogiques, numériser et archiver facilement les documents grâce à des solutions adaptées aux médiathèques de lycées, collèges et BCD du primaire, créant un environnement qui favorise l’apprentissage autonome, le travail collaboratif et la recherche active.",
     src: "cactus.jpg",
-    link: "/Solutions/Edu/img2.png",
+    link: "/focus-m-visual-4.png",
     color: "#dc2626",
     textColor: "#ffffff",
   },
@@ -92,7 +92,7 @@ const projects = [
     description:
       " Équipez vos étudiants avec des outils fiables et adaptés à l’éducation, qui remplacent plusieurs cahiers et manuels tout en centralisant leur apprentissage dans un seul outil performant. Simples, robustes et efficaces, les Chromebooks leur permettent de collaborer facilement, d’accéder instantanément à tous leurs cours et ressources, et de réaliser leurs projets avec fluidité, offrant une expérience numérique motivante et moderne",
     src: "house.jpg",
-    link: "/Solutions/Edu/img9.png",
+    link: "/focus-m-visual-5.jpg",
     color: "#ffffff",
     textColor: "#000000",
   },

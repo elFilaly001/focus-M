@@ -127,7 +127,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         }}
       >
         <Image
-          src="/Solutions/Ent/hero.png"
+          src="/focus-m-visual-7.jpg"
           alt="Salle de réunion moderne avec écran tactile Focus-M"
           fill
           className="object-cover object-center w-full h-full"

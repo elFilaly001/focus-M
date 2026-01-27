@@ -38,7 +38,7 @@ const projects = [
     description:
       "Équipez vos espaces de communication à distance avec des solutions fiables garantissant une qualité audio et vidéo optimale. Facilitez les réunions à distance, les échanges avec vos partenaires et la collaboration entre sites, tout en assurant la sécurité et la stabilité des connexions.",
     src: "house.jpg",
-    link: "/Solutions/Ent/img4.png",
+    link: "/focus-m-visual-6.jpg",
     color: "#ffffff",
     textColor: "#000000",
   },
@@ -74,7 +74,7 @@ const projects = [
     description:
       "Permettez à vos équipes de rester connectées où qu’elles se trouvent grâce à des solutions de visioconférence mobiles et faciles à déployer. Adaptées aux déplacements, aux sites temporaires ou aux réunions improvisées, elles garantissent une communication fluide et efficace.",
     src: "house.jpg",
-    link: "/Solutions/Ent/img8.png",
+    link: "/focus-m-visual-8.jpg",
     color: "#ffffff",
     textColor: "#000000",
   },
