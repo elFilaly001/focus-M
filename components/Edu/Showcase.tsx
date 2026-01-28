@@ -54,7 +54,7 @@ export function ShowcaseSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4"
           >
-            Showcase des Espaces Organisés
+            Visite virtuelle show room
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
