@@ -4,11 +4,14 @@ import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { useToast } from "@/hooks/use-toast"
 
 export function NewsletterPopup() {
   const [isOpen, setIsOpen] = useState(false)
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
 
   useEffect(() => {
     // Check if user has already seen the popup
@@ -26,12 +29,40 @@ export function NewsletterPopup() {
     localStorage.setItem('newsletter-popup-shown', 'true')
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitted(true)
-    // Mark as seen when submitted
-    localStorage.setItem('newsletter-popup-shown', 'true')
-    setTimeout(() => handleClose(), 2000)
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        toast({
+          title: "Inscription réussie",
+          description: "Vous êtes maintenant inscrit à notre newsletter.",
+        })
+        // Mark as seen when submitted
+        localStorage.setItem('newsletter-popup-shown', 'true')
+        setTimeout(() => handleClose(), 2000)
+      } else {
+        throw new Error('Failed to subscribe')
+      }
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur s'est produite. Veuillez réessayer.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (!isOpen) return null
@@ -69,8 +100,8 @@ export function NewsletterPopup() {
                 required
                 className="w-full h-12"
               />
-              <Button type="submit" className="w-full h-12 bg-[#dc2626] text-white hover:bg-[#991b1b]">
-                S'abonner
+              <Button type="submit" className="w-full h-12 bg-[#dc2626] text-white hover:bg-[#991b1b]" disabled={isSubmitting}>
+                {isSubmitting ? "Inscription..." : "S'abonner"}
               </Button>
             </form>
           </>

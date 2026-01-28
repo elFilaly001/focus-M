@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Clock, Users } from "lucide-react";
+import { DemoForm } from "@/components/DemoForm";
 
 export const metadata = {
   title: "Réserver une Démo - FocusTech",
@@ -36,85 +37,11 @@ export default function DemoPage() {
               <h2 className="font-display text-3xl font-bold mb-6">
                 Planifiez Votre Démo
               </h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Prénom *
-                    </label>
-                    <Input placeholder="Jean" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Nom *
-                    </label>
-                    <Input placeholder="Dupont" required />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Email Professionnel *
-                  </label>
-                  <Input
-                    type="email"
-                    placeholder="jean@entreprise.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Numéro de Téléphone *
-                  </label>
-                  <Input type="tel" placeholder="+212 1 23 45 67 89" required />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Nom de l'Entreprise *
-                  </label>
-                  <Input placeholder="Votre Entreprise" required />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Secteur d'Activité
-                  </label>
-                  <Input placeholder="ex: Éducation, Entreprise, Santé" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Nombre d'Écrans Nécessaires
-                  </label>
-                  <Input type="number" placeholder="1" min="1" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Date Préférée
-                  </label>
-                  <Input
-                    type="date"
-                    min={new Date().toISOString().split("T")[0]}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Informations Complémentaires
-                  </label>
-                  <Textarea
-                    placeholder="Parlez-nous de votre projet, vos besoins spécifiques ou vos questions..."
-                    rows={4}
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-[#dc2626] hover:bg-[#991b1b] text-white"
-                >
-                  Demander une Démo
-                </Button>
-                <p className="text-sm text-muted-foreground text-center">
-                  * Champs obligatoires. Nous vous contacterons sous 24 heures
-                  pour confirmer votre démo.
-                </p>
-              </form>
+              <DemoForm />
+              <p className="text-sm text-muted-foreground text-center mt-4">
+                * Champs obligatoires. Nous vous contacterons sous 24 heures
+                pour confirmer votre démo.
+              </p>
             </div>
 
             {/* Info */}

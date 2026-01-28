@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail } from "lucide-react"
+import { ContactForm } from "@/components/ContactForm"
 
 
 
@@ -31,41 +32,13 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="py-20 bg-white dark:bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="flex flex-col items-center justify-center max-w-2xl mx-auto">
             {/* Contact Form */}
-            <div>
-              <h2 className="font-display text-3xl font-bold mb-6">Envoyez-nous un message</h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Prénom</label>
-                    <Input placeholder="Jean" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Nom</label>
-                    <Input placeholder="Dupont" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">E-mail</label>
-                  <Input type="email" placeholder="jean@example.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Téléphone</label>
-                  <Input type="tel" placeholder="+212 1 23 45 67 89" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Société</label>
-                  <Input placeholder="Votre entreprise" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <Textarea placeholder="Parlez-nous de votre projet..." rows={5} />
-                </div>
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-[#991b1b] text-white">
-                  Envoyer le message
-                </Button>
-              </form>
+            <div className="w-full">
+              <h2 className="font-display text-3xl font-bold mb-6 text-center">Envoyez-nous un message</h2>
+              <div className="w-full">
+                <ContactForm />
+              </div>
             </div>
 
             {/* Contact Info */}

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SectorProvider } from "@/components/sector-context";
 import LayoutShell from "@/components/layout-shell";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         >
           <SectorProvider>
             <LayoutShell>{children}</LayoutShell>
+            <Toaster />
           </SectorProvider>
         </ThemeProvider>
       </body>
