@@ -76,9 +76,7 @@ export function ShowcaseSection() {
           transition={{ delay: 0.5 }}
           className="text-center mt-12"
         >
-          <p className="text-sm text-muted-foreground">
-            ✨ Espaces organisés et équipés pour tous vos besoins ✨
-          </p>
+          
         </motion.div>
       </div>
     </section>
