@@ -16,7 +16,7 @@ export default function PoliticsPage() {
             Politique de Confidentialité
           </h1>
           <p className="text-center text-white/80 mt-4">
-            Dernière mise à jour : [date]
+            Dernière mise à jour : [28/01/2026]
           </p>
         </div>
       </div>
@@ -52,20 +52,15 @@ export default function PoliticsPage() {
                   <strong className="text-foreground">FOCUS M</strong>
                 </p>
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">Forme juridique :</strong>{" "}
-                  [ex. SAS / SARL]
-                </p>
-                <p className="text-muted-foreground">
                   <strong className="text-foreground">Adresse :</strong>{" "}
-                  [adresse complète]
+                  Rabat, Maroc
                 </p>
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">Email :</strong> [email de
-                  contact]
+                  <strong className="text-foreground">Email :</strong> contact@focusm.ma
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  [numéro]
+                  +212 522222222
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-6">
@@ -324,7 +319,7 @@ export default function PoliticsPage() {
               <div className="p-6 bg-[#162030] text-white rounded-lg">
                 <p className="flex items-center gap-2">
                   <span>📧</span>
-                  <span className="font-semibold">[email de contact]</span>
+                  <span className="font-semibold">contact@focusm.ma</span>
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-6">
@@ -388,11 +383,11 @@ export default function PoliticsPage() {
                 <p className="text-foreground font-bold">FOCUS M</p>
                 <p className="text-muted-foreground flex items-center gap-2">
                   <span>📧</span>
-                  <span>[email]</span>
+                  <span>contact@focusm.ma</span>
                 </p>
                 <p className="text-muted-foreground flex items-center gap-2">
                   <span>📞</span>
-                  <span>[téléphone]</span>
+                  <span>+212 522222222</span>
                 </p>
               </div>
             </div>

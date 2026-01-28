@@ -43,15 +43,15 @@ export default function MentionLegalPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Siège social :</strong>{" "}
-                  [adresse – Maroc]
+                  [Rabat – Maroc]
                 </p>
                 <p>
                   <strong className="text-foreground">Adresse e-mail :</strong>{" "}
-                  [email de contact]
+                  contact@focusm.ma
                 </p>
                 <p>
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  [numéro]
+                  +212 522222222
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function MentionLegalPage() {
                 <p className="text-sm font-semibold text-foreground mb-2">
                   Pour exercer ces droits, vous pouvez contacter :
                 </p>
-                <p className="text-muted-foreground">[email de contact]</p>
+                <p className="text-muted-foreground">contact@focusm.ma</p>
               </div>
             </div>
           </section>
@@ -213,7 +213,7 @@ export default function MentionLegalPage() {
               </p>
               <div className="mt-6 p-6 bg-[#C52133]/5 dark:bg-[#C52133]/10 rounded-lg border border-[#C52133]/20">
                 <p className="text-[#C52133] dark:text-[#C52133] font-semibold">
-                  [email de contact]
+                  contact@focusm.ma
                 </p>
               </div>
             </div>
