@@ -79,10 +79,10 @@ export function FinalCTASection() {
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <TrendingUp className="h-6 w-6 text-white/80" />
-                <div className="text-4xl md:text-5xl font-bold">100%</div>
+                <div className="text-4xl md:text-5xl font-bold">1500+</div>
               </div>
               <p className="text-white/70 text-sm md:text-base">
-                Taux de satisfaction
+                Professeurs formés
               </p>
             </div>
 

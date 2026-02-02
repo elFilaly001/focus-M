@@ -6,17 +6,32 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
+import { Calendar } from "@/components/ui/calendar"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { CalendarIcon } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { format } from "date-fns"
+import { fr } from "date-fns/locale"
 
 export function DemoForm() {
 
-  // Helper to get tomorrow's date in yyyy-mm-dd format
+  // Helper to get tomorrow's date at midnight for proper comparison
   function getTomorrowDate() {
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
-    return tomorrow.toISOString().split("T")[0]
+    tomorrow.setHours(0, 0, 0, 0)
+    return tomorrow
+  }
+
+  // Helper to check if a date is a weekend (Saturday = 6, Sunday = 0)
+  function isWeekend(date: Date) {
+    const day = date.getDay()
+    return day === 0 || day === 6
   }
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
+  const [calendarOpen, setCalendarOpen] = useState(false)
   const { toast } = useToast()
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -33,7 +48,7 @@ export function DemoForm() {
       company: formData.get('company'),
       sector: formData.get('sector'),
       screenCount: formData.get('screenCount'),
-      preferredDate: formData.get('preferredDate'),
+      preferredDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
       additionalInfo: formData.get('additionalInfo'),
     }
 
@@ -53,6 +68,7 @@ export function DemoForm() {
         })
         // Reset form ---
         formRef.current?.reset()
+        setSelectedDate(undefined)
       } else {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to send demo request')
@@ -103,12 +119,40 @@ export function DemoForm() {
       </div>
       <div>
         <label htmlFor="preferredDate" className="block text-sm font-medium mb-2">Date Préférée</label>
-        <Input
-          id="preferredDate"
-          name="preferredDate"
-          type="date"
-          min={getTomorrowDate()}
-        />
+        <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              className={cn(
+                "w-full justify-start text-left font-normal bg-input dark:bg-[#080c13] border-input h-9 px-3 py-1",
+                !selectedDate && "text-muted-foreground"
+              )}
+            >
+              <CalendarIcon className="mr-2 h-4 w-4" />
+              {selectedDate ? format(selectedDate, "PPP", { locale: fr }) : "Sélectionner une date"}
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0" align="start">
+            <Calendar
+              mode="single"
+              selected={selectedDate}
+              onSelect={(date) => {
+                setSelectedDate(date)
+                setCalendarOpen(false)
+              }}
+              disabled={(date) => date < getTomorrowDate() || isWeekend(date)}
+              locale={fr}
+              modifiers={{
+                weekend: (date) => isWeekend(date),
+              }}
+              modifiersClassNames={{
+                weekend: "text-red-400 opacity-50 line-through",
+              }}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
+        <p className="text-xs text-muted-foreground mt-1">Disponible du lundi au vendredi uniquement</p>
       </div>
       <div>
         <label htmlFor="additionalInfo" className="block text-sm font-medium mb-2">Informations Complémentaires</label>
