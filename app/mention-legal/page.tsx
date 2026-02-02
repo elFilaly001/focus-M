@@ -51,7 +51,7 @@ export default function MentionLegalPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  +212 522222222
+                  05222-44289
                 </p>
               </div>
             </div>

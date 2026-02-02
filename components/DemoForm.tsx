@@ -8,6 +8,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 
 export function DemoForm() {
+
+  // Helper to get tomorrow's date in yyyy-mm-dd format
+  function getTomorrowDate() {
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    return tomorrow.toISOString().split("T")[0]
+  }
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
   const formRef = useRef<HTMLFormElement>(null)
@@ -99,7 +107,7 @@ export function DemoForm() {
           id="preferredDate"
           name="preferredDate"
           type="date"
-          min={new Date().toISOString().split("T")[0]}
+          min={getTomorrowDate()}
         />
       </div>
       <div>

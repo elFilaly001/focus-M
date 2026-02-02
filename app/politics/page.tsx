@@ -60,7 +60,7 @@ export default function PoliticsPage() {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  +212 522222222
+                  05222-44289
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-6">
@@ -387,7 +387,7 @@ export default function PoliticsPage() {
                 </p>
                 <p className="text-muted-foreground flex items-center gap-2">
                   <span>📞</span>
-                  <span>+212 522222222</span>
+                  <span>05222-44289</span>
                 </p>
               </div>
             </div>
