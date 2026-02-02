@@ -43,7 +43,7 @@ export function DemoForm() {
           title: "Demande envoyée",
           description: "Nous vous contacterons bientôt pour planifier votre démo.",
         })
-        // Reset form
+        // Reset form ---
         formRef.current?.reset()
       } else {
         const errorData = await response.json();
