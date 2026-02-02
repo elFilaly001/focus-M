@@ -104,7 +104,7 @@ export default function ProductDetailPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-[#dc2626] hover:bg-[#b91c1c] text-white">
-                    Demander une démo
+                    Réserver une démo
                   </Button>
                   <Button size="lg" variant="outline">
                     Fiche produit
@@ -330,7 +330,7 @@ export default function ProductDetailPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-lg px-10 h-14">
-                <Link href="/demo">Demander une démo</Link>
+                <Link href="/demo">Réserver une démo</Link>
               </Button>
               <Button
                 asChild

@@ -337,7 +337,7 @@ export default function HeroPlatform() {
                 size="lg"
                 className="bg-[#dc2626] text-white hover:bg-[#b91c1c] text-lg px-8 h-14"
               >
-                <Link href="/education/demo">Demander une démo</Link>
+                <Link href="/education/demo">Réserver une démo</Link>
               </Button>
               <Button
                 asChild

@@ -56,7 +56,7 @@ export function AboutIntroSection() {
                     <Award className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 29,
+                        end: 20,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -75,18 +75,20 @@ export function AboutIntroSection() {
                   </p>
                 </motion.div>
 
-                <motion.div
+                
+
+<motion.div
                   initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
-                  transition={{ duration: 0.7, delay: 0.08 }}
+                  transition={{ duration: 0.7, delay: 0.24 }}
                   className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
                   <div className="flex items-start gap-3 mb-2">
-                    <Users className="h-6 w-6 text-[var(--color-primary)]" />
+                    <CheckCircle className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 37000,
+                        end: 1500,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -95,13 +97,13 @@ export function AboutIntroSection() {
                           className="text-3xl font-bold text-[var(--color-primary)]"
                           ref={ref}
                         >
-                          {value}+{" "}
+                          {value}+
                         </div>
                       );
                     })()}
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Etudiants engagés{" "}
+                    Professeurs formés
                   </p>
                 </motion.div>
 
@@ -139,14 +141,14 @@ export function AboutIntroSection() {
                   initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
-                  transition={{ duration: 0.7, delay: 0.24 }}
+                  transition={{ duration: 0.7, delay: 0.08 }}
                   className="bg-gradient-to-br from-[var(--color-card-light)] to-[var(--color-card)] dark:from-[var(--color-card)] dark:to-[var(--color-card)] rounded-xl p-4 border border-border"
                 >
                   <div className="flex items-start gap-3 mb-2">
-                    <CheckCircle className="h-6 w-6 text-[var(--color-primary)]" />
+                    <Users className="h-6 w-6 text-[var(--color-primary)]" />
                     {(() => {
                       const { value, ref } = useCountUp({
-                        end: 100,
+                        end: 37000,
                         duration: 1200,
                         startOnView: true,
                       });
@@ -155,13 +157,13 @@ export function AboutIntroSection() {
                           className="text-3xl font-bold text-[var(--color-primary)]"
                           ref={ref}
                         >
-                          {value}%
+                          {value}+{" "}
                         </div>
                       );
                     })()}
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Taux de satisfaction
+                    Etudiants engagés{" "}
                   </p>
                 </motion.div>
               </div>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { FileText, Download, Book, Video } from "lucide-react"
 
 export const metadata = {
-  title: "Downloads - FocusTech",
+  title: "Downloads - Focus M",
   description: "Download product manuals, specifications, and software",
 }
 
@@ -38,7 +38,7 @@ export default function DownloadsPage() {
                 <div className="flex-1">
                   <h3 className="font-display text-xl font-bold mb-2">Product Manuals</h3>
                   <p className="text-muted-foreground mb-4">
-                    Comprehensive user guides and installation manuals for all FocusTech products.
+                    Comprehensive user guides and installation manuals for all Focus M products.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Button
@@ -121,7 +121,7 @@ export default function DownloadsPage() {
                       className="hover:border-[#dc2626] hover:text-[#dc2626] bg-transparent"
                     >
                       <Download className="h-4 w-4 mr-2" />
-                      FocusTech Suite (Windows)
+                      Focus M Suite (Windows)
                     </Button>
                     <Button
                       variant="outline"
@@ -129,7 +129,7 @@ export default function DownloadsPage() {
                       className="hover:border-[#dc2626] hover:text-[#dc2626] bg-transparent"
                     >
                       <Download className="h-4 w-4 mr-2" />
-                      FocusTech Suite (macOS)
+                      Focus M Suite (macOS)
                     </Button>
                     <Button
                       variant="outline"
@@ -153,7 +153,7 @@ export default function DownloadsPage() {
                 <div className="flex-1">
                   <h3 className="font-display text-xl font-bold mb-2">Training Materials</h3>
                   <p className="text-muted-foreground mb-4">
-                    Video tutorials and training resources to help you get the most from your FocusTech display.
+                    Video tutorials and training resources to help you get the most from your Focus M display.
                   </p>
                   <Button
                     variant="outline"

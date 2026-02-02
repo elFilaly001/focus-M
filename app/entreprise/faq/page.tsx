@@ -10,9 +10,9 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "FAQ - FocusTech Entreprise",
+  title: "FAQ - Focus M Entreprise",
   description:
-    "Questions fréquemment posées sur les solutions FocusTech pour les entreprises.",
+    "Questions fréquemment posées sur les solutions Focus M pour les entreprises.",
 };
 
 export default function FaqPage() {

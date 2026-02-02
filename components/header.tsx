@@ -115,7 +115,7 @@ export function Header() {
             </Button>
 
             <Button asChild variant="default" className="bg-[#dc2626] hover:bg-[#991b1b] text-white">
-              <Link href={getAssociatLink('/demo')}>Demander une démo</Link>
+              <Link href={getAssociatLink('/demo')}>Réserver une démo</Link>
             </Button>
           </div>
 
@@ -188,7 +188,7 @@ export function Header() {
               </Button>
 
               <Button asChild className="bg-[#dc2626] hover:bg-[#991b1b] text-white flex-1 ml-4">
-                <Link href={getAssociatLink('/demo')}>Demander une démo</Link>
+                <Link href={getAssociatLink('/demo')}>Réserver une démo</Link>
               </Button>
             </div>
           </nav>

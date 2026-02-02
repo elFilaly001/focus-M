@@ -3,9 +3,9 @@ import { MapBanner } from "@/components/MapBanner";
 import { FaqSection } from "@/components/Edu/FaqSection";
 
 export const metadata = {
-  title: "FAQ - FocusTech",
+  title: "FAQ - Focus M",
   description:
-    "Frequently Asked Questions about FocusTech interactive displays and solutions.",
+    "Frequently Asked Questions about Focus M interactive displays and solutions.",
 };
 
 export default function FaqPage() {

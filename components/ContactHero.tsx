@@ -53,7 +53,7 @@ export function ContactHero({ className }: ContactHeroProps) {
             >
               <div>
                 <h3 className="font-semibold text-[var(--color-primary)] mb-2">Adresse</h3>
-                <p>FocusTech Siège<br />123 Avenue de l'Innovation<br />Tech City, 10001</p>
+                <p>Focus M Siège<br />123 Avenue de l'Innovation<br />Tech City, 10001</p>
                 <p className="mt-2">Lun–Ven | 09:00–18:00</p>
               </div>
               <div>
@@ -62,7 +62,7 @@ export function ContactHero({ className }: ContactHeroProps) {
               </div>
               <div>
                 <h3 className="font-semibold text-[var(--color-primary)] mb-2">Email</h3>
-                <p>contact@focustech.com</p>
+                <p>contact@focusm.ma</p>
               </div>
               <div>
                 <h3 className="font-semibold text-[var(--color-primary)] mb-2">Téléphone</h3>

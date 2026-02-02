@@ -5,9 +5,9 @@ import { Calendar, Clock, Users } from "lucide-react";
 import { DemoForm } from "@/components/DemoForm";
 
 export const metadata = {
-  title: "Réserver une Démo - FocusTech",
+  title: "Réserver une Démo - Focus M",
   description:
-    "Planifiez une démonstration personnalisée des écrans interactifs FocusTech",
+    "Planifiez une démonstration personnalisée des écrans interactifs Focus M",
 };
 
 export default function DemoPage() {
@@ -21,7 +21,7 @@ export default function DemoPage() {
               Réservez Votre <span className="text-[#dc2626]">Démo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Découvrez FocusTech en direct avec une démonstration personnalisée
+              Découvrez Focus M en direct avec une démonstration personnalisée
               adaptée à vos besoins.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function DemoPage() {
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
                   Nos spécialistes produits vous guideront à travers une
-                  démonstration complète des capacités de FocusTech,
+                  démonstration complète des capacités de Focus M,
                   personnalisée selon votre cas d'usage spécifique.
                 </p>
               </div>

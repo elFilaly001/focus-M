@@ -129,7 +129,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
               size="lg"
               className="w-full sm:w-auto bg-[#C52133] text-white hover:bg-[#a81a29] transition-colors font-semibold rounded-xl px-8 py-3 shadow-md"
             >
-              Demander une démo
+              Réserver une démo
             </Button>
           </Link>
         </motion.div>

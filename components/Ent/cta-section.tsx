@@ -43,7 +43,7 @@ export function FinalCTASection() {
                 className="bg-white text-[#dc2626] hover:bg-white/10 hover:text-white text-lg px-10 h-16 font-semibold group shadow-xl"
               >
                 <Link href="/entreprise/demo">
-                  Demander une démo
+                  Réserver une démo
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>

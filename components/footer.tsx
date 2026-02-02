@@ -44,7 +44,7 @@ export function Footer() {
             <div className="mb-4">
               <Image
                 src={logoSrc}
-                alt="Logo FocusTech"
+                alt="Logo Focus M"
                 width={0}
                 height={0}
                 sizes="64px"
