@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description:
     "Découvrez nos écrans tactiles interactifs 4K UHD pour entreprises et établissements scolaires. Touch X2 et Touch Ultra avec technologie multi-touch 20 points. Solutions d'affichage professionnel pour salles de conférence et salles de classe.",
   keywords: [
+    "sno7i focusm",
     "écran tactile",
     "écran interactif",
     "écran tactile professionnel",
