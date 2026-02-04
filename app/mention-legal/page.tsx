@@ -43,7 +43,7 @@ export default function MentionLegalPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Siège social :</strong>{" "}
-                  [Rabat – Maroc]
+                  Rabat – Maroc
                 </p>
                 <p>
                   <strong className="text-foreground">Adresse e-mail :</strong>{" "}

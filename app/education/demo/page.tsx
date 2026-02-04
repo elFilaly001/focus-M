@@ -18,7 +18,7 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Réservez Votre <span className="text-[#dc2626]">Démo</span>
+              Réservez votre <span className="text-[#dc2626]">démo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Découvrez Focus M en direct avec une démonstration personnalisée
@@ -35,7 +35,7 @@ export default function DemoPage() {
             {/* Form */}
             <div>
               <h2 className="font-display text-3xl font-bold mb-6">
-                Planifiez Votre Démo
+                Planifiez votre démo
               </h2>
               <DemoForm />
               <p className="text-sm text-muted-foreground text-center mt-4">
@@ -48,7 +48,7 @@ export default function DemoPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="font-display text-3xl font-bold mb-6">
-                  À Quoi S'Attendre
+                  À quoi s'attendre
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
                   Nos spécialistes produits vous guideront à travers une
@@ -106,7 +106,7 @@ export default function DemoPage() {
 
               <div className="bg-muted rounded-xl p-8 border border-border">
                 <h3 className="font-display text-xl font-bold mb-4">
-                  Pendant Votre Démo
+                  Pendant votre démo
                 </h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
