@@ -72,6 +72,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" href="/LOGO/Brandbook-FOCUS-M-1.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/LOGO/Brandbook-FOCUS-M-1.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/LOGO/Brandbook-FOCUS-M-1.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
