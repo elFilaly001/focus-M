@@ -57,7 +57,7 @@ export default function PoliticsPage() {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Adresse :</strong>{" "}
-                  Rue Barbier, Angle R322, Casablanca 20290
+                  Angle Avenue Ambassadeur Ben Aîcha, 2ᵉ étage, Casablanca
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email :</strong> contact@focusm.ma
