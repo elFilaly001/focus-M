@@ -56,6 +56,10 @@ export default function PoliticsPage() {
                   Rabat, Maroc
                 </p>
                 <p className="text-muted-foreground">
+                  <strong className="text-foreground">Adresse :</strong>{" "}
+                  Rue Barbier, Angle R322, Casablanca 20290
+                </p>
+                <p className="text-muted-foreground">
                   <strong className="text-foreground">Email :</strong> contact@focusm.ma
                 </p>
                 <p className="text-muted-foreground">

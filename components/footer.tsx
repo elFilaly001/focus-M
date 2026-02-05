@@ -204,6 +204,12 @@ export function Footer() {
                   Rabat, Maroc
                 </span>
               </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">
+                  Rue Barbier, Angle R322, Casablanca 20290
+                </span>
+              </li>
               <li className="pt-2">
                 <Link
                   href={`${basePath}/contact`}
