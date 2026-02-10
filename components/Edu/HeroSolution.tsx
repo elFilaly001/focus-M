@@ -12,11 +12,11 @@ interface HeroSolutionProps {
 }
 
 const features = [
-  "Analyse de vos besoins pédagogiques et techniques",
-  "Vente ou location longue durée de tableaux interactifs",
-  "Installation et intégration sur site",
-  "Accompagnement et formation des équipes",
-  "Support technique continu",
+  "Auditer vos besoins pédagogiques et votre infrastructure actuelle.",
+  "Fournir des écrans tactiles et tableaux interactifs adaptés (Vente ou Location).",
+  "Installer et configurer l'ensemble de vos équipements sur site.",
+  "Former vos équipes enseignantes pour une prise en main immédiate.",
+  "Assurer un support technique réactif et une maintenance continue.",
 ];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
@@ -56,7 +56,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.18, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          L'innovation au service de la pédagogie
+          Nos solutions interactives au service de la pédagogie
         </motion.h1>
         {/* <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -80,7 +80,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Chez Focus-M, nous accompagnons les établissements éducatifs, écoles, universités et centres de formation dans leur transformation numérique grâce à des solutions interactives adaptées aux enjeux pédagogiques actuels.
+          Focus M accélère la transformation numérique des établissements scolaires, universités et centres de formation. Nous déployons des écrans interactifs de dernière génération, spécialement conçus pour enrichir l'expérience d'apprentissage et moderniser vos salles de classe.
         </motion.p>
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -89,7 +89,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Nos dispositifs, disponibles à la vente ou en location longue durée, intègrent la livraison, l’installation, la formation et la maintenance. Ils s’adaptent aux contraintes pédagogiques, techniques et budgétaires, tout en garantissant une expérience d’usage fluide, intuitive et durable pour les équipes pédagogiques comme pour les apprenants.
+          Accessibles à l'achat ou en location longue durée, nos solutions incluent un service complet : livraison, installation sur site, formation et maintenance. Nous garantissons un matériel fiable et performant, adapté à vos contraintes budgétaires et techniques.
         </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"

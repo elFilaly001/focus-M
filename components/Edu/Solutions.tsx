@@ -50,21 +50,21 @@ const solutions = [
 const benefits = [
   {
     icon: Activity,
-    title: "Expérience d’apprentissage engageante ",
+    title: "Interactivité Tactile & Engagement",
     description:
-      "Stimulez l’attention et la participation grâce à des espaces interactifs",
+      "Captiver l'auditoire grâce à nos écrans haute précision qui favorisent la participation active et l'apprentissage visuel.",
   },
   {
     icon: Sliders,
-    title: "Solutions pédagogiques flexibles",
+    title: "Écosystème Compatible & Hybride",
     description:
-      "Répondez aux besoins pédagogiques avec des dispositifs flexibles et inclusifs.",
+      "Intégrez nos solutions à vos logiciels actuels pour fluidifier l'enseignement, en présentiel comme à distance.",
   },
   {
     icon: Headphones,
-    title: "Accompagnement professionnel dédié ",
+    title: "Installation & Support Expert",
     description:
-      "Formez les équipes pédagogiques et bénéficiez d’un support technique dédié.",
+      "Profitez d'un déploiement clé en main, de la pose du matériel à la maintenance technique de votre parc informatique.",
   },
 ];
 
@@ -88,7 +88,7 @@ export function SolutionsEducation() {
               Repenser l’apprentissage, repenser l’espace
             </h2>
             <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto">
-              Découvrez comment nos solutions transforment chaque environnement éducatif en une expérience interactive immersive, pensée pour tous les niveaux et tous les usages.
+              De la salle de classe au grand amphithéâtre, nos écrans interactifs s'adaptent à chaque configuration. Une technologie d'affichage fiable, conçue pour digitaliser tous vos espaces d'enseignement.
             </p>
           </motion.div>
 

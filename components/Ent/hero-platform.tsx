@@ -56,7 +56,7 @@ export default function HeroPlatformEnterprise() {
                             transition={{ delay: 0.2 }}
                             className="text-xl text-white/90 mb-8 max-w-2xl"
                         >
-                            Des solutions interactives pensées pour structurer les échanges, valoriser vos environnements et accompagner la performance de votre organisation.
+                            Optimisez vos salles de réunion avec nos écrans interactifs et systèmes de visioconférence. Des outils collaboratifs performants pour dynamiser le travail d'équipe et accélérer la prise de décision.
                         </motion.p>
 
                         <motion.div 
