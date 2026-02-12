@@ -24,7 +24,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
     <section
       className={cn(
         "w-full flex flex-col-reverse md:flex-row items-stretch justify-between overflow-hidden min-h-screen pb-6 md:pb-10 dark:bg-[#080c13]",
-        className
+        className,
       )}
     >
       {/* Left: Content */}
@@ -50,7 +50,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           Salle de réunion intelligente
         </motion.span> */}
         <motion.h1
-          className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#162030] dark:text-white mb-3 sm:mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.6 }}
@@ -80,7 +80,11 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Focus M accélère la transformation numérique des établissements scolaires, universités et centres de formation. Nous déployons des écrans interactifs de dernière génération, spécialement conçus pour enrichir l'expérience d'apprentissage et moderniser vos salles de classe.
+          Focus M accélère la transformation numérique des établissements
+          scolaires, universités et centres de formation. Nous déployons des
+          écrans interactifs de dernière génération, spécialement conçus pour
+          enrichir l'expérience d'apprentissage et moderniser vos salles de
+          classe.
         </motion.p>
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
@@ -89,7 +93,10 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Accessibles à l'achat ou en location longue durée, nos solutions incluent un service complet : livraison, installation sur site, formation et maintenance. Nous garantissons un matériel fiable et performant, adapté à vos contraintes budgétaires et techniques.
+          Accessibles à l'achat ou en location longue durée, nos solutions
+          incluent un service complet : livraison, installation sur site,
+          formation et maintenance. Nous garantissons un matériel fiable et
+          performant, adapté à vos contraintes budgétaires et techniques.
         </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"
@@ -106,7 +113,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           {features.map((f, i) => (
             <motion.li
               key={i}
-              className="flex items-center gap-2 text-[#162030] dark:text-gray-200 text-sm sm:text-base md:text-lg"
+              className="flex items-center gap-2 text-gray-900 dark:text-gray-200 text-sm sm:text-base md:text-lg"
               initial={{ opacity: 0, x: -20 }}
               animate="visible"
               whileInView={{ opacity: 1, x: 0 }}
