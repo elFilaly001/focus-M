@@ -194,9 +194,9 @@ export const Card: React.FC<CardProps> = ({
             {title}
           </h2>
           <div
-            className={`flex h-full mt-5 gap-10 ${i % 2 === 0 ? "flex-row-reverse" : ""}`}
+            className={`flex items-center h-full mt-5 gap-10 ${i % 2 === 0 ? "flex-row-reverse" : ""}`}
           >
-            <div className="w-[40%] relative top-[10%]">
+            <div className="w-[40%] ">
               <p className={`text-base`} style={{ color: textColor }}>
                 {description}
               </p>
