@@ -177,7 +177,7 @@ export const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(
     scrollYProgress,
     [0, 1],
-    isLastCard ? [2.5, 1.5] : [2, 1]
+    isLastCard ? [2.5, 1.5] : [2, 1],
   );
   const scale = useTransform(progress, range, [1, targetScale]);
 
@@ -186,11 +186,11 @@ export const Card: React.FC<CardProps> = ({
   const opacity = useTransform(
     progress,
     [
-      (i - maxVisibleCards) / projects.length,
+      Math.max(0, (i - maxVisibleCards) / projects.length),
       i / projects.length,
       (i + 1) / projects.length,
     ],
-    [0, 1, 1]
+    [0, 1, 1],
   );
 
   return (
@@ -220,7 +220,9 @@ export const Card: React.FC<CardProps> = ({
           >
             {title}
           </h2>
-          <div className={`flex h-full mt-5 gap-10 ${i % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+          <div
+            className={`flex h-full mt-5 gap-10 ${i % 2 === 0 ? "flex-row-reverse" : ""}`}
+          >
             <div className="w-[40%] relative top-[10%]">
               <p className={`text-base`} style={{ color: textColor }}>
                 {description}
