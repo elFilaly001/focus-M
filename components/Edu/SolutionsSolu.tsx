@@ -181,17 +181,8 @@ export const Card: React.FC<CardProps> = ({
   );
   const scale = useTransform(progress, range, [1, targetScale]);
 
-  // Calculate opacity: only show 5 cards at a time
-  const maxVisibleCards = 5;
-  const opacity = useTransform(
-    progress,
-    [
-      Math.max(0, (i - maxVisibleCards) / projects.length),
-      i / projects.length,
-      (i + 1) / projects.length,
-    ],
-    [0, 1, 1],
-  );
+  // Ensure cards are fully opaque and don't show through each other
+  // Removed opacity transformation to prevent transparency issues at different zoom levels
 
   return (
     <div
@@ -201,17 +192,17 @@ export const Card: React.FC<CardProps> = ({
       <motion.div
         style={{
           scale,
-          opacity,
           top: `calc(-5vh + ${stackPosition * 0}px)`,
         }}
-        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
+        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top bg-white dark:bg-[#080c13]"
       >
         {/* Desktop layout - colored background with separate image */}
         <div
-          className="hidden md:flex flex-col h-full p-6 lg:p-10"
+          className="hidden md:flex flex-col h-full p-6 lg:p-10 relative z-10"
           style={{
             backgroundColor: color,
             border: color === "#ffffff" ? "2px solid #000000" : "none",
+            opacity: 1,
           }}
         >
           <h2
@@ -289,10 +280,10 @@ export const Card: React.FC<CardProps> = ({
           </motion.div>
 
           {/* Overlay gradient for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/30 z-[1]"></div>
 
           {/* Content */}
-          <div className="relative h-full flex flex-col justify-end p-6 text-white z-10">
+          <div className="relative h-full flex flex-col justify-end p-6 text-white z-20">
             <h2 className="text-2xl font-semibold mb-3">{title}</h2>
             <p className="text-sm mb-4 line-clamp-3">{description}</p>
             {/* <span className='flex items-center gap-2'>
