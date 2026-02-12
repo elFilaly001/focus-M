@@ -187,14 +187,14 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-20 md:top-24"
+      className="h-screen flex justify-center sticky top-20 md:top-24 mt-20 md:mt-24"
     >
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${stackPosition * 0}px)`,
         }}
-        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top bg-white dark:bg-[#080c13]"
+        className="flex flex-col relative h-[450px] w-[95%] md:w-[90%] lg:w-[85%] rounded-md overflow-hidden origin-top bg-white dark:bg-[#080c13]"
       >
         {/* Desktop layout - colored background with separate image */}
         <div
@@ -283,9 +283,9 @@ export const Card: React.FC<CardProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/30 z-[1]"></div>
 
           {/* Content */}
-          <div className="relative h-full flex flex-col justify-end p-6 text-white z-20">
+          <div className="relative h-full flex flex-col p-6 text-white z-20">
             <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-            <p className="text-sm mb-4 line-clamp-3">{description}</p>
+            <p className="text-sm mb-4">{description}</p>
             {/* <span className='flex items-center gap-2'>
               <a
                 href={'#'}
