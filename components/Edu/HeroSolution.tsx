@@ -23,7 +23,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
   return (
     <section
       className={cn(
-        "w-full flex flex-col-reverse md:flex-row items-stretch justify-between overflow-hidden min-h-screen pb-6 md:pb-10 dark:bg-[#080c13]",
+        "w-full flex flex-col-reverse md:flex-row items-stretch justify-between overflow-hidden min-h-screen pb-6 md:pb-10 bg-white dark:bg-[#080c13]",
         className,
       )}
     >
@@ -31,8 +31,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
       <motion.div
         className="flex-1 px-4 sm:px-6 md:pl-32 md:pr-12 pt-8 md:py-20 flex flex-col justify-center"
         initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
           type: "spring",
           stiffness: 60,
@@ -50,11 +49,10 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           Salle de réunion intelligente
         </motion.span> */}
         <motion.h1
-          className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#162030] dark:text-white mb-3 sm:mb-4 leading-tight"
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.6 }}
-          viewport={{ once: true }}
         >
           Nos solutions interactives au service de la pédagogie
         </motion.h1>
@@ -76,9 +74,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28, duration: 0.5 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           Focus M accélère la transformation numérique des établissements
           scolaires, universités et centres de formation. Nous déployons des
@@ -89,9 +86,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         <motion.p
           className="text-gray-700 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28, duration: 0.5 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
         >
           Accessibles à l'achat ou en location longue durée, nos solutions
           incluent un service complet : livraison, installation sur site,
@@ -113,12 +109,11 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           {features.map((f, i) => (
             <motion.li
               key={i}
-              className="flex items-center gap-2 text-gray-900 dark:text-gray-200 text-sm sm:text-base md:text-lg"
-              initial={{ opacity: 0, x: -20 }}
-              animate="visible"
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
+              className="flex items-center gap-2 text-[#162030] dark:text-gray-200 text-sm sm:text-base md:text-lg"
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: { opacity: 1, x: 0 },
+              }}
             >
               <CheckCircle className="w-5 h-5 text-[#C52133] flex-shrink-0" />{" "}
               {f}
@@ -127,9 +122,8 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         </motion.ul>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.5 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
         >
           <Link href="/education/demo">
             <Button
@@ -145,8 +139,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
       <motion.div
         className="flex-1 relative w-full h-64 sm:h-80 md:h-auto md:w-1/2 mb-6 md:mb-0"
         initial={{ opacity: 0, x: 40, y: 0 }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{
           type: "spring",
           stiffness: 60,
