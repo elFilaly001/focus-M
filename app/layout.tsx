@@ -73,8 +73,18 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" href="/LOGO/Brandbook-FOCUS-M-1.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/LOGO/Brandbook-FOCUS-M-1.png" sizes="192x192" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/LOGO/Brandbook-FOCUS-M-1.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/LOGO/Brandbook-FOCUS-M-1.png"
+          sizes="192x192"
+        />
         <link rel="apple-touch-icon" href="/LOGO/Brandbook-FOCUS-M-1.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
@@ -82,8 +92,9 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
+          storageKey="focus-m-theme"
         >
           <SectorProvider>
             <LayoutShell>{children}</LayoutShell>

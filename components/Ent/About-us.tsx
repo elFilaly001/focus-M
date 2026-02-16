@@ -44,13 +44,13 @@ export function AboutIntroSection() {
               </p> */}
 
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 20 ans, Focus M accompagne les entreprises et organisations dans leur transformation digitale, en concevant des environnements interactifs et collaboratifs alliant innovation technologique et performance opérationnelle.
+                Depuis plus de 20 ans, Focus M modernise vos infrastructures avec des solutions d'affichage professionnel et de visioconférence. Nous pilotons votre transformation digitale pour rendre chaque réunion plus productive et chaque échange plus fluide.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Des espaces de travail collaboratifs aux environnements immersifs, nous créons des expériences interactives favorisant l’engagement, la collaboration et l’efficacité collective.
+                Spécialistes des écrans interactifs pour l'entreprise, nous équipons vos salles de conseil, open-spaces et showrooms. Nos technologies fluidifient le travail collaboratif et accélèrent vos processus décisionnels grâce à des outils intuitifs.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Notre approche globale et sur mesure couvre l’ensemble du projet, du conseil à l’installation, en passant par la formation et le support technique, afin de proposer des solutions fiables, évolutives et alignées avec vos enjeux métiers.
+                Notre offre inclut l'ingénierie complète du projet : audit technique, installation clé en main, formation des collaborateurs et maintenance. Nous garantissons des équipements fiables, sécurisés et immédiatement opérationnels pour vos équipes.
               </p>
             </motion.div>
 

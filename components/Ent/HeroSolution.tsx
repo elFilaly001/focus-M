@@ -12,10 +12,10 @@ interface HeroSolutionProps {
 }
 
 const features = [
-  "Analyse de vos besoins ",
-  "Installation et Intégration",
-  "Accompagnement et Formation ",
-  "Soutien technique continu",
+  "Auditer votre infrastructure réseau et vos besoins fonctionnels.",
+  "Déployer et intégrer les équipements de visioconférence sur site.",
+  "Former vos collaborateurs à l'usage des nouveaux outils.",
+  "Garantir la disponibilité de vos salles grâce au support technique.",
 ];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
@@ -65,10 +65,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
           transition={{ delay: 0.28, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Découvrez les 4 étapes clés pour moderniser vos espaces de travail
-          avec Focus-M. De l'installation à la prise en main opérationnelle,
-          nous simplifions l'intégration des nouvelles technologies pour booster
-          la performance de vos équipes.{" "}
+         Adoptez une méthodologie éprouvée pour la digitalisation de vos salles. De l'audit initial au maintien en condition opérationnelle, nous gérons l'intégralité de votre projet audiovisuel pour une sérénité totale.
         </motion.p>
         <motion.ul
           className="mb-6 sm:mb-8 space-y-2 sm:space-y-3"

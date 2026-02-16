@@ -25,13 +25,13 @@ export function AboutIntroSection() {
                 Votre partenaire en solutions interactives pour réinventer l’éducation
               </h2>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-6 leading-relaxed">
-                Depuis plus de 20 ans, Focus M accompagne les établissements scolaires, universitaires et centres de formation dans la conception et le déploiement d’espaces d’apprentissage interactifs.
+                Depuis plus de 20 ans, Focus M équipe écoles, universités et centres de formation avec des solutions d'affichage interactif de pointe. Nous transformons vos salles de cours classiques en véritables classes numériques connectées.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Experts en solutions pédagogiques interactives, nous concevons la technologie comme un levier de transformation éducative au service de l’humain, en créant des environnements dynamiques favorisant l’engagement et la collaboration.
+                Spécialistes des écrans tactiles et outils collaboratifs, nous fournissons une technologie fiable qui modernise l'enseignement. Nos équipements sont conçus pour simplifier le travail des enseignants tout en maximisant la participation des élèves.
               </p>
               <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
-                Notre approche structurée et sur mesure intègre diagnostic, installation, formation et accompagnement continu, afin de garantir une adoption durable et pleinement intégrée aux pratiques éducatives.
+                Notre offre clé en main couvre tout le cycle de vie : audit technique, installation sur site, formation des équipes et maintenance. Nous garantissons une intégration fluide de vos nouveaux outils numériques.
               </p>
             </motion.div>
 

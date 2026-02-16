@@ -1,40 +1,48 @@
-"use client"
+"use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
-type Sector = 'enterprise' | 'education'
+type Sector = "enterprise" | "education";
 
 interface SectorContextType {
-  sector: Sector
-  setSector: (sector: Sector) => void
+  sector: Sector;
+  setSector: (sector: Sector) => void;
 }
 
-const SectorContext = createContext<SectorContextType | undefined>(undefined)
+const SectorContext = createContext<SectorContextType | undefined>(undefined);
 
 export function SectorProvider({ children }: { children: React.ReactNode }) {
-  const [sector, setSector] = useState<Sector>('enterprise')
-  const pathname = usePathname()
+  const [sector, setSector] = useState<Sector>("enterprise");
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
-    if (pathname.includes('/education/home')) {
-      setSector('education')
-    } else if (pathname.includes('/entreprise/home')) {
-      setSector('enterprise')
+    if (pathname.includes("/education")) {
+      setSector("education");
+    } else if (pathname.includes("/entreprise")) {
+      setSector("enterprise");
+    } else if (
+      pathname !== "/home" &&
+      pathname !== "/" &&
+      !pathname.startsWith("/mention-legal") &&
+      !pathname.startsWith("/politics")
+    ) {
+      router.push("/home");
     }
-  }, [pathname])
+  }, [pathname, router]);
 
   return (
     <SectorContext.Provider value={{ sector, setSector }}>
       {children}
     </SectorContext.Provider>
-  )
+  );
 }
 
 export function useSector() {
-  const context = useContext(SectorContext)
+  const context = useContext(SectorContext);
   if (context === undefined) {
-    throw new Error('useSector must be used within a SectorProvider')
+    throw new Error("useSector must be used within a SectorProvider");
   }
-  return context
+  return context;
 }

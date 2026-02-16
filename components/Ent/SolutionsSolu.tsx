@@ -159,41 +159,32 @@ export const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(
     scrollYProgress,
     [0, 1],
-    isLastCard ? [2.5, 1.5] : [2, 1]
+    isLastCard ? [2.5, 1.5] : [2, 1],
   );
   const scale = useTransform(progress, range, [1, targetScale]);
 
-  // Calculate opacity: only show 5 cards at a time
-  const maxVisibleCards = 5;
-  const opacity = useTransform(
-    progress,
-    [
-      (i - maxVisibleCards) / projects.length,
-      i / projects.length,
-      (i + 1) / projects.length,
-    ],
-    [0, 1, 1]
-  );
+  // Ensure cards are fully opaque and don't show through each other
+  // Removed opacity transformation to prevent transparency issues at different zoom levels
 
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-20 md:top-24"
+      className="h-screen flex justify-center sticky top-20 md:top-24 mt-20 md:mt-24"
     >
       <motion.div
         style={{
           scale,
-          opacity,
           top: `calc(-5vh + ${stackPosition * 0}px)`,
         }}
-        className="flex flex-col relative h-[450px] w-[90%] md:w-[80%] lg:w-[70%] rounded-md overflow-hidden origin-top"
+        className="flex flex-col relative h-[450px] w-[98%] md:w-[95%] lg:w-[90%] rounded-md overflow-hidden origin-top bg-white dark:bg-[#080c13]"
       >
         {/* Desktop layout - colored background with separate image */}
         <div
-          className="hidden md:flex flex-col h-full p-6 lg:p-10"
+          className="hidden md:flex flex-col h-full p-6 lg:p-10 relative z-10"
           style={{
             backgroundColor: color,
             border: color === "#ffffff" ? "2px solid #000000" : "none",
+            opacity: 1,
           }}
         >
           <h2
@@ -202,8 +193,10 @@ export const Card: React.FC<CardProps> = ({
           >
             {title}
           </h2>
-          <div className={`flex h-full mt-5 gap-10 ${i % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-            <div className="w-[40%] relative top-[10%]">
+          <div
+            className={`flex items-center h-full mt-5 gap-10 ${i % 2 === 0 ? "flex-row-reverse" : ""}`}
+          >
+            <div className="w-[40%] ">
               <p className={`text-base`} style={{ color: textColor }}>
                 {description}
               </p>
@@ -269,12 +262,12 @@ export const Card: React.FC<CardProps> = ({
           </motion.div>
 
           {/* Overlay gradient for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/30 z-[1]"></div>
 
           {/* Content */}
-          <div className="relative h-full flex flex-col justify-end p-6 text-white z-10">
+          <div className="relative h-full flex flex-col p-6 text-white z-20">
             <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-            <p className="text-sm mb-4 line-clamp-3">{description}</p>
+            <p className="text-sm mb-4">{description}</p>
             {/* <span className='flex items-center gap-2'>
               <a
                 href={'#'}

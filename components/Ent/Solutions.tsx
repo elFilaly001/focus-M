@@ -51,21 +51,21 @@ const solutions = [
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Productivité accrue ",
+    title: " Efficacité & Gain de Temps ",
     description:
-      "Réduisez le temps de réunion et optimisez la collaboration des équipes.",
+      "Accélérez la prise de décision en réduisant la durée de vos réunions grâce au partage d'écran instantané.",
   },
   {
     icon: Video,
-    title: " Intégration complète des outils collaboratifs",
+    title: "  Visioconférence Universelle",
     description:
-      "Connectez Teams, Zoom, Google Meet et d’autres solutions collaboratives.",
+      "Connectez nativement vos salles à Teams, Zoom ou Google Meet pour une collaboration hybride fluide et sans coupure",
   },
   {
     icon: Shield,
-    title: "Sécurité de niveau entreprise ",
+    title: " Fiabilité Technique ",
     description:
-      "Garantissez le chiffrement de bout en bout et la conformité aux standards entreprise.",
+      "Garantissez la continuité de vos opérations avec un matériel robuste, conçu pour un usage intensif en entreprise.",
   },
 ];
 
@@ -89,9 +89,7 @@ export function SolutionsEnterprise() {
               Des solutions pour chaque espace professionnel
             </h2>
             <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto">
-              De la salle de réunion au hall d'accueil, nos écrans tactiles
-              transforment votre environnement de travail en espace collaboratif
-              moderne
+             Facilitez le travail hybride en équipant vos bureaux de solutions de visioconférence avancées. Créez des environnements connectés qui boostent la productivité de vos équipes sur site ou à distance.
             </p>
           </motion.div>
 

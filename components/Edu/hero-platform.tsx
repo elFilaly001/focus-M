@@ -332,7 +332,7 @@ export default function HeroPlatform() {
               animate={{ opacity: 1, y: 0 }}
               className="text-xl text-muted-foreground mb-8 max-w-xl hidden md:block"
             >
-              Imaginez un apprentissage où chaque cours devient une expérience interactive. Dessinez, collaborez et vivez le futur de l’éducation dès aujourd’hui.
+              Transformez vos classes avec nos écrans interactifs et solutions collaboratives. Une technologie d'affichage tactile qui simplifie la pédagogie et captive l'attention des élèves au quotidien.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-20 mobile-draw-limit">
