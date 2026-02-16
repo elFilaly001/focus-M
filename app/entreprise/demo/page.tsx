@@ -98,8 +98,8 @@ export default function DemoPage() {
                       Un calendrier flexible
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Des créneaux de démonstration disponibles en ligne ou sur
-                      site, selon vos contraintes et disponibilités.
+                      Des créneaux de démonstration disponibles en ligne
+ou au showroom, selon vos contraintes et disponibilités.
                     </p>
                   </div>
                 </div>

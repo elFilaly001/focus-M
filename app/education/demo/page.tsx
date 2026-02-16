@@ -97,8 +97,8 @@ export default function DemoPage() {
                       Un calendrier flexible
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Des créneaux de démonstration disponibles en ligne ou sur
-                      site, selon vos contraintes et disponibilités.
+                      Des créneaux de démonstration disponibles en ligne
+ou au showroom, selon vos contraintes et disponibilités.
                     </p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function DemoPage() {
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
                     <span>
-                      Découvrir les options de déploiement et de support
+                      Découvrir les solutions interactives en actions
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -137,7 +137,8 @@ export default function DemoPage() {
                   <li className="flex items-start">
                     <span className="text-[#dc2626] mr-2">•</span>
                     <span>
-                      Recevoir un devis personnalisé pour votre organisation
+                      Recevoir une offre technique et financière
+personnalisée pour votre organisation
                     </span>
                   </li>
                 </ul>

@@ -63,7 +63,7 @@ export function ShowcaseSection() {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Découvrez nos espaces organisés et équipés pour différents besoins : enfants, coworking, salles de classe et plus encore !
+            Découvrez nos espaces organisés et équipés pour différents besoins: enfants, coworking, salles de classe et plus encore !
           </motion.p>
         </div>
 

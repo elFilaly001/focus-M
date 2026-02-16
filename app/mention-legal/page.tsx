@@ -43,7 +43,7 @@ export default function MentionLegalPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Siège social :</strong>{" "}
-                  Rabat – Maroc
+                  Angle Avenue Ambassadeur Ben Aicha et rue barbier, 2ème étage, Casablanca
                 </p>
                 <p>
                   <strong className="text-foreground">Adresse e-mail :</strong>{" "}
@@ -51,7 +51,7 @@ export default function MentionLegalPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  05222-44289
+                  0522 244 289
                 </p>
               </div>
             </div>
@@ -70,8 +70,7 @@ export default function MentionLegalPage() {
                 <strong className="text-foreground">www.focus-m.ma</strong>,
                 incluant, de façon non limitative, les textes, images,
                 graphismes, logos, icônes, vidéos, ainsi que la structure du
-                site, est la propriété exclusive de FOCUS M ou de ses
-                partenaires.
+                site, est la propriété exclusive de FOCUS M.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Toute reproduction, représentation, modification, publication ou

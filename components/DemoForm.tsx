@@ -40,6 +40,8 @@ export function DemoForm() {
     setIsSubmitting(true)
 
     const formData = new FormData(formRef.current as HTMLFormElement)
+    // Get all checked solutions
+    const solutions = formData.getAll('solutions');
     const data = {
       firstName: formData.get('firstName'),
       lastName: formData.get('lastName'),
@@ -47,7 +49,7 @@ export function DemoForm() {
       phone: formData.get('phone'),
       company: formData.get('company'),
       sector: formData.get('sector'),
-      screenCount: formData.get('screenCount'),
+      solutions,
       preferredDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
       additionalInfo: formData.get('additionalInfo'),
     }
@@ -114,8 +116,49 @@ export function DemoForm() {
         <Input id="sector" name="sector" placeholder="ex: Éducation, Entreprise, Santé" />
       </div>
       <div>
-        <label htmlFor="screenCount" className="block text-sm font-medium mb-2">Nombre d'Écrans Nécessaires</label>
-        <Input id="screenCount" name="screenCount" type="number" placeholder="1" min="1" />
+        <label className="block text-sm font-medium mb-2">Solutions qui vous intéressent</label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Classe connectée" className="accent-primary h-4 w-4 rounded" />
+            Classe connectée
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Classe inversée" className="accent-primary h-4 w-4 rounded" />
+            Classe inversée
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Hyflex" className="accent-primary h-4 w-4 rounded" />
+            Hyflex
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Fablab" className="accent-primary h-4 w-4 rounded" />
+            Fablab
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="MOOC" className="accent-primary h-4 w-4 rounded" />
+            MOOC
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Mobilier connecté" className="accent-primary h-4 w-4 rounded" />
+            Mobilier connecté
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="CDI / BCD" className="accent-primary h-4 w-4 rounded" />
+            CDI / BCD
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="solutions" value="Radio" className="accent-primary h-4 w-4 rounded" />
+            Radio
+          </label>
+          <label className="flex items-center gap-2 sm:col-span-2">
+            <input type="checkbox" name="solutions" value="Amphithéâtre et espace ludique interactif" className="accent-primary h-4 w-4 rounded" />
+            Amphithéâtre et espace ludique interactif
+          </label>
+          <label className="flex items-center gap-2 sm:col-span-2">
+            <input type="checkbox" name="solutions" value="Chromebook" className="accent-primary h-4 w-4 rounded" />
+            Chromebook
+          </label>
+        </div>
       </div>
       <div>
         <label htmlFor="preferredDate" className="block text-sm font-medium mb-2">Date Préférée</label>
@@ -152,7 +195,7 @@ export function DemoForm() {
             />
           </PopoverContent>
         </Popover>
-        <p className="text-xs text-muted-foreground mt-1">Disponible du lundi au vendredi uniquement</p>
+        <p className="text-xs text-muted-foreground mt-1">Disponible du lundi au vendredi</p>
       </div>
       <div>
         <label htmlFor="additionalInfo" className="block text-sm font-medium mb-2">Informations Complémentaires</label>

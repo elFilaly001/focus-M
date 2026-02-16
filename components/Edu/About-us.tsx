@@ -222,7 +222,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                       Déploiement clé en main gratuit
+                       Déploiement clé en main offert
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Formation complète et accompagnement personnalisé

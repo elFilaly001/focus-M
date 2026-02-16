@@ -23,10 +23,12 @@ const colors = [
   "#06b6d4",
 ];
 
+
 export default function HeroPlatform() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [drawingEnabled, setDrawingEnabled] = useState<boolean>(false); // Start disabled
+  // Drawing is always disabled by default
+  const [drawingEnabled, setDrawingEnabled] = useState<boolean>(false);
   const [showPalette, setShowPalette] = useState(false);
   const [color, setColor] = useState("#000000");
   const [lineWidth, setLineWidth] = useState(5);
@@ -44,14 +46,6 @@ export default function HeroPlatform() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-
-  // Enable drawing by default on desktop, disable on mobile
-  useEffect(() => {
-    if (mounted) {
-      const isMobile = window.innerWidth < 768;
-      setDrawingEnabled(!isMobile);
-    }
-  }, [mounted]);
 
   useEffect(() => {
     drawingEnabledRef.current = drawingEnabled;
@@ -94,6 +88,7 @@ export default function HeroPlatform() {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform before scaling
       ctx.scale(dpr, dpr);
       canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
@@ -249,19 +244,28 @@ export default function HeroPlatform() {
         <Palette className="h-6 w-6 text-white" />
       </Button>
 
-      {/* Pen Toggle Button */}
-      <Button
-        onClick={(e) => {
-          e.stopPropagation();
-          setDrawingEnabled(!drawingEnabled);
-        }}
-        size="lg"
-        className={`absolute top-8 right-24 md:top-22 md:right-8 z-40 rounded-full h-10 w-10 p-0 shadow-lg transition-all ${
-          drawingEnabled ? "bg-green-600" : "bg-[#dc2626]"
-        }`}
-      >
-        <Pen className="h-6 w-6 text-white" />
-      </Button>
+      {/* Pen Toggle Button with Tooltip */}
+      <div className="absolute top-8 right-24 md:top-22 md:right-8 z-40 flex items-center gap-2">
+        {/* Tooltip/Hint on the left */}
+        {!drawingEnabled && (
+          <span className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-lg text-sm shadow border border-gray-200 dark:border-gray-700 animate-in fade-in slide-in-from-bottom-4 duration-200">
+            Activez-moi et faites sortir votre talent
+          </span>
+        )}
+        <Button
+          onClick={(e) => {
+            e.stopPropagation();
+            setDrawingEnabled(!drawingEnabled);
+          }}
+          size="lg"
+          className={`rounded-full h-10 w-10 p-0 shadow-lg transition-all ${
+            drawingEnabled ? "bg-green-600" : "bg-[#dc2626]"
+          }`}
+          aria-label={drawingEnabled ? "Désactiver le dessin" : "Activer le dessin"}
+        >
+          <Pen className="h-6 w-6 text-white" />
+        </Button>
+      </div>
 
       {/* Palette Panel */}
       {showPalette && (

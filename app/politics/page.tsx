@@ -1,3 +1,4 @@
+import { Mail, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -51,20 +52,20 @@ export default function PoliticsPage() {
                 <p>
                   <strong className="text-foreground">FOCUS M</strong>
                 </p>
-                <p className="text-muted-foreground">
+                {/* <p className="text-muted-foreground">
                   <strong className="text-foreground">Adresse :</strong>{" "}
                   Rabat, Maroc
-                </p>
+                </p> */}
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Adresse :</strong>{" "}
-                  Angle Avenue Ambassadeur Ben Aîcha, 2ᵉ étage, Casablanca
+                  Angle Avenue Ambassadeur Ben Aicha et rue barbier, 2ème étage, Casablanca
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email :</strong> contact@focusm.ma
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Téléphone :</strong>{" "}
-                  05222-44289
+                  0522 244 289
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-6">
@@ -187,7 +188,7 @@ export default function PoliticsPage() {
                   <span className="text-[#C52133] mr-2">•</span>
                   <span>
                     L'intérêt légitime de FOCUS M dans le cadre de son activité
-                    B2B
+                    B2B - B2C
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -322,12 +323,12 @@ export default function PoliticsPage() {
               </p>
               <div className="p-6 bg-[#162030] text-white rounded-lg">
                 <p className="flex items-center gap-2">
-                  <span>📧</span>
+                  <Mail className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                   <span className="font-semibold">contact@focusm.ma</span>
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-6">
-                Une réponse sera apportée dans un délai maximal d'un mois.
+                 Une réponse sera apportée dans les plus brefs délais.
               </p>
             </div>
           </section>
@@ -386,12 +387,12 @@ export default function PoliticsPage() {
               <div className="p-6 bg-muted rounded-lg border border-border space-y-2">
                 <p className="text-foreground font-bold">FOCUS M</p>
                 <p className="text-muted-foreground flex items-center gap-2">
-                  <span>📧</span>
+                  <Mail className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                   <span>contact@focusm.ma</span>
                 </p>
                 <p className="text-muted-foreground flex items-center gap-2">
-                  <span>📞</span>
-                  <span>05222-44289</span>
+                  <Phone className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
+                  <span>0522 244 289</span>
                 </p>
               </div>
             </div>

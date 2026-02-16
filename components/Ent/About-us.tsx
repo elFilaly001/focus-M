@@ -217,7 +217,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                      Support 24/7
+                      Support technique et SAV
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Une équipe dédiée à votre service à tout moment
@@ -237,7 +237,7 @@ export function AboutIntroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 dark:text-white">
-                      Installation gratuite
+                      Installation offerte
                     </h4>
                     {/* <p className="text-sm text-muted-foreground dark:text-slate-300">
                         Formation complète et accompagnement personnalisé
