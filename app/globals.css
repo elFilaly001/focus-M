@@ -154,7 +154,7 @@
    - Desktop (>=1024px): Untitled-1.png
 */
 .home-bg {
-  background-image: url('/Home/Untitled-3.png');
+  background-image: url('/Home/Untitled-3.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,12 +162,12 @@
 
 @media (min-width: 768px) {
   .home-bg {
-    background-image: url('/Home/Untitled-2.png');
+    background-image: url('/Home/Untitled-2.webp');
   }
 }
 
 @media (min-width: 1024px) {
   .home-bg {
-    background-image: url('/Home/Untitled-1.png');
+    background-image: url('/Home/Untitled-1.webp');
   }
 }

@@ -1,67 +1,15 @@
 const LogoSlider = () => {
   const logos = [
-    {
-      id: 1,
-      name: "OCP",
-      src: "https://www.pngfind.com/pngs/m/691-6911535_ocp-group-logo-png-transparent-png-ocp-group.png",
-      height: "60px",
-    },
-    {
-      id: 2,
-      name: "Ebertec",
-      src: "https://red.ma/wp-content/uploads/2022/12/EBERTEC-TEC.png",
-      height: "150px",
-    },
-    {
-      id: 3,
-      name: "DWP",
-      src: "https://dwp.ma/wp-content/uploads/2023/05/DWP-logo.png",
-      height: "60px",
-    },
-    {
-      id: 4,
-      name: "AJARINVEST",
-      src: "https://ajarinvest.ma/wp-content/uploads/2020/06/Logo-Ajarinvest.png",
-      height: "60px",
-    },
-    {
-      id: 5,
-      name: "Engor",
-      src: "https://www.engor.net/wp-content/uploads/2019/05/logo-engor-v2-e1748542387856.png",
-      height: "60px",
-    },
-    {
-      id: 6,
-      name: "Concept Cerame",
-      src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-4.png",
-      height: "60px",
-    },
-    {
-      id: 7,
-      name: "CDM",
-      src: "https://www.creditdumaroc.ma/sites/all/themes/custom/cdm_rebrand/assets/images/icons/logo_cdm.svg",
-      height: "30px",
-    },
-    {
-      id: 8,
-      name: "Deloitte",
-      src: "https://cdn.worldvectorlogo.com/logos/deloitte-2.svg",
-      height: "40px",
-      invertInDark: true,
-    },
-    {
-      id: 9,
-      name: "PWC",
-      src: "https://www.pwc.com/etc.clientlibs/pwc/clientlibs/rebrand-clientlibs/components-colors/resources/images/slim-header-v2/PwC-logo-white.svg",
-      height: "70px",
-      invertInDark: true,
-    },
-    {
-      id: 10,
-      name: "Nexia",
-      src: "/LOGO/Ent/Nexa Morocco Logo.png",
-      height: "40px",
-    },
+    { id: 1, name: "OCP", src: "/8.png" },
+    { id: 2, name: "Ebertec", src: "https://red.ma/wp-content/uploads/2022/12/EBERTEC-TEC.png" },
+    { id: 3, name: "DWP", src: "https://dwp.ma/wp-content/uploads/2023/05/DWP-logo.png" },
+    { id: 4, name: "AJARINVEST", src: "https://ajarinvest.ma/wp-content/uploads/2020/06/Logo-Ajarinvest.png" },
+    { id: 5, name: "Engor", src: "https://www.engor.net/wp-content/uploads/2019/05/logo-engor-v2-e1748542387856.png" },
+    { id: 6, name: "Concept Cerame", src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-4.png" },
+    { id: 7, name: "CDM", src: "https://www.creditdumaroc.ma/sites/all/themes/custom/cdm_rebrand/assets/images/icons/logo_cdm.svg" },
+    { id: 8, name: "Deloitte", src: "/10.png" },
+    { id: 9, name: "PWC", src: "/pwc.webp" },
+    { id: 10, name: "Nexia", src: "/nexia.webp" },
   ];
 
   // Triple the logos to ensure smooth infinite scroll
@@ -89,12 +37,14 @@ const LogoSlider = () => {
           <div className="logo-track">
             {duplicatedLogos.map((logo, index) => (
               <div key={`${logo.id}-${index}`} className="logo-item">
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  style={{ height: logo.height }}
-                  className={`${logo.invertInDark ? 'dark:invert' : ''} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0`}
-                />
+                <div className="bg-slate-900/80 dark:bg-slate-900/80 rounded-xl p-4 flex items-center justify-center shadow-sm">
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="h-28 w-auto max-h-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             ))}
           </div>

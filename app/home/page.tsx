@@ -31,14 +31,14 @@ export default function DiagonalSplitSection() {
               transition={{ duration: 0.18 }}
               className="flex flex-col items-center"
             >
-              <GraduationCap className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+              <GraduationCap className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" style={{ color: '#dc2626' }} />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-[#dc2626]">
                 Éducation
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block text-[#dc2626]">
                 Solutions interactives
               </p>
-              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg">
+              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg text-[#dc2626]">
                 Découvrir <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
             </motion.div>
@@ -64,14 +64,14 @@ export default function DiagonalSplitSection() {
               transition={{ duration: 0.18 }}
               className="flex flex-col items-center"
             >
-              <Building2 className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+              <Building2 className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" style={{ color: '#080c13' }} />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-[#080c13]">
                 Entreprise
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block text-[#080c13]">
                 Solutions professionnelles
               </p>
-              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg">
+              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg text-[#080c13]">
                 Découvrir <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
             </motion.div>
