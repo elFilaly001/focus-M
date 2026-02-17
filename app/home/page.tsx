@@ -64,14 +64,14 @@ export default function DiagonalSplitSection() {
               transition={{ duration: 0.18 }}
               className="flex flex-col items-center"
             >
-              <Building2 className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" style={{ color: '#080c13' }} />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-[#080c13]">
+              <Building2 className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-4" style={{ color: '#273b5d' }} />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-[#273b5d]">
                 Entreprise
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block text-[#080c13]">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 mb-3 hidden md:block text-[#273b5d]">
                 Solutions professionnelles
               </p>
-              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg text-[#080c13]">
+              <div className="inline-flex items-center gap-2 font-bold justify-center hidden md:inline-flex text-base lg:text-lg text-[#273b5d]">
                 Découvrir <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
             </motion.div>
