@@ -43,13 +43,83 @@ const LogoSlider = () => {
             {duplicatedLogos.map((logo, index) => (
               <div key={`${logo.id}-${index}`} className="logo-item">
                 <div className="rounded-xl p-4 flex items-center justify-center shadow-sm">
-                  <img
-                    src={logo.src}
-                    alt={logo.name}
-                    className="h-32 w-56 object-contain mx-auto"
-                    style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
-                    loading="lazy"
-                  />
+                  {logo.name === "ECOLE BELGE" ? (
+                    <>
+                      <img
+                        src="/ebm.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto block dark:hidden"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                      <img
+                        src="/ebmdark.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto hidden dark:block"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                    </>
+                  ) : logo.name === "YOUCODE" ? (
+                    <>
+                      <img
+                        src="/youcode.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto block dark:hidden"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                      <img
+                        src="/youcodedark.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto hidden dark:block"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                    </>
+                  ) : logo.name === "OFPPT" ? (
+                    <>
+                      <img
+                        src="/ofppt.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto block dark:hidden"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                      <img
+                        src="/ofpptdark.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto hidden dark:block"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                    </>
+                  ) : logo.name === "1337" ? (
+                    <>
+                      <img
+                        src="/1337light.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto block dark:hidden"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                      <img
+                        src="/1337.webp"
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto hidden dark:block"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
+                    </>
+                  ) : (
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="h-32 w-56 object-contain mx-auto"
+                      style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               </div>
             ))}

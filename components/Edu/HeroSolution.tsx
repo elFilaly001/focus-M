@@ -13,10 +13,10 @@ interface HeroSolutionProps {
 
 const features = [
   "Auditer vos besoins pédagogiques et votre infrastructure actuelle.",
-  "Fournir des écrans tactiles et tableaux interactifs adaptés (Vente ou Location).",
+  "Fournir des solutions interactives adaptées (Vente ou Location)",
   "Installer et configurer l'ensemble de vos équipements sur site.",
   "Former vos équipes enseignantes pour une prise en main immédiate.",
-  "Assurer un support technique réactif et une maintenance continue.",
+  "Assurer l’adaptabilité des solutions sur tous les types d’écrans interactifs.",
 ];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
@@ -148,7 +148,7 @@ export function HeroSolution({ className }: HeroSolutionProps) {
         }}
       >
         <Image
-          src="/focus-m-visual-1.webp"
+          src="/focus-m-visual-11.webp"
           alt="Salle de réunion moderne avec écran tactile Focus-M"
           fill
           className="object-cover object-center w-full h-full"

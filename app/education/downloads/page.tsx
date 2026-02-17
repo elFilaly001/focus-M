@@ -76,7 +76,7 @@ export default function DownloadsPage() {
       </section>
 
       {/* Assistance CTA */}
-      <section className="py-20 bg-muted">
+      {/* <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-4xl font-bold mb-6">Besoin d'aide ?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ export default function DownloadsPage() {
             <a href="/contact">Contacter le support</a>
           </Button>
         </div>
-      </section>
+      </section> */}
 
     </div>
   )
