@@ -37,11 +37,12 @@ const LogoSlider = () => {
           <div className="logo-track">
             {duplicatedLogos.map((logo, index) => (
               <div key={`${logo.id}-${index}`} className="logo-item">
-                <div className="bg-slate-900/80 dark:bg-slate-900/80 rounded-xl p-4 flex items-center justify-center shadow-sm">
+                <div className="rounded-xl p-4 flex items-center justify-center shadow-sm">
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-28 w-auto max-h-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    className="h-32 w-56 object-contain mx-auto"
+                    style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
                     loading="lazy"
                   />
                 </div>
