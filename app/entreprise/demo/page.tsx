@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Clock, Users } from "lucide-react";
-import { DemoForm } from "@/components/DemoForm";
+import { DemoForm } from "@/components/Ent/DemoForm";
 
 export const metadata = {
   title: "Réservez une Démo - Focus M",
