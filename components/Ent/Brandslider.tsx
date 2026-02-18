@@ -1,14 +1,14 @@
 const LogoSlider = () => {
   const logos = [
-    { id: 2, name: "Ebertec", src: "https://red.ma/wp-content/uploads/2022/12/EBERTEC-TEC.png" },
     { id: 3, name: "DWP", src: "https://dwp.ma/wp-content/uploads/2023/05/DWP-logo.png" },
-    { id: 4, name: "AJARINVEST", src: "https://ajarinvest.ma/wp-content/uploads/2020/06/Logo-Ajarinvest.png" },
+    { id: 4, name: "AJARINVEST", src: "/ajar.png" },
     { id: 1, name: "OCP", src: "/ocp.webp" },
-    { id: 5, name: "Engor", src: "https://www.engor.net/wp-content/uploads/2019/05/logo-engor-v2-e1748542387856.png" },
-    { id: 6, name: "Concept Cerame", src: "https://conceptcerame.com/wp-content/uploads/2025/02/Blue-Waves-Surfing-Club-Logo-250-x-55-px-4.png" },
+    { id: 6, name: "Concept Cerame", src: "/conceptcerame.webp" },
     { id: 8, name: "Deloitte", src: "/10.png" },
+    { id: 5, name: "Engor", src: "/engor.png" },
     { id: 7, name: "CDM", src: "https://www.creditdumaroc.ma/sites/all/themes/custom/cdm_rebrand/assets/images/icons/logo_cdm.svg" },
     { id: 9, name: "PWC", src: "/pwc.webp" },
+    { id: 2, name: "Ebertec", src: "https://red.ma/wp-content/uploads/2022/12/EBERTEC-TEC.png" },
     { id: 10, name: "Nexia", src: "/nexia.webp" },
   ];
 
@@ -90,13 +90,13 @@ const LogoSlider = () => {
                       />
                     </>
                   ) : logo.name === "OCP" ? (
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className="h-52 w-80 object-contain mx-auto"
-                      style={{ maxHeight: '13rem', maxWidth: '20rem', minHeight: '8rem', minWidth: '12rem' }}
-                      loading="lazy"
-                    />
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        className="h-32 w-56 object-contain mx-auto"
+                        style={{ maxHeight: '8rem', maxWidth: '14rem', minHeight: '5rem', minWidth: '8rem' }}
+                        loading="lazy"
+                      />
                   ) : (
                     <img
                       src={logo.src}
