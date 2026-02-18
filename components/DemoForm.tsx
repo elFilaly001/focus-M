@@ -44,6 +44,10 @@ export function DemoForm() {
     const today = getTodayDate();
     const tomorrow = getTomorrowDate();
 
+    // Normalize the input date to midnight for proper comparison
+    const normalizedDate = new Date(date);
+    normalizedDate.setHours(0, 0, 0, 0);
+
     // Get the end of current week (Sunday)
     const endOfWeek = new Date(today);
     const daysUntilSunday = 7 - today.getDay();
@@ -51,7 +55,7 @@ export function DemoForm() {
     endOfWeek.setHours(23, 59, 59, 999);
 
     // Check if date is after tomorrow and before end of current week
-    return date > tomorrow && date <= endOfWeek;
+    return normalizedDate > tomorrow && normalizedDate <= endOfWeek;
   }
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -251,25 +255,28 @@ export function DemoForm() {
               }}
               disabled={(date) => {
                 const today = getTodayDate();
-                const tomorrow = getTomorrowDate();
 
-                // Disable today
-                if (date.getTime() === today.getTime()) {
-                  return true;
-                }
+                // Normalize the input date for comparison
+                const normalizedDate = new Date(date);
+                normalizedDate.setHours(0, 0, 0, 0);
 
                 // Disable weekends
                 if (isWeekend(date)) {
                   return true;
                 }
 
-                // Disable rest of current week (after tomorrow)
-                if (isRestOfCurrentWeek(date)) {
+                // Disable past dates
+                if (normalizedDate < today) {
                   return true;
                 }
 
-                // Disable dates before tomorrow
-                if (date < tomorrow) {
+                // Disable entire current week (today through Sunday)
+                const endOfWeek = new Date(today);
+                const daysUntilSunday = 7 - today.getDay();
+                endOfWeek.setDate(today.getDate() + daysUntilSunday);
+                endOfWeek.setHours(23, 59, 59, 999);
+
+                if (normalizedDate <= endOfWeek) {
                   return true;
                 }
 
