@@ -10,7 +10,7 @@ const downloadCategories = [
     description: "Écrans interactifs et solutions tactiles i3-CONNECT",
     icon: Monitor,
     products: [
-      { name: "i3 Touch ELM2", file: null },
+      { name: "i3 Touch ELM2", file: "/Fiches%20techniques/i3CONNECT_Elm2_ProductBrochure.pdf" },
       { name: "i3 Touch Ultra 105", file: "/Fiches%20techniques/FT_i3TOUCH-ULTRA.pdf" },
       { name: "i3 Touch V-One", file: "/Fiches%20techniques/i3TOUCH%20V-ONE_DataSheet%2020240606_compressed%20(1)%20(1).pdf" },
       { name: "i3 Touch Aspen 4", file: "/Fiches%20techniques/i3CONNECT_Aspen4_ProductBrochure_FR.pdf" },
@@ -39,12 +39,14 @@ const downloadCategories = [
     products: [
       { name: "Vocal Wearable (récepteur vocal)", file: "/Fiches%20techniques/IPEVO%20VOCAL%20WEARABLE%20R%C3%A9cepteur%20Vocal%20Vurbo.ai.pdf" },
       { name: "TOTEM 180 (caméra panoramique)", file: "/Fiches%20techniques/Datasheet%20Totem%20180.pdf" },
-      { name: "TOTEM 360 (caméra 360° + haut-parleur)", file: "/Fiches%20techniques/Datasheet%20Totem%20360.pdf" },
+      { name: "TOTEM 360 (caméra + haut-parleur)", file: "/Fiches%20techniques/Datasheet%20Totem%20360.pdf" },
       { name: "VC-Z4K (caméra PTZ UHD 4K)", file: "/Fiches%20techniques/Cam%C3%A9ra%20PTZ%20IPEVO%20VC-Z4K%20UHD%204K.pdf" },
       { name: "VC-B4K (barre vidéo UHD 4K)", file: "/Fiches%20techniques/IPEVO%20VC-B4K%20Barre%20vid%C3%A9o%20UHD%204K.pdf" },
       { name: "P2V ULTRA (caméra pour objets)", file: "/Fiches%20techniques/IPEVO%20P2V%20ULTRA%20OBJECT%20CAMERA%20FULL%20PACK.pdf" },
       { name: "VZ-R double mode HDMI/USB 8MP", file: "/Fiches%20techniques/Datasheet%20VZ-R%20HDMI-USB%20DUAL%20MODE%208MP.pdf" },
-      { name: "VZ-R double mode HDMI/USB 13MP", file: "/Fiches%20techniques/Datasheet%20VZ-R%2013MP%20HDMI-USB%20DUAL%20MODE%208MP.pdf" },
+      { name: "VZ-R ULTRA (caméra de documents)", file: "/Fiches%20techniques/Datasheet%20VZ-R%2013MP%20HDMI-USB%20DUAL%20MODE%208MP.pdf" },
+      { name: "VZ-X ULTRA", file: "/Fiches%20techniques/IPEVO%20VZ-X%20ULTRA%20Cam%C3%A9ra%20de%20documents%2013%20MP%20sans%20fil,%20HDMI%20et%20USB_.pdf" },
+      { name: "VZ-X sans fil HDMI/USB", file: "/Fiches%20techniques/Datasheet%20VZ-X_HDMI_USB.pdf" },
     ],
   },
   {
