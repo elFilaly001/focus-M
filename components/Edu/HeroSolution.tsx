@@ -16,7 +16,6 @@ const features = [
   "Fournir des solutions interactives adaptées (Vente ou Location)",
   "Installer et configurer l'ensemble de vos équipements sur site.",
   "Former vos équipes enseignantes pour une prise en main immédiate.",
-  "Assurer l’adaptabilité des solutions sur tous les types d’écrans interactifs.",
 ];
 
 export function HeroSolution({ className }: HeroSolutionProps) {
