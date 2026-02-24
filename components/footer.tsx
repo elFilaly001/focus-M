@@ -186,7 +186,7 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  05222-44289
+                  0522 244 289
                 </span>
               </li>
 
