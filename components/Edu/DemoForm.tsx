@@ -18,14 +18,6 @@ import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
 export function DemoForm() {
-  // Helper to get tomorrow's date at midnight for proper comparison
-  function getTomorrowDate() {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
-    return tomorrow;
-  }
-
   // Helper to get today's date at midnight
   function getTodayDate() {
     const today = new Date();
@@ -39,25 +31,6 @@ export function DemoForm() {
     return day === 0 || day === 6;
   }
 
-  // Helper to check if a date is in the current week (after tomorrow)
-  function isRestOfCurrentWeek(date: Date) {
-    const today = getTodayDate();
-    const tomorrow = getTomorrowDate();
-
-    // Normalize the input date to midnight for proper comparison
-    const normalizedDate = new Date(date);
-    normalizedDate.setHours(0, 0, 0, 0);
-
-    // Get the end of current week (Sunday)
-    const endOfWeek = new Date(today);
-    const daysUntilSunday = 7 - today.getDay();
-    endOfWeek.setDate(today.getDate() + daysUntilSunday);
-    endOfWeek.setHours(23, 59, 59, 999);
-
-    // Check if date is after tomorrow and before end of current week
-    return normalizedDate > tomorrow && normalizedDate <= endOfWeek;
-  }
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [calendarOpen, setCalendarOpen] = useState(false);
@@ -68,20 +41,19 @@ export function DemoForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(formRef.current as HTMLFormElement)
-    // Get all checked solutions
-    const solutions = formData.getAll('solutions');
+    const formData = new FormData(formRef.current as HTMLFormElement);
+    const solutions = formData.getAll("solutions");
     const data = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      company: formData.get('company'),
-      sector: formData.get('sector'),
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      company: formData.get("company"),
+      sector: formData.get("sector"),
       solutions,
-      preferredDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
-      additionalInfo: formData.get('additionalInfo'),
-    }
+      preferredDate: selectedDate ? format(selectedDate, "yyyy-MM-dd") : null,
+      additionalInfo: formData.get("additionalInfo"),
+    };
 
     try {
       const response = await fetch("/api/demo", {
@@ -98,7 +70,6 @@ export function DemoForm() {
           description:
             "Nous vous contacterons bientôt pour planifier votre démo.",
         });
-        // Reset form ---
         formRef.current?.reset();
         setSelectedDate(undefined);
       } else {
@@ -179,46 +150,98 @@ export function DemoForm() {
         />
       </div>
       <div>
-        <label className="block text-sm font-medium mb-2">Solutions qui vous intéressent</label>
+        <label className="block text-sm font-medium mb-2">
+          Solutions qui vous intéressent
+        </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Classe connectée" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Classe connectée"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Classe connectée
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Classe inversée" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Classe inversée"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Classe inversée
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Hyflex" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Hyflex"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Hyflex
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Fablab" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Fablab"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Fablab
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="MOOC" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="MOOC"
+              className="accent-primary h-4 w-4 rounded"
+            />
             MOOC
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Mobilier connecté" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Mobilier connecté"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Mobilier connecté
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="CDI / BCD" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="CDI / BCD"
+              className="accent-primary h-4 w-4 rounded"
+            />
             CDI / BCD
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" name="solutions" value="Radio" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Radio"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Radio
           </label>
           <label className="flex items-center gap-2 sm:col-span-2">
-            <input type="checkbox" name="solutions" value="Amphithéâtre et espace ludique interactif" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Amphithéâtre et espace ludique interactif"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Amphithéâtre et espace ludique interactif
           </label>
           <label className="flex items-center gap-2 sm:col-span-2">
-            <input type="checkbox" name="solutions" value="Chromebook" className="accent-primary h-4 w-4 rounded" />
+            <input
+              type="checkbox"
+              name="solutions"
+              value="Chromebook"
+              className="accent-primary h-4 w-4 rounded"
+            />
             Chromebook
           </label>
         </div>
@@ -236,7 +259,7 @@ export function DemoForm() {
               variant="outline"
               className={cn(
                 "w-full justify-start text-left font-normal bg-input dark:bg-[#080c13] border-input h-9 px-3 py-1",
-                !selectedDate && "text-muted-foreground",
+                !selectedDate && "text-muted-foreground"
               )}
             >
               <CalendarIcon className="mr-2 h-4 w-4" />
@@ -260,23 +283,22 @@ export function DemoForm() {
                 const normalizedDate = new Date(date);
                 normalizedDate.setHours(0, 0, 0, 0);
 
-                // Disable weekends
-                if (isWeekend(date)) {
-                  return true;
-                }
-
                 // Disable past dates
                 if (normalizedDate < today) {
                   return true;
                 }
 
-                // Disable entire current week (today through Sunday)
-                const endOfWeek = new Date(today);
-                const daysUntilSunday = 7 - today.getDay();
-                endOfWeek.setDate(today.getDate() + daysUntilSunday);
-                endOfWeek.setHours(23, 59, 59, 999);
+                // Disable weekends
+                if (isWeekend(date)) {
+                  return true;
+                }
 
-                if (normalizedDate <= endOfWeek) {
+                // Disable next 7 days from today (first available = next Friday)
+                const cutoff = new Date(today);
+                cutoff.setDate(today.getDate() + 7);
+                cutoff.setHours(23, 59, 59, 999);
+
+                if (normalizedDate <= cutoff) {
                   return true;
                 }
 
@@ -293,7 +315,9 @@ export function DemoForm() {
             />
           </PopoverContent>
         </Popover>
-        <p className="text-xs text-muted-foreground mt-1">Disponible du lundi au vendredi</p>
+        <p className="text-xs text-muted-foreground mt-1">
+          Disponible du lundi au vendredi (à partir de la semaine prochaine)
+        </p>
       </div>
       <div>
         <label
